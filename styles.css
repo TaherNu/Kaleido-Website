@@ -4194,8 +4194,13 @@ body {
   max-width: 1000px;
   width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-title {
@@ -4215,18 +4220,14 @@ body {
   line-height: 1.6;
   color: rgba(253, 253, 246, 0.9);
   max-width: 700px;
-  margin: 0 auto;
   font-weight: 400;
+  text-align: center;
   position: absolute;
   bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-}
-
-/* Active navigation link styling */
-.nav-links a.active {
-  color: #FF8F35;
+  margin: 0;
 }
 
 /* Responsive Design for Contact Page */
