@@ -4276,3 +4276,416 @@ body {
     width: 95%;
   }
 }
+
+
+
+
+
+
+
+/* ========== CONTACT FORM SECTION ========== */
+.contact-form-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+/* Orange Rectangle - Full Width */
+.orange-rectangle {
+  width: 95%;
+  height: 95%;
+  background-color: #FF7D15;
+  border-radius: 30px;
+  padding: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* White Inner Rectangle */
+.white-inner {
+  background-color: #FDFDF6;
+  display: flex;
+  gap: 3rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+.form-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.form-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: 7rem;
+  letter-spacing: 4px;
+  color: #101010;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 10;
+}
+
+.form-description {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.5rem;
+  width: 90%;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Right Side - Cards Container */
+.form-right {
+  flex: 1.5;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Individual Cards */
+.contact-card {
+  flex: 1;
+  min-width: 200px;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Card 1 - WhatsApp (#FF7D15) */
+.card-whatsapp {
+  background-color: #FF7D15;
+}
+
+/* Card 2 - Phone (#EC4539) */
+.card-phone {
+  background-color: #EC4539;
+}
+
+/* Card 3 - Email (#F1B020) */
+.card-email {
+  background-color: #F1B020;
+}
+
+/* Card Icon */
+.card-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Card Title */
+.card-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #FDFDF6;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Card Text */
+.card-text {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #FDFDF6;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Button */
+.card-btn {
+  background: #FDFDF6;
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn {
+  color: #FF7D15;
+}
+
+.whatsapp-btn:hover {
+  background-color: #101010;
+  color: #FF7D15;
+  transform: translateY(-3px);
+}
+
+.phone-btn {
+  color: #EC4539;
+}
+
+.phone-btn:hover {
+  background-color: #101010;
+  color: #EC4539;
+  transform: translateY(-3px);
+}
+
+.email-btn {
+  color: #F1B020;
+}
+
+.email-btn:hover {
+  background-color: #101010;
+  color: #F1B020;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .contact-form-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .orange-rectangle {
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .white-inner {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .form-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .white-inner {
+    flex-direction: column;
+  }
+  
+  .form-left {
+    text-align: center;
+  }
+  
+  .form-right {
+    justify-content: center;
+  }
+  
+  .contact-card {
+    min-width: 240px;
+  }
+  
+  .form-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .orange-rectangle {
+    padding: 1.5rem;
+  }
+  
+  .white-inner {
+    padding: 1.5rem;
+  }
+  
+  .form-heading {
+    font-size: 1.8rem;
+  }
+  
+  .form-description {
+    font-size: 0.9rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .card-text {
+    font-size: 0.8rem;
+  }
+  
+  .card-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ========== AVAILABILITY SECTION ========== */
+.availability-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.availability-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Left Side - 50% */
+.availability-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Large Square with Background Image */
+.availability-square {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Dark Overlay */
+.square-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Square Content */
+.square-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+.square-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem;
+  font-weight: 10;
+  letter-spacing: 4px;
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.square-text {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: rgba(253, 253, 246, 0.9);
+  max-width: 80%;
+}
+
+/* Right Side - 50% */
+.availability-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+.availability-paragraph {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.8;
+  color: rgba(253, 253, 246, 0.85);
+  max-width: 90%;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .availability-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .square-heading {
+    font-size: 2.5rem;
+  }
+  
+  .availability-paragraph {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .availability-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .availability-left {
+    width: 100%;
+  }
+  
+  .availability-square {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .availability-right {
+    text-align: center;
+    padding-left: 0;
+    justify-content: center;
+  }
+  
+  .availability-paragraph {
+    max-width: 100%;
+  }
+  
+  .square-heading {
+    font-size: 2rem;
+  }
+  
+  .square-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .square-heading {
+    font-size: 1.8rem;
+  }
+  
+  .availability-paragraph {
+    font-size: 0.9rem;
+  }
+}
