@@ -226,72 +226,6 @@ body.scrolled .logo-secondary {
   padding: 1rem 1rem 0.5rem 1rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1000px) {
-  .navbar {
-    padding: 1rem 1.5rem;
-  }
-  .nav-links {
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
-  .hero-content {
-    padding: 1.5rem;
-  }
-  .kaleido-main {
-    font-size: 3.8rem;
-    letter-spacing: 3px;
-  }
-  .presents {
-    font-size: 1.5rem;
-  }
-  .top-left,
-  .top-right {
-    font-size: 1.4rem;
-  }
-  .bottom-left,
-  .bottom-right {
-    font-size: 1.2rem;
-  }
-  .bottom-paragraph {
-    font-size: 0.9rem;
-    padding: 0.8rem;
-  }
-}
-
-@media (max-width: 780px) {
-  .navbar {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  .nav-links {
-    justify-content: center;
-  }
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .top-left,
-  .top-right,
-  .bottom-left,
-  .bottom-right {
-    text-align: center;
-    grid-column: 1;
-  }
-  .top-right {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-  .center-group {
-    grid-column: 1;
-  }
-  .bottom-paragraph {
-    grid-column: 1;
-  }
-  .kaleido-main {
-    font-size: 2.5rem;
-  }
-}
 
 
 
@@ -412,108 +346,20 @@ body.scrolled .logo-secondary {
   font-weight: 400;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1000px) {
-  .rectangles-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  /* Remove the vertical offset on mobile for better readability */
-  .rectangle-left {
-    transform: translateY(0);
-  }
-  
-  .rectangle-right {
-    transform: translateY(0);
-  }
-  
-  .rectangle-left:hover {
-    transform: translateY(-8px);
-  }
-  
-  .rectangle-right:hover {
-    transform: translateY(-8px);
-  }
-  
-  .rectangle {
-    min-width: 280px;
-    width: 100%;
-  }
-}
 
-/* Responsive adjustments */
-@media (max-width: 1000px) {
-  .our-story {
-    padding: 1.5rem 1.5rem 3rem 1.5rem;
-  }
-  
-  .story-heading {
-    font-size: 3.5rem;
-  }
-  
-  .story-subheading {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .rectangle {
-    padding: 1.8rem;
-  }
-  
-  .rectangle-title {
-    font-size: 1.5rem;
-  }
-  
-  .rectangle-text {
-    font-size: 0.95rem;
-  }
-}
 
-@media (max-width: 850px) {
-  .rectangles-wrapper {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-  
-  /* Reduce rotation on mobile for better readability */
-  .rectangle-left,
-  .rectangle-right {
-    transform: rotate(-2deg);
-  }
-  
-  .rectangle:hover {
-    transform: rotate(-2deg) translateY(-5px);
-  }
-  
-  .story-heading {
-    font-size: 2.8rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .our-story {
-    padding: 1rem 1.5rem 2rem 1.5rem;
-  }
-  
-  .rectangle-left,
-  .rectangle-right {
-    transform: rotate(0deg);
-  }
-  
-  .rectangle:hover {
-    transform: translateY(-5px);
-  }
-  
-  .story-heading {
-    font-size: 2.2rem;
-  }
-  
-  .story-subheading {
-    font-size: 1rem;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -732,77 +578,6 @@ body.scrolled .logo-secondary {
   background: #FF8F35;
   border-color: #B4030E;
 }
-
-/* Responsive */
-@media (max-width: 1000px) {
-  .films-heading {
-    font-size: 3.5rem;
-  }
-  
-  .film-card {
-    width: 280px;
-    height: 500px;
-  }
-}
-
-@media (max-width: 768px) {
-  .featured-films {
-    padding: 2rem 1rem;
-  }
-  
-  .films-heading {
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
-  }
-  
-  .film-card {
-    width: 260px;
-    height: 480px;
-  }
-  
-  .film-card-title {
-    font-size: 1.2rem;
-  }
-  
-  .film-card-stats {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.8rem;
-  }
-  
-  .film-join-btn {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.75rem;
-  }
-  
-  .scroll-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .film-card {
-    width: 240px;
-    height: 440px;
-  }
-  
-  .featured-card .film-card-content {
-    padding: 1rem;
-  }
-  
-  .film-card-title {
-    font-size: 1rem;
-  }
-  
-  .scroll-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-  }
-}
-
-
 
 
 
@@ -1054,42 +829,11 @@ body.scrolled .logo-secondary {
   display: none;
 }
 
-/* Responsive for new sliders */
-@media (max-width: 1000px) {
-  .service-slide-card {
-    width: 280px;
-    height: 180px;
-  }
-  
-  .service-slide-card:hover {
-    width: 330px;
-    height: 220px;
-  }
-}
 
-@media (max-width: 768px) {
-  .service-slide-card {
-    width: 240px;
-    height: 160px;
-  }
-  
-  .service-slide-card:hover {
-    width: 280px;
-    height: 190px;
-  }
-}
 
-@media (max-width: 480px) {
-  .service-slide-card {
-    width: 200px;
-    height: 140px;
-  }
-  
-  .service-slide-card:hover {
-    width: 230px;
-    height: 160px;
-  }
-}
+
+
+
 
 
 
@@ -8514,5 +8258,2563 @@ body.scrolled .logo-secondary {
   
   .footer-col-title {
     font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== PAGE 1 - NAVBAR & HERO - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  /* Hero Section */
+  .kaleido-main {
+    font-size: 11rem;
+  }
+  
+  .presents {
+    font-size: 3.2rem;
+  }
+  
+  .top-left, .top-right {
+    font-size: 1.9rem;
+  }
+  
+  .bottom-left, .bottom-right {
+    font-size: 1.6rem;
+  }
+  
+  .bottom-paragraph {
+    max-width: 1000px;
+    font-size: 0.95rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 1rem 2.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+  
+  .work-with-us {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  /* Hero Section */
+  .kaleido-main {
+    font-size: 8rem;
+    letter-spacing: 4px;
+  }
+  
+  .presents {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .top-left, .top-right {
+    font-size: 1.5rem;
+  }
+  
+  .bottom-left, .bottom-right {
+    font-size: 1.3rem;
+  }
+  
+  .bottom-paragraph {
+    max-width: 850px;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  
+  .hero-content {
+    padding: 1.5rem 2rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0.9rem 2rem;
+  }
+  
+  .nav-links {
+    gap: 1.2rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  
+  .work-with-us {
+    padding: 0.4rem 1.1rem;
+    font-size: 0.8rem;
+  }
+  
+  .logo-img {
+    height: 35px;
+  }
+  
+  .logo-secondary {
+    height: 50px;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  /* Hero Section */
+  .kaleido-main {
+    font-size: 6rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .presents {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+  .top-left, .top-right {
+    font-size: 1.2rem;
+  }
+  
+  .bottom-left, .bottom-right {
+    font-size: 1.1rem;
+  }
+  
+  .bottom-paragraph {
+    max-width: 700px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .hero-content {
+    padding: 1.2rem 1.5rem;
+    grid-template-rows: auto auto 1fr auto;
+  }
+  
+  /* Navbar - more compact */
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  
+  .work-with-us {
+    padding: 0.35rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .logo-img {
+    height: 32px;
+  }
+  
+  .logo-secondary {
+    height: 45px;
+  }
+}
+
+/* Optional: For very wide screens (keeping it contained) */
+@media (min-width: 1920px) {
+  .bottom-paragraph {
+    max-width: 1400px;
+  }
+  
+  .hero-content {
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== PAGE 2 - OUR STORY - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .story-heading {
+    font-size: 8rem;
+  }
+  
+  .story-subheading {
+    font-size: 1.2rem;
+    max-width: 700px;
+  }
+  
+  .rectangle {
+    width: 700px;
+    height: 320px;
+    padding: 2rem;
+  }
+  
+  .rectangle-title {
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  
+  .rectangle-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .rectangle-left {
+    transform: translateY(100px) rotate(-3.5deg);
+  }
+  
+  .rectangle-right {
+    transform: translateY(60px) rotate(-3.5deg);
+  }
+  
+  .rectangles-wrapper {
+    gap: 2.5rem;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .our-story {
+    padding: 1.5rem 2rem 3rem 2rem;
+  }
+  
+  .story-container {
+    padding-top: 1.5rem;
+  }
+  
+  .story-heading {
+    font-size: 6rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .story-subheading {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .rectangles-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+  
+  .rectangle {
+    width: 90%;
+    max-width: 650px;
+    height: auto;
+    min-height: 280px;
+    padding: 1.8rem;
+  }
+  
+  .rectangle-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .rectangle-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Remove the angle offsets on laptops for better readability */
+  .rectangle-left {
+    transform: translateY(0) rotate(-2deg);
+  }
+  
+  .rectangle-right {
+    transform: translateY(0) rotate(-2deg);
+  }
+  
+  /* Slight hover effect instead */
+  .rectangle-left:hover,
+  .rectangle-right:hover {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .our-story {
+    padding: 1rem 1.5rem 2.5rem 1.5rem;
+  }
+  
+  .story-container {
+    padding-top: 1rem;
+  }
+  
+  .story-heading {
+    font-size: 4.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .story-subheading {
+    font-size: 1rem;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .rectangles-wrapper {
+    gap: 1.5rem;
+  }
+  
+  .rectangle {
+    width: 95%;
+    max-width: 550px;
+    min-height: 260px;
+    padding: 1.5rem;
+  }
+  
+  .rectangle-title {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.7rem;
+  }
+  
+  .rectangle-text {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+  
+  .rectangle-left,
+  .rectangle-right {
+    transform: rotate(-1deg);
+  }
+  
+  .rectangle-left:hover,
+  .rectangle-right:hover {
+    transform: translateY(-3px) rotate(0deg);
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .story-container {
+    max-width: 1600px;
+  }
+  
+  .rectangle {
+    width: 900px;
+    height: 380px;
+  }
+  
+  .rectangle-title {
+    font-size: 3rem;
+  }
+  
+  .rectangle-text {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== PAGE 3 - FEATURED FILMS - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .films-heading {
+    font-size: 6.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .film-card {
+    width: 300px;
+    height: 500px;
+  }
+  
+  .card-title {
+    font-size: 2.5rem;
+  }
+  
+  .card-stats {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.9rem;
+  }
+  
+  .join-btn {
+    padding: 0.45rem 1.3rem;
+    font-size: 0.8rem;
+  }
+  
+  .featured-card .card-content {
+    padding: 1.3rem;
+    gap: 0.7rem;
+  }
+  
+  .slider-container {
+    gap: 1.2rem;
+  }
+  
+  .scroll-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .featured-films {
+    padding: 3rem 1.5rem;
+  }
+  
+  .films-heading {
+    font-size: 5rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .film-card {
+    width: 260px;
+    height: 460px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+  }
+  
+  .card-stats {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .join-btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.75rem;
+  }
+  
+  .featured-card .card-content {
+    padding: 1.2rem;
+    gap: 0.6rem;
+  }
+  
+  .slider-container {
+    gap: 1rem;
+    padding: 0.8rem 0.4rem;
+  }
+  
+  .slider-wrapper {
+    margin-bottom: 1.5rem;
+  }
+  
+  .scroll-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.6rem;
+  }
+  
+  .button-container {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .featured-films {
+    padding: 2rem 1.2rem;
+  }
+  
+  .films-heading {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .film-card {
+    width: 240px;
+    height: 430px;
+  }
+  
+  .card-title {
+    font-size: 1.6rem;
+  }
+  
+  .card-stats {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.7rem;
+  }
+  
+  .join-btn {
+    padding: 0.35rem 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .featured-card .card-content {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .slider-container {
+    gap: 0.8rem;
+    padding: 0.6rem 0.3rem;
+  }
+  
+  .scroll-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+  }
+  
+  .button-container {
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* For very small laptops (under 900px - keeping your existing 768px and 480px breakpoints handle this well) */
+/* But adding a slight adjustment for 820px-900px range */
+@media (max-width: 900px) and (min-width: 769px) {
+  .films-heading {
+    font-size: 3.5rem;
+  }
+  
+  .film-card {
+    width: 220px;
+    height: 400px;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+  }
+  
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .films-container {
+    max-width: 1600px;
+  }
+  
+  .film-card {
+    width: 400px;
+    height: 600px;
+  }
+  
+  .card-title {
+    font-size: 3.5rem;
+  }
+  
+  .films-heading {
+    font-size: 9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== PAGE 4 - SERVICES - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .services {
+    padding: 3rem 0 0 0;
+  }
+  
+  .services-container {
+    padding: 0 1.5rem;
+  }
+  
+  /* Top section WE/DO */
+  .we-text, .do-text {
+    font-size: 6.5rem;
+    letter-spacing: 6px;
+  }
+  
+  .service-item {
+    font-size: 1.6rem;
+    padding: 0.4rem 1.5rem;
+  }
+  
+  .vertical-slider-container {
+    gap: 1.2rem;
+  }
+  
+  .services-top {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Orange Banner */
+  .orange-banner-full {
+    padding: 2.5rem 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .orange-banner-content {
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .banner-headline {
+    font-size: 3.2rem;
+  }
+  
+  .banner-paragraph {
+    font-size: 1.1rem;
+  }
+  
+  .banner-service-tag {
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Sliders */
+  .service-slide-card {
+    width: 300px;
+    height: 190px;
+  }
+  
+  .service-slide-card:hover {
+    width: 360px;
+    height: 240px;
+  }
+  
+  .slider-track {
+    gap: 1.2rem;
+  }
+  
+  .slider-container-new {
+    margin: 1.2rem 0;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .services {
+    padding: 2.5rem 0 0 0;
+  }
+  
+  .services-container {
+    padding: 0 1.2rem;
+  }
+  
+  /* Top section - changes to column layout */
+  .services-top {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .we-text, .do-text {
+    font-size: 5rem;
+    letter-spacing: 5px;
+  }
+  
+  /* Vertical slider becomes horizontal on laptops */
+  .vertical-slider-wrapper {
+    width: 100%;
+  }
+  
+  .vertical-slider-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .service-item {
+    font-size: 1.3rem;
+    padding: 0.4rem 1.2rem;
+    white-space: nowrap;
+  }
+  
+  /* Orange Banner */
+  .orange-banner-full {
+    padding: 2rem 1.2rem;
+    border-radius: 30px;
+  }
+  
+  .orange-banner-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .banner-left {
+    text-align: center;
+  }
+  
+  .banner-headline {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .banner-right {
+    text-align: center;
+  }
+  
+  .banner-paragraph {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .banner-service-tag {
+    font-size: 0.85rem;
+    padding: 0.35rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Sliders */
+  .service-slide-card {
+    width: 260px;
+    height: 165px;
+  }
+  
+  .service-slide-card:hover {
+    width: 310px;
+    height: 200px;
+  }
+  
+  .slider-track {
+    gap: 1rem;
+  }
+  
+  .slider-container-new {
+    margin: 1rem 0;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .services {
+    padding: 2rem 0 0 0;
+  }
+  
+  .services-container {
+    padding: 0 1rem;
+  }
+  
+  /* Top section */
+  .services-top {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .we-text, .do-text {
+    font-size: 4rem;
+    letter-spacing: 4px;
+  }
+  
+  .vertical-slider-container {
+    gap: 0.8rem;
+  }
+  
+  .service-item {
+    font-size: 1.1rem;
+    padding: 0.3rem 1rem;
+  }
+  
+  /* Orange Banner */
+  .orange-banner-full {
+    padding: 1.8rem 1rem;
+    border-radius: 25px;
+  }
+  
+  .orange-banner-content {
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .banner-headline {
+    font-size: 2rem;
+  }
+  
+  .banner-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+  
+  .banner-service-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.9rem;
+  }
+  
+  /* Sliders */
+  .service-slide-card {
+    width: 230px;
+    height: 145px;
+  }
+  
+  .service-slide-card:hover {
+    width: 270px;
+    height: 175px;
+  }
+  
+  .slider-track {
+    gap: 0.8rem;
+  }
+  
+  .slider-container-new {
+    margin: 0.8rem 0;
+  }
+}
+
+/* For very small laptops (820px-900px) */
+@media (max-width: 900px) and (min-width: 769px) {
+  .we-text, .do-text {
+    font-size: 3.5rem;
+  }
+  
+  .service-item {
+    font-size: 1rem;
+    padding: 0.25rem 0.8rem;
+  }
+  
+  .banner-headline {
+    font-size: 1.8rem;
+  }
+  
+  .banner-paragraph {
+    font-size: 0.85rem;
+  }
+  
+  .service-slide-card {
+    width: 200px;
+    height: 130px;
+  }
+  
+  .service-slide-card:hover {
+    width: 240px;
+    height: 160px;
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .services-container {
+    max-width: 1600px;
+  }
+  
+  .we-text, .do-text {
+    font-size: 10rem;
+  }
+  
+  .service-item {
+    font-size: 2.2rem;
+  }
+  
+  .banner-headline {
+    font-size: 4.5rem;
+  }
+  
+  .service-slide-card {
+    width: 400px;
+    height: 250px;
+  }
+  
+  .service-slide-card:hover {
+    width: 480px;
+    height: 320px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== PAGE 5 - STUDIO REEL - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .studio-reel {
+    padding: 3rem 2rem;
+  }
+  
+  .reel-container {
+    max-width: 1400px;
+    gap: 1.8rem;
+  }
+  
+  .side-rectangle {
+    width: 120px;
+    height: 200px;
+  }
+  
+  .main-reel {
+    height: 650px;
+  }
+  
+  .reel-heading {
+    font-size: 7.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .reel-content {
+    padding: 2.5rem;
+  }
+  
+  .reel-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+  }
+  
+  .reel-footer-text {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .reel-line {
+    max-width: 50px;
+  }
+  
+  .reel-heading-wrapper {
+    gap: 1.2rem;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .studio-reel {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .reel-container {
+    max-width: 1200px;
+    gap: 1.5rem;
+  }
+  
+  .side-rectangle {
+    width: 100px;
+    height: 180px;
+  }
+  
+  .main-reel {
+    height: 550px;
+  }
+  
+  .reel-heading {
+    font-size: 5.5rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  
+  .reel-content {
+    padding: 2rem;
+  }
+  
+  .reel-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .reel-footer-text {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .reel-line {
+    max-width: 45px;
+  }
+  
+  .reel-heading-wrapper {
+    gap: 1rem;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .studio-reel {
+    padding: 2rem 1.2rem;
+  }
+  
+  .reel-container {
+    gap: 1.2rem;
+  }
+  
+  .side-rectangle {
+    width: 80px;
+    height: 160px;
+  }
+  
+  .main-reel {
+    height: 480px;
+  }
+  
+  .reel-heading {
+    font-size: 4rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  
+  .reel-content {
+    padding: 1.8rem;
+  }
+  
+  .reel-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+  
+  .reel-footer-text {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+  
+  .reel-line {
+    max-width: 35px;
+  }
+  
+  .reel-heading-wrapper {
+    gap: 0.8rem;
+  }
+}
+
+/* For the transition zone between laptop and tablet (820px-900px) */
+@media (max-width: 900px) and (min-width: 769px) {
+  .studio-reel {
+    padding: 1.8rem 1rem;
+  }
+  
+  .reel-container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .side-rectangle {
+    width: 160px;
+    height: 50px;
+    order: 2;
+  }
+  
+  .main-reel {
+    width: 100%;
+    height: 450px;
+    order: 1;
+  }
+  
+  .reel-heading {
+    font-size: 3.5rem;
+    white-space: nowrap;
+  }
+  
+  .reel-heading-wrapper {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .reel-line {
+    width: 60px;
+    max-width: 60px;
+    height: 2px;
+  }
+  
+  .reel-content {
+    padding: 1.5rem;
+  }
+  
+  .reel-subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .reel-footer-text {
+    font-size: 0.7rem;
+  }
+}
+
+/* Optional: For very wide screens (maintains proportions) */
+@media (min-width: 1920px) {
+  .studio-reel {
+    padding: 4rem 0;
+  }
+  
+  .reel-container {
+    max-width: 1800px;
+    gap: 2.5rem;
+  }
+  
+  .side-rectangle {
+    width: 160px;
+    height: 260px;
+  }
+  
+  .main-reel {
+    height: 850px;
+  }
+  
+  .reel-heading {
+    font-size: 11rem;
+  }
+  
+  .reel-content {
+    padding: 3.5rem;
+  }
+  
+  .reel-subtitle {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+  
+  .reel-footer-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .reel-line {
+    max-width: 80px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== PAGE 6 - STORIES GALLERY - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .stories-gallery {
+    padding: 5rem 2rem 3.5rem 2rem;
+  }
+  
+  .gallery-container {
+    max-width: 1200px;
+  }
+  
+  .gallery-subtitle {
+    font-size: 3.8rem;
+    letter-spacing: 5px;
+    margin-top: 8%;
+  }
+  
+  .gallery-title {
+    font-size: 7.5rem;
+    letter-spacing: 7px;
+  }
+  
+  .gallery-heading-wrapper {
+    margin-bottom: 2.5rem;
+  }
+  
+  .filter-buttons {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .gallery-description {
+    font-size: 0.95rem;
+    max-width: 750px;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .stories-gallery {
+    padding: 4rem 1.8rem 3rem 1.8rem;
+  }
+  
+  .gallery-container {
+    max-width: 1000px;
+  }
+  
+  .gallery-subtitle {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-top: 5%;
+    line-height: 0.5;
+  }
+  
+  .gallery-title {
+    font-size: 6rem;
+    letter-spacing: 6px;
+  }
+  
+  .gallery-heading-wrapper {
+    margin-bottom: 2rem;
+  }
+  
+  .filter-buttons {
+    gap: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1.3rem;
+    font-size: 0.8rem;
+  }
+  
+  .gallery-description {
+    font-size: 0.9rem;
+    max-width: 700px;
+    line-height: 1.5;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .stories-gallery {
+    padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+  }
+  
+  .gallery-container {
+    max-width: 900px;
+  }
+  
+  .gallery-subtitle {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    margin-top: 3%;
+    line-height: 0.6;
+  }
+  
+  .gallery-title {
+    font-size: 4.5rem;
+    letter-spacing: 5px;
+  }
+  
+  .gallery-heading-wrapper {
+    margin-bottom: 1.8rem;
+  }
+  
+  .filter-buttons {
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .gallery-description {
+    font-size: 0.85rem;
+    max-width: 650px;
+    line-height: 1.5;
+  }
+}
+
+/* For the transition zone (820px-900px) - bridges to your tablet breakpoint */
+@media (max-width: 900px) and (min-width: 769px) {
+  .stories-gallery {
+    padding: 3rem 1.2rem 2rem 1.2rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-top: 2%;
+  }
+  
+  .gallery-title {
+    font-size: 3.8rem;
+    letter-spacing: 4px;
+  }
+  
+  .filter-buttons {
+    gap: 0.7rem;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .gallery-description {
+    font-size: 0.8rem;
+    max-width: 600px;
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .stories-gallery {
+    padding: 7rem 2rem 5rem 2rem;
+  }
+  
+  .gallery-container {
+    max-width: 1600px;
+  }
+  
+  .gallery-subtitle {
+    font-size: 5.5rem;
+    letter-spacing: 8px;
+    margin-top: 12%;
+  }
+  
+  .gallery-title {
+    font-size: 11rem;
+    letter-spacing: 10px;
+  }
+  
+  .filter-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .gallery-description {
+    font-size: 1.1rem;
+    max-width: 900px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ========== PAGE 7 - JOIN THE MOVEMENT - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .movement-hero {
+    min-height: 100vh;
+  }
+  
+  .movement-container {
+    max-width: 800px;
+    padding: 1.8rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 4.8rem;
+    letter-spacing: 7px;
+    line-height: 0.35;
+  }
+  
+  .movement-title {
+    font-size: 6rem;
+    letter-spacing: 8px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .movement-description {
+    font-size: 1.2rem;
+    max-width: 550px;
+    margin-bottom: 1.8rem;
+  }
+  
+  .movement-btn {
+    padding: 0.8rem 2.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .movement-dots {
+    margin-top: 2.5rem;
+    gap: 0.9rem;
+  }
+  
+  .dot {
+    width: 11px;
+    height: 11px;
+  }
+  
+  .dot.active {
+    width: 28px;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .movement-hero {
+    min-height: 95vh;
+  }
+  
+  .movement-container {
+    max-width: 700px;
+    padding: 1.5rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 3.8rem;
+    letter-spacing: 6px;
+    line-height: 0.4;
+  }
+  
+  .movement-title {
+    font-size: 5rem;
+    letter-spacing: 7px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .movement-description {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  .movement-btn {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .movement-dots {
+    margin-top: 2rem;
+    gap: 0.8rem;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .dot.active {
+    width: 25px;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .movement-hero {
+    min-height: 90vh;
+  }
+  
+  .movement-container {
+    max-width: 600px;
+    padding: 1.2rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    line-height: 0.45;
+  }
+  
+  .movement-title {
+    font-size: 4rem;
+    letter-spacing: 6px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .movement-description {
+    font-size: 1rem;
+    max-width: 450px;
+    margin-bottom: 1.3rem;
+    line-height: 1.35;
+  }
+  
+  .movement-btn {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .movement-dots {
+    margin-top: 1.8rem;
+    gap: 0.7rem;
+  }
+  
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+  
+  .dot.active {
+    width: 22px;
+  }
+}
+
+/* For the transition zone (820px-900px) - bridges to your tablet breakpoint */
+@media (max-width: 900px) and (min-width: 769px) {
+  .movement-hero {
+    min-height: 85vh;
+  }
+  
+  .movement-container {
+    max-width: 550px;
+    padding: 1rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    line-height: 0.5;
+  }
+  
+  .movement-title {
+    font-size: 3.2rem;
+    letter-spacing: 5px;
+  }
+  
+  .movement-description {
+    font-size: 0.95rem;
+    max-width: 400px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .movement-btn {
+    padding: 0.55rem 1.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .movement-dots {
+    margin-top: 1.5rem;
+    gap: 0.6rem;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .dot.active {
+    width: 20px;
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .movement-hero {
+    min-height: 108vh;
+  }
+  
+  .movement-container {
+    max-width: 1000px;
+    padding: 2.5rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 6.5rem;
+    letter-spacing: 10px;
+  }
+  
+  .movement-title {
+    font-size: 8rem;
+    letter-spacing: 12px;
+  }
+  
+  .movement-description {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .movement-btn {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+  }
+  
+  .movement-dots {
+    margin-top: 3.5rem;
+    gap: 1.2rem;
+  }
+  
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .dot.active {
+    width: 35px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== FOOTER - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .footer {
+    padding: 3.5rem 3rem 2rem 3rem;
+  }
+  
+  .footer-container {
+    max-width: 1400px;
+  }
+  
+  .footer-left {
+    width: 35%;
+  }
+  
+  .footer-logo-img {
+    max-width: 700px;
+  }
+  
+  .footer-tagline {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .footer-right {
+    width: 65%;
+    padding-left: 150px;
+    gap: 5rem;
+  }
+  
+  .footer-col-title {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.7rem;
+  }
+  
+  .footer-nav-grid {
+    gap: 0.8rem 1.5rem;
+  }
+  
+  .social-img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .footer-social-icons {
+    gap: 1rem;
+  }
+  
+  .contact-img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .contact-text {
+    font-size: 0.85rem;
+  }
+  
+  .footer-contact-item {
+    gap: 0.7rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.8rem;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .footer {
+    padding: 3rem 2.5rem 1.8rem 2.5rem;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+  }
+  
+  .footer-left {
+    width: 38%;
+  }
+  
+  .footer-logo-img {
+    max-width: 600px;
+  }
+  
+  .footer-tagline {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .footer-right {
+    width: 62%;
+    padding-left: 80px;
+    gap: 3rem;
+  }
+  
+  .footer-col-title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .footer-nav-grid {
+    gap: 0.6rem 1.2rem;
+  }
+  
+  .nav-col {
+    min-width: 200px;
+  }
+  
+  .social-img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .footer-social-icons {
+    gap: 0.9rem;
+  }
+  
+  .contact-img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-text {
+    font-size: 0.8rem;
+  }
+  
+  .footer-contact-item {
+    gap: 0.6rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .footer {
+    padding: 2.5rem 2rem 1.5rem 2rem;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-left {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer-logo-img {
+    max-width: 500px;
+    margin: 0 auto 0.5rem auto;
+  }
+  
+  .footer-tagline {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.85rem;
+  }
+  
+  .footer-right {
+    width: 100%;
+    padding-left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-col {
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  .footer-col-title {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .footer-links a {
+    font-size: 0.8rem;
+    white-space: normal;
+  }
+  
+  .footer-nav-grid {
+    gap: 0.5rem 1rem;
+  }
+  
+  .nav-col {
+    min-width: auto;
+  }
+  
+  .social-img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .footer-social-icons {
+    justify-content: flex-start;
+  }
+  
+  .footer-contact-item {
+    justify-content: flex-start;
+  }
+  
+  .contact-text {
+    font-size: 0.8rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+  }
+}
+
+/* For the transition zone (820px-900px) - bridges to your tablet breakpoint */
+@media (max-width: 900px) and (min-width: 769px) {
+  .footer {
+    padding: 2rem 1.5rem 1.2rem 1.5rem;
+  }
+  
+  .footer-logo-img {
+    max-width: 400px;
+  }
+  
+  .footer-tagline {
+    font-size: 0.8rem;
+  }
+  
+  .footer-right {
+    gap: 1.5rem;
+  }
+  
+  .footer-col {
+    min-width: 160px;
+  }
+  
+  .footer-col-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.75rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-nav-grid {
+    gap: 0.4rem 0.8rem;
+  }
+  
+  .social-img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .footer-social-icons {
+    gap: 0.8rem;
+  }
+  
+  .contact-img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .contact-text {
+    font-size: 0.75rem;
+  }
+  
+  .footer-contact-item {
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .footer {
+    padding: 5rem 5rem 2.5rem 5rem;
+  }
+  
+  .footer-container {
+    max-width: 1800px;
+  }
+  
+  .footer-left {
+    width: 32%;
+  }
+  
+  .footer-logo-img {
+    max-width: 900px;
+  }
+  
+  .footer-tagline {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+  
+  .footer-right {
+    width: 68%;
+    padding-left: 250px;
+    gap: 8rem;
+  }
+  
+  .footer-col-title {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.8rem;
+  }
+  
+  .footer-links a {
+    font-size: 1rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.9rem;
+  }
+  
+  .social-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .contact-text {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== WORK PAGE - HERO RECTANGLE - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .work-page {
+    padding-top: 80px;
+  }
+  
+  .work-rectangle {
+    width: 92%;
+    height: calc(90vh - 80px);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .work-content {
+    max-width: 900px;
+    padding: 1.8rem;
+  }
+  
+  .work-title {
+    font-size: 7rem;
+    letter-spacing: 6px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .work-description {
+    font-size: 1.2rem;
+    max-width: 700px;
+    bottom: 2.5rem;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .work-page {
+    padding-top: 75px;
+  }
+  
+  .work-rectangle {
+    width: 90%;
+    height: calc(88vh - 75px);
+    border-radius: 18px;
+  }
+  
+  .work-content {
+    max-width: 800px;
+    padding: 1.5rem;
+  }
+  
+  .work-title {
+    font-size: 5.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
+  }
+  
+  .work-description {
+    font-size: 1rem;
+    max-width: 650px;
+    bottom: 2rem;
+    line-height: 1.5;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .work-page {
+    padding-top: 70px;
+  }
+  
+  .work-rectangle {
+    width: 88%;
+    height: calc(85vh - 70px);
+    border-radius: 16px;
+  }
+  
+  .work-content {
+    max-width: 700px;
+    padding: 1.2rem;
+  }
+  
+  .work-title {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .work-description {
+    font-size: 0.9rem;
+    max-width: 550px;
+    bottom: 1.8rem;
+    line-height: 1.45;
+  }
+}
+
+/* For the transition zone (820px-900px) - bridges to your tablet breakpoint */
+@media (max-width: 900px) and (min-width: 769px) {
+  .work-page {
+    padding-top: 65px;
+  }
+  
+  .work-rectangle {
+    width: 85%;
+    height: calc(82vh - 65px);
+    border-radius: 14px;
+  }
+  
+  .work-content {
+    max-width: 600px;
+    padding: 1rem;
+  }
+  
+  .work-title {
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .work-description {
+    font-size: 0.85rem;
+    max-width: 500px;
+    bottom: 1.5rem;
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .work-page {
+    padding-top: 90px;
+  }
+  
+  .work-rectangle {
+    width: 92%;
+    height: calc(92vh - 90px);
+  }
+  
+  .work-content {
+    max-width: 1200px;
+    padding: 2.5rem;
+  }
+  
+  .work-title {
+    font-size: 11rem;
+    letter-spacing: 10px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .work-description {
+    font-size: 1.6rem;
+    max-width: 900px;
+    bottom: 3.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ========== WORK GALLERY SECTION - LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  .work-gallery {
+    padding: 5rem 3rem;
+  }
+  
+  /* Gallery Header */
+  .gallery-header {
+    gap: 2.5rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .gallery-main-description {
+    font-size: 1.3rem;
+    max-width: 450px;
+  }
+  
+  /* Gallery Cards */
+  .gallery-cards {
+    gap: 1.2rem;
+    padding: 0.8rem 0.4rem;
+  }
+  
+  .gallery-card {
+    width: 360px;
+    height: 500px;
+  }
+  
+  .card-content {
+    padding: 1.8rem;
+  }
+  
+  .gallery-card-heading {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .gallery-card-paragraph {
+    font-size: 0.95rem;
+    padding-top: 250px;
+  }
+  
+  .gallery-card-btn {
+    padding: 0.55rem 1.3rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  .work-gallery {
+    padding: 4rem 2.5rem;
+  }
+  
+  /* Gallery Header */
+  .gallery-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  
+  .gallery-main-description {
+    font-size: 1.1rem;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* Gallery Cards - Switch to horizontal scroll instead of wrap */
+  .gallery-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    padding: 0.8rem 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Show scrollbar hint on laptops */
+  .gallery-cards::after {
+    content: '';
+    padding-right: 0.5rem;
+  }
+  
+  .gallery-card {
+    flex: 0 0 auto;
+    width: 320px;
+    height: 480px;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .gallery-card-heading {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .gallery-card-paragraph {
+    font-size: 0.9rem;
+    padding-top: 220px;
+    line-height: 1.45;
+  }
+  
+  .gallery-card-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Small Laptops / Chromebooks (900px - 1023px) */
+@media (max-width: 1023px) {
+  .work-gallery {
+    padding: 3.5rem 2rem;
+  }
+  
+  /* Gallery Header */
+  .gallery-header {
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .gallery-main-description {
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+  
+  /* Gallery Cards */
+  .gallery-cards {
+    gap: 1rem;
+    padding: 0.6rem 0.4rem;
+  }
+  
+  .gallery-card {
+    width: 280px;
+    height: 450px;
+  }
+  
+  .card-content {
+    padding: 1.3rem;
+  }
+  
+  .gallery-card-heading {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .gallery-card-paragraph {
+    font-size: 0.85rem;
+    padding-top: 200px;
+    line-height: 1.4;
+  }
+  
+  .gallery-card-btn {
+    padding: 0.45rem 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* For the transition zone (820px-900px) - bridges to your tablet breakpoint */
+@media (max-width: 900px) and (min-width: 769px) {
+  .work-gallery {
+    padding: 3rem 1.5rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 2.2rem;
+  }
+  
+  .gallery-main-description {
+    font-size: 0.95rem;
+    max-width: 450px;
+  }
+  
+  .gallery-card {
+    width: 260px;
+    height: 430px;
+  }
+  
+  .gallery-card-heading {
+    font-size: 1.2rem;
+  }
+  
+  .gallery-card-paragraph {
+    font-size: 0.8rem;
+    padding-top: 180px;
+  }
+  
+  .gallery-card-btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* Optional: For very wide screens */
+@media (min-width: 1920px) {
+  .work-gallery {
+    padding: 7rem 5rem;
+  }
+  
+  .gallery-header {
+    gap: 4rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 5rem;
+    letter-spacing: 5px;
+  }
+  
+  .gallery-main-description {
+    font-size: 1.7rem;
+    max-width: 600px;
+  }
+  
+  .gallery-cards {
+    gap: 2rem;
+  }
+  
+  .gallery-card {
+    width: 480px;
+    height: 620px;
+  }
+  
+  .card-content {
+    padding: 2.5rem;
+  }
+  
+  .gallery-card-heading {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+  .gallery-card-paragraph {
+    font-size: 1.1rem;
+    padding-top: 350px;
+  }
+  
+  .gallery-card-btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Optional: Add scroll hint for laptop users */
+@media (max-width: 1365px) and (min-width: 1024px) {
+  .gallery-cards {
+    scrollbar-width: thin;
+    scrollbar-color: #FF8F35 rgba(253, 253, 246, 0.2);
+  }
+  
+  .gallery-cards::-webkit-scrollbar {
+    display: block;
+    height: 4px;
+  }
+  
+  .gallery-cards::-webkit-scrollbar-track {
+    background: rgba(253, 253, 246, 0.1);
+    border-radius: 10px;
+  }
+  
+  .gallery-cards::-webkit-scrollbar-thumb {
+    background: #FF8F35;
+    border-radius: 10px;
   }
 }
