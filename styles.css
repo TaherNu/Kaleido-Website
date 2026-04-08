@@ -66,6 +66,7 @@ body {
 .logo-secondary {
   opacity: 0;
   position: absolute;
+  height: 60px;
 }
 
 /* When scrolled past hero, switch logos */
@@ -7999,5 +8000,429 @@ body.scrolled .logo-secondary {
   
   .availability-paragraph {
     font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== LAPTOP BREAKPOINTS ========== */
+
+/* Large Laptops / Small Desktops (1366px - 1600px) */
+@media (max-width: 1600px) {
+  /* Hero section */
+  .kaleido-main {
+    font-size: 10rem;
+  }
+  
+  .presents {
+    font-size: 3rem;
+  }
+  
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    font-size: 1.8rem;
+  }
+  
+  /* Story section */
+  .story-heading {
+    font-size: 7rem;
+  }
+  
+  .rectangle {
+    width: 700px;
+    height: 300px;
+  }
+  
+  .rectangle-title {
+    font-size: 2.2rem;
+  }
+  
+  /* Films section */
+  .films-heading {
+    font-size: 6rem;
+  }
+  
+  .film-card {
+    width: 300px;
+    height: 500px;
+  }
+  
+  /* Services section */
+  .we-text, .do-text {
+    font-size: 10rem;
+  }
+  
+  .service-item {
+    font-size: 1.5rem;
+  }
+  
+  /* Studio Reel */
+  .reel-heading {
+    font-size: 7rem;
+  }
+  
+  /* Stories Gallery */
+  .gallery-title {
+    font-size: 7rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 3rem;
+  }
+  
+  /* Movement Hero */
+  .movement-title {
+    font-size: 5.5rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 4rem;
+  }
+  
+  /* Footer */
+  .footer-right {
+    padding-left: 100px;
+  }
+}
+
+/* Standard Laptops (1024px - 1365px) */
+@media (max-width: 1365px) {
+  /* Hero section */
+  .kaleido-main {
+    font-size: 8rem;
+  }
+  
+  .presents {
+    font-size: 2.5rem;
+  }
+  
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    font-size: 1.5rem;
+  }
+  
+  .bottom-paragraph {
+    font-size: 0.9rem;
+  }
+  
+  /* Story section */
+  .story-heading {
+    font-size: 5rem;
+  }
+  
+  .story-subheading {
+    font-size: 1rem;
+  }
+  
+  .rectangle {
+    width: 550px;
+    height: 280px;
+    padding: 1.8rem;
+  }
+  
+  .rectangle-title {
+    font-size: 1.8rem;
+  }
+  
+  .rectangle-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Films section */
+  .films-heading {
+    font-size: 4.5rem;
+  }
+  
+  .film-card {
+    width: 260px;
+    height: 460px;
+  }
+  
+  .featured-card .card-title {
+    font-size: 1.3rem;
+  }
+  
+  /* Services section */
+  .we-text, .do-text {
+    font-size: 7rem;
+  }
+  
+  .service-item {
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+  }
+  
+  .banner-headline {
+    font-size: 2.5rem;
+  }
+  
+  .banner-paragraph {
+    font-size: 1rem;
+  }
+  
+  /* Studio Reel */
+  .main-reel {
+    height: 550px;
+  }
+  
+  .reel-heading {
+    font-size: 5rem;
+  }
+  
+  /* Stories Gallery */
+  .gallery-title {
+    font-size: 5rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 2rem;
+  }
+  
+  /* Movement Hero */
+  .movement-title {
+    font-size: 4rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 3rem;
+  }
+  
+  .movement-description {
+    font-size: 1rem;
+  }
+  
+  /* Work Page */
+  .work-title {
+    font-size: 6rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .gallery-main-description {
+    font-size: 1rem;
+  }
+  
+  /* About Page */
+  .about-hero-heading {
+    font-size: 3.5rem;
+  }
+  
+  .who-heading, .vision-heading {
+    font-size: 4rem;
+  }
+  
+  .who-paragraph, .vision-paragraph {
+    font-size: 1.1rem;
+  }
+  
+  .approach-heading {
+    font-size: 3rem;
+  }
+  
+  .approach-text {
+    font-size: 1.1rem;
+  }
+  
+  .matters-heading {
+    font-size: 3.5rem;
+  }
+  
+  /* Services Page */
+  .services-hero-heading {
+    font-size: 4rem;
+  }
+  
+  .creative-title {
+    font-size: 4rem;
+  }
+  
+  /* Events Page */
+  .events-hero-heading {
+    font-size: 4rem;
+  }
+  
+  .events-left-heading {
+    font-size: 5rem;
+  }
+  
+  /* Contact Page */
+  .contact-title {
+    font-size: 5rem;
+  }
+  
+  .form-heading {
+    font-size: 4rem;
+  }
+  
+  /* Footer */
+  .footer-right {
+    padding-left: 50px;
+    gap: 2rem;
+  }
+  
+  .footer-nav-grid {
+    gap: 1rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Laptops / Large Tablets (900px - 1023px) */
+@media (max-width: 1023px) {
+  /* Hero section */
+  .kaleido-main {
+    font-size: 6rem;
+  }
+  
+  .presents {
+    font-size: 2rem;
+  }
+  
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    font-size: 1.2rem;
+  }
+  
+  /* Story section */
+  .story-heading {
+    font-size: 4rem;
+  }
+  
+  .rectangle {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 250px;
+  }
+  
+  .rectangles-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .rectangle-left, .rectangle-right {
+    transform: translateY(0) rotate(-2deg);
+  }
+  
+  /* Films section */
+  .films-heading {
+    font-size: 3.5rem;
+  }
+  
+  /* Services section */
+  .we-text, .do-text {
+    font-size: 5rem;
+  }
+  
+  .services-we-do-top {
+    flex-direction: column;
+  }
+  
+  .vertical-slider-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Studio Reel */
+  .reel-heading {
+    font-size: 3.5rem;
+  }
+  
+  /* Stories Gallery */
+  .gallery-title {
+    font-size: 3.5rem;
+  }
+  
+  /* Movement Hero */
+  .movement-title {
+    font-size: 3rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 2rem;
+  }
+  
+  /* Work Page */
+  .work-title {
+    font-size: 4rem;
+  }
+  
+  /* About Page */
+  .about-hero-heading {
+    font-size: 2.8rem;
+  }
+  
+  .who-heading, .vision-heading {
+    font-size: 3rem;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-left, .footer-right {
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .footer-tagline {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .footer-right {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Optional: Scale everything proportionally using viewport units */
+/* Add this as an alternative approach at the very top of your CSS */
+:root {
+  /* Base font size that scales with viewport width */
+  font-size: calc(14px + 0.2vw);
+}
+
+@media (min-width: 1920px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1366px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 13px;
   }
 }
