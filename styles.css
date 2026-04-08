@@ -8402,27 +8402,117 @@ body.scrolled .logo-secondary {
   }
 }
 
-/* Optional: Scale everything proportionally using viewport units */
-/* Add this as an alternative approach at the very top of your CSS */
-:root {
-  /* Base font size that scales with viewport width */
-  font-size: calc(14px + 0.2vw);
-}
-
-@media (min-width: 1920px) {
-  :root {
-    font-size: 18px;
+/* ========== MEDIUM LAPTOPS (1000px - 1365px) ========== */
+@media (max-width: 1365px) and (min-width: 1001px) {
+  /* Hero section */
+  .kaleido-main {
+    font-size: 8rem;
   }
-}
-
-@media (max-width: 1366px) {
-  :root {
-    font-size: 14px;
+  
+  .presents {
+    font-size: 2.5rem;
   }
-}
-
-@media (max-width: 1024px) {
-  :root {
-    font-size: 13px;
+  
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    font-size: 1.5rem;
+  }
+  
+  /* Story section */
+  .story-heading {
+    font-size: 6rem;
+  }
+  
+  .rectangle {
+    width: 600px;
+    height: 300px;
+  }
+  
+  /* Films section */
+  .films-heading {
+    font-size: 5rem;
+  }
+  
+  .film-card {
+    width: 280px;
+    height: 480px;
+  }
+  
+  /* Services section */
+  .we-text, .do-text {
+    font-size: 8rem;
+  }
+  
+  .service-item {
+    font-size: 1.4rem;
+  }
+  
+  /* Studio Reel */
+  .reel-heading {
+    font-size: 6rem;
+  }
+  
+  /* Gallery */
+  .gallery-title {
+    font-size: 6rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 3rem;
+  }
+  
+  /* Movement */
+  .movement-title {
+    font-size: 5rem;
+  }
+  
+  .movement-subtitle {
+    font-size: 4rem;
+  }
+  
+  /* Work Page */
+  .work-title {
+    font-size: 7rem;
+  }
+  
+  /* About Page */
+  .about-hero-heading {
+    font-size: 4rem;
+  }
+  
+  .who-heading, .vision-heading {
+    font-size: 5rem;
+  }
+  
+  /* Services Page */
+  .services-hero-heading {
+    font-size: 5rem;
+  }
+  
+  .creative-title {
+    font-size: 5rem;
+  }
+  
+  /* Events Page */
+  .events-hero-heading {
+    font-size: 5rem;
+  }
+  
+  /* Contact Page */
+  .contact-title {
+    font-size: 6rem;
+  }
+  
+  .form-heading {
+    font-size: 5rem;
+  }
+  
+  /* Footer */
+  .footer-right {
+    padding-left: 80px;
+    gap: 3rem;
+  }
+  
+  .footer-col-title {
+    font-size: 1.2rem;
   }
 }
