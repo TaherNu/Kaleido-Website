@@ -10,16 +10,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Same Navigation Bar -->
   <nav class="navbar">
-    <div class="logo">KALEIDO PICTURES</div>
+    <div class="logo">
+      <img src="Images/KLogo.png" alt="Kaleido Pictures" class="logo-img logo-primary">
+      <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="logo-img logo-secondary">
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="work.html" class="active">Work</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="creative.html">Creative Services</a></li>
-      <li><a href="#">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><button class="work-with-us">Work With Us</button></li>
     </ul>
@@ -49,53 +51,49 @@
       <div class="gallery-cards">
         <!-- Card 1 - NARRATIVE FILM -->
         <div class="gallery-card">
-          <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format');"></div>
-          <div class="card-overlay"></div>
+          <div class="card-bg" style="background-image: url('Images/KWork_3.png');"></div>
           <div class="card-content">
-            <h3 class="card-heading">NARRATIVE<br>FILM</h3>
-            <p class="card-paragraph">
+            <h3 class="gallery-card-heading">NARRATIVE<br>FILM</h3>
+            <p class="gallery-card-paragraph">
               Story-driven projects that focus on character, emotion, and atmosphere—crafted through cinematic visuals that bring each narrative to life with depth and intention.
             </p>
-            <button class="card-btn">View Films →</button>
+            <button class="gallery-card-btn">View Films →</button>
           </div>
         </div>
     
         <!-- Card 2 - COMMERCIAL STORYTELLING -->
         <div class="gallery-card">
-          <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format');"></div>
-          <div class="card-overlay"></div>
+          <div class="card-bg" style="background-image: url('Images/KWork_4.png');"></div>
           <div class="card-content">
-            <h3 class="card-heading">COMMERCIAL<br>STORYTELLING</h3>
-            <p class="card-paragraph">
+            <h3 class="gallery-card-heading">COMMERCIAL<br>STORYTELLING</h3>
+            <p class="gallery-card-paragraph">
               Creative work designed to communicate ideas with clarity and impact, blending visual storytelling with brand identity to create engaging and memorable experiences.
             </p>
-            <button class="card-btn">VIEW COMMERCIALS →</button>
+            <button class="gallery-card-btn">VIEW COMMERCIALS →</button>
           </div>
         </div>
     
         <!-- Card 3 - EXPERIMENTAL VISUALS -->
         <div class="gallery-card">
-          <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=800&auto=format');"></div>
-          <div class="card-overlay"></div>
+          <div class="card-bg" style="background-image: url('Images/KWork_5.png');"></div>
           <div class="card-content">
-            <h3 class="card-heading">EXPERIMENTAL<br>VISUALS</h3>
-            <p class="card-paragraph">
+            <h3 class="gallery-card-heading">EXPERIMENTAL<br>VISUALS</h3>
+            <p class="gallery-card-paragraph">
               A collection of explorative pieces that challenge traditional storytelling, focusing on mood, form, and visual expression to push creative boundaries.
             </p>
-            <button class="card-btn">VIEW EXPERIMENTS →</button>
+            <button class="gallery-card-btn">VIEW EXPERIMENTS →</button>
           </div>
         </div>
     
         <!-- Card 4 - CONCEPT DEVELOPMENT -->
         <div class="gallery-card">
-          <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=800&auto=format');"></div>
-          <div class="card-overlay"></div>
+          <div class="card-bg" style="background-image: url('Images/KWork_6.png');"></div>
           <div class="card-content">
-            <h3 class="card-heading">CONCEPT<br>DEVELOPMENT</h3>
-            <p class="card-paragraph">
+            <h3 class="gallery-card-heading">CONCEPT<br>DEVELOPMENT</h3>
+            <p class="gallery-card-paragraph">
               Early-stage ideas and visual explorations that shape the foundation of each project, revealing the creative process behind the final outcome.
             </p>
-            <button class="card-btn">VIEW CONCEPTS →</button>
+            <button class="gallery-card-btn">VIEW CONCEPTS →</button>
           </div>
         </div>
       </div>
@@ -171,9 +169,9 @@
       <div class="sliding-rectangle">
 
         <!-- Background Image (changes with slide) -->
-        <div class="sliding-bg active" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1920&auto=format');"></div>
-        <div class="sliding-bg" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1920&auto=format');"></div>
-        <div class="sliding-bg" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1920&auto=format');"></div>
+        <div class="sliding-bg active" style="background-image: url('Images/KWork_23.png');"></div>
+        <div class="sliding-bg" style="background-image: url('Images/KWork_23.png');"></div>
+        <div class="sliding-bg" style="background-image: url('Images/KWork_23.png');"></div>
 
         <!-- Dark Overlay on Left Half -->
         <div class="left-overlay"></div>
@@ -212,17 +210,16 @@
 
       </div>
     </section>
-
-        <!-- PAGE 7 - JOIN THE MOVEMENT -->
+    <!-- PAGE 7 - JOIN THE MOVEMENT -->
     <section class="movement-hero">
     
       <!-- Background Image Slider -->
       <div class="background-slider">
-        <div class="background-slide active" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=1920&auto=format');"></div>
+        <div class="background-slide active" style="background-image: url('Images/BG_KHome_26.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_27.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_28.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_29.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_30.png');"></div>
       </div>
 
       <div class="movement-container">
@@ -288,58 +285,95 @@
 
 
 
-  <!-- Same Footer -->
+
+
+
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
+
+      <!-- Left Section - 45% -->
       <div class="footer-left">
-        <h1 class="footer-logo">KALEIDO PICTURES</h1>
+        <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
         <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
       </div>
+
+      <!-- Right Section - 55% -->
       <div class="footer-right">
-        <div class="footer-col">
+      
+       <!-- Column 1 - Navigation Links (split into 2 columns) -->
+      <div class="footer-col nav-col">
+        <h4 class="footer-col-title">Explore</h4>
+        <div class="footer-nav-grid">
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Work</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+          <ul class="footer-links">
+            <li><a href="creative.html">Creative services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+      </div>
+
+        <!-- Column 2 - Socials with Icons (no text) -->
         <div class="footer-col">
           <h4 class="footer-col-title">Socials</h4>
           <div class="footer-social-icons">
-            <a href="#" class="social-icon-link">
-              <img src="Images/YouTube.png" alt="YouTube" class="social-img">
+            <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+              <img src="Images/KInstagram.png" alt="YouTube" class="social-img">
             </a>
-            <a href="#" class="social-icon-link">
-              <img src="Images/TikTok.png" alt="TikTok" class="social-img">
+            <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+              <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
             </a>
-            <a href="#" class="social-icon-link">
-              <img src="Images/Instagram.png" alt="Instagram" class="social-img">
+            <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+              <img src="Images/KYouTube.png" alt="Instagram" class="social-img">
             </a>
-            <a href="#" class="social-icon-link">
-              <img src="Images/Indeed.png" alt="Indeed" class="social-img">
+            <a href="https://discord.gg/DtGMmvyp" class="social-icon-link" target="_blank">
+              <img src="Images/KDiscord.png" alt="Indeed" class="social-img">
             </a>
           </div>
         </div>
+
+        <!-- Column 3 - Contact -->
+       <!-- Column 3 - Contact -->
         <div class="footer-col">
           <h4 class="footer-col-title">Contact Us</h4>
           <div class="footer-contact-item">
-            <span class="contact-icon">📞</span>
+            <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
             <span class="contact-text">+971 00 000 0000</span>
           </div>
           <div class="footer-contact-item">
-            <span class="contact-icon">✉️</span>
+            <img src="Images/KEmail.png" alt="Email" class="contact-img">
             <span class="contact-text">loremipsum@gmail.com</span>
           </div>
         </div>
+
       </div>
     </div>
   </footer>
 
 
+
+
   <script>
+
+      // ===== SCROLL DETECTION FOR LOGO CHANGE =====
+    window.addEventListener('scroll', function() {
+      const heroSection = document.querySelector('.hero');
+      const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > heroHeight - 100) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
     // Horizontal card slider functionality
     const slider = document.querySelector('.slider-container');
     const scrollLeftBtn = document.querySelector('.scroll-left');

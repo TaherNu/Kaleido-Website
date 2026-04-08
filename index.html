@@ -10,21 +10,27 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <section class="hero">
-    <nav class="navbar">
-      <div class="logo">KALEIDO PICTURES</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="creative.html">Creative Services</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><button class="work-with-us">Work With Us</button></li>
-      </ul>
-    </nav>
 
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/KLogo.png" alt="Kaleido Pictures" class="logo-img logo-primary">
+      <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="logo-img logo-secondary">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="creative.html">Creative Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="work-with-us">Work With Us</button></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero">
     <div class="hero-content">
       <div class="top-left">
         YOUTH<br>POWERED
@@ -133,7 +139,8 @@
     </section>
 
     <!-- PAGE 4 - SERVICES -->
-<!-- PAGE 4 - SERVICES -->
+
+        <!-- PAGE 4 - SERVICES (UPDATED WITH TWO SLIDERS) -->
     <section class="services">
       <div class="services-container">
 
@@ -169,50 +176,53 @@
           </div>
         </div>
 
-        <!-- Image Grid INSIDE the orange rectangle -->
-            <!-- Image Grid INSIDE the orange rectangle - with custom layout -->
-                <!-- Image Grid INSIDE the orange rectangle - with custom layout -->
-        <div class="services-grid">
-          <!-- Top Row -->
-          <div class="grid-row top-row">
-            <!-- Rectangle 1 -->
-            <div class="service-rect rect-1" style="background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=800&auto=format');"></div>
-
-            <!-- Stacked container for Rectangle 2 and 3 -->
-            <div class="stacked-container">
-              <div class="service-rect rect-2" style="background-image: url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=800&auto=format');"></div>
-              <div class="service-rect rect-3" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format');"></div>
+        <!-- SLIDER 1 - Left to Right -->
+        <div class="slider-container-new slider-1">
+          <div class="slider-track">
+            <div class="service-slide-card">
+              <img src="Images/KHome_12.png">
             </div>
-
-            <!-- Rectangle 4 -->
-            <div class="service-rect rect-4" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=800&auto=format');"></div>
-
-            <!-- Tall Rectangle 5 that spans both rows -->
-            <div class="tall-container">
-              <div class="service-rect rect-5" style="background-image: url('https://images.unsplash.com/photo-1535016120720-40c646be5580?q=80&w=800&auto=format');"></div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_13.png" alt="Project 2">
             </div>
-          </div>
-
-          <!-- Bottom Row - with rectangles under Rectangle 5 -->
-          <div class="grid-row bottom-row">
-            <!-- Rectangle 7 (now positioned under Rectangle 4 area) -->
-            <div class="service-rect rect-7" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format');"></div>
-            
-            <!-- Rectangle 8 - under Rectangle 5 -->
-            <div class="service-rect rect-8" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format');"></div>
-            
-            <!-- Rectangle 9 - under Rectangle 5 -->
-            <div class="service-rect rect-9" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format');"></div>
-            
-            <!-- Rectangle 10 -->
-            <div class="service-rect rect-10" style="background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=800&auto=format');"></div>
-            
-            <!-- Rectangle 6 -->
-            <div class="service-rect rect-6" style="background-image: url('https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?q=80&w=800&auto=format');"></div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_14.png" alt="Project 3">
+            </div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_15.png" alt="Project 4">
+            </div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_13.png" alt="Project 5">
+            </div>
           </div>
         </div>
+
+        <!-- SLIDER 2 - Right to Left -->
+        <div class="slider-container-new slider-2">
+          <div class="slider-track reverse">
+            <div class="service-slide-card">
+              <img src="Images/KHome_12.png">
+            </div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_13.png" alt="Project 2">
+            </div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_14.png" alt="Project 3">
+            </div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_15.png" alt="Project 4">
+            </div>
+            <div class="service-slide-card">
+              <img src="Images/KHome_13.png" alt="Project 5">
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
+
+
+
 
     <!-- PAGE 5 - STUDIO REEL -->
     <section class="studio-reel">
@@ -271,11 +281,11 @@
     
       <!-- Background Image Slider -->
       <div class="background-slider">
-        <div class="background-slide active" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=1920&auto=format');"></div>
-        <div class="background-slide" style="background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=1920&auto=format');"></div>
+        <div class="background-slide active" style="background-image: url('Images/BG_KHome_26.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_27.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_28.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_29.png');"></div>
+        <div class="background-slide" style="background-image: url('Images/BG_KHome_30.png');"></div>
       </div>
 
       <div class="movement-container">
@@ -352,69 +362,84 @@
 
 
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container">
-
-        <!-- Left Section - 45% -->
-        <div class="footer-left">
-          <h1 class="footer-logo">KALEIDO PICTURES</h1>
-          <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
-        </div>
-
-        <!-- Right Section - 55% -->
-        <div class="footer-right">
-        
-          <!-- Column 1 - Navigation Links -->
-          <div class="footer-col">
-            <ul class="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Newsletter</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Services</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 2 - Socials with Icons (no text) -->
-          <div class="footer-col">
-            <h4 class="footer-col-title">Socials</h4>
-            <div class="footer-social-icons">
-              <a href="#" class="social-icon-link">
-                <img src="Images/Instagram.png" alt="YouTube" class="social-img">
-              </a>
-              <a href="#" class="social-icon-link">
-                <img src="Images/WhatsApp.png" alt="TikTok" class="social-img">
-              </a>
-              <a href="#" class="social-icon-link">
-                <img src="Images/Instagram.png" alt="Instagram" class="social-img">
-              </a>
-              <a href="#" class="social-icon-link">
-                <img src="Images/WhatsApp.png" alt="Indeed" class="social-img">
-              </a>
-            </div>
-          </div>
-
-          <!-- Column 3 - Contact -->
-          <div class="footer-col">
-            <h4 class="footer-col-title">Contact Us</h4>
-            <div class="footer-contact-item">
-              <span class="contact-icon">📞</span>
-              <span class="contact-text">+971 00 000 0000</span>
-            </div>
-            <div class="footer-contact-item">
-              <span class="contact-icon">✉️</span>
-              <span class="contact-text">loremipsum@gmail.com</span>
-            </div>
-          </div>
-
-        </div>
+      <!-- Left Section - 45% -->
+      <div class="footer-left">
+        <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
+        <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
       </div>
-    </footer>
 
+      <!-- Right Section - 55% -->
+      <div class="footer-right">
+      
+        <!-- Column 1 - Navigation Links -->
+        <div class="footer-col">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="creative.html">Creative services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2 - Socials with Icons (no text) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Socials</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+              <img src="Images/KInstagram.png" alt="YouTube" class="social-img">
+            </a>
+            <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+              <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
+            </a>
+            <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+              <img src="Images/KYouTube.png" alt="Instagram" class="social-img">
+            </a>
+            <a href="https://discord.gg/DtGMmvyp" class="social-icon-link" target="_blank">
+              <img src="Images/KDiscord.png" alt="Indeed" class="social-img">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 3 - Contact -->
+       <!-- Column 3 - Contact -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
+            <span class="contact-text">+971 00 000 0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <img src="Images/KEmail.png" alt="Email" class="contact-img">
+            <span class="contact-text">loremipsum@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
 
 <script>
+  // ===== SCROLL DETECTION FOR LOGO CHANGE =====
+  window.addEventListener('scroll', function() {
+    const heroSection = document.querySelector('.hero');
+    const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > heroHeight - 100) {
+      document.body.classList.add('scrolled');
+    } else {
+      document.body.classList.remove('scrolled');
+    }
+  });
+
+
   // Horizontal card slider functionality
   const slider = document.querySelector('.slider-container');
   const scrollLeftBtn = document.querySelector('.scroll-left');
@@ -430,141 +455,180 @@
     });
   }
 
-    // Vertical slider functionality for services
-    const serviceItems = document.querySelectorAll('.service-item');
-    const orangeBanner = document.querySelector('.orange-banner');
+  // ===== VERTICAL SLIDER FOR SERVICES (UPDATED) =====
+  const serviceItems = document.querySelectorAll('.service-item');
+  const orangeBanner = document.querySelector('.orange-banner-full');
 
-    // Content mapping for each service
-    const serviceContent = {
-      'story-development': {
-        tag: 'STORY DEVELOPMENT',
-        headline: 'SHAPING STORIES<br>THAT CAPTIVATE',
-        paragraph: 'Every remarkable film begins with a story. At Kaleido Pictures, we take your ideas from spark to script, carefully shaping narratives that inspire, engage, and resonate. From brainstorming concepts and developing characters to storyboarding scenes and refining arcs, we lay the foundation for cinematic experiences that captivate audiences and leave a lasting impression. Your vision becomes our blueprint — a story crafted with creativity, precision, and emotion.'
-      },
-      'direction': {
-        tag: 'DIRECTION & CINEMATOGRAPHY',
-        headline: 'VISUAL STORYTELLING<br>THAT MOVES',
-        paragraph: 'Our directors and cinematographers bring scripts to life through powerful visual language. We focus on composition, lighting, camera movement, and emotional beats to create stunning imagery that serves the story. Every frame is carefully crafted to evoke emotion, build tension, and immerse audiences in your world. From intimate close-ups to sweeping landscapes, we capture the essence of your narrative with cinematic excellence.'
-      },
-      'producing': {
-        tag: 'PRODUCING & FILMING',
-        headline: 'BRINGING VISIONS<br>TO REALITY',
-        paragraph: 'Production is where planning meets execution. Our producing team manages budgets, schedules, locations, casting, and crew coordination to ensure smooth, efficient shoots. We handle the logistics so you can focus on creativity. From pre-production to the final day of filming, we ensure every detail aligns with your vision while maintaining professional standards and creative integrity.'
-      },
-      'post-production': {
-        tag: 'POST-PRODUCTION & EDITING',
-        headline: 'CRAFTING THE<br>FINAL MASTERPIECE',
-        paragraph: 'The magic happens in post-production. Our editors, colorists, and sound designers transform raw footage into a polished, cohesive film. We handle editing, visual effects, color grading, sound design, and mixing to create a seamless viewing experience. Every cut, transition, and effect is meticulously refined until your story shines with clarity, emotion, and impact.'
-      }
-    };
-
-    if (serviceItems.length > 0) {
-      serviceItems.forEach(item => {
-        item.addEventListener('click', () => {
-          // Remove active class from all items
-          serviceItems.forEach(i => i.classList.remove('active'));
-          // Add active class to clicked item
-          item.classList.add('active');
-        
-          // Get the service key
-          const serviceKey = item.getAttribute('data-service');
-          const content = serviceContent[serviceKey];
-        
-          // Update the orange banner content
-          if (content && orangeBanner) {
-            orangeBanner.querySelector('.banner-service-tag').textContent = content.tag;
-            orangeBanner.querySelector('.banner-headline').innerHTML = content.headline;
-            orangeBanner.querySelector('.banner-paragraph').textContent = content.paragraph;
-          }
-        });
-      });
+  // Content mapping for each service
+  const serviceContent = {
+    'story-development': {
+      tag: 'STORY DEVELOPMENT',
+      headline: 'SHAPING STORIES<br>THAT CAPTIVATE',
+      paragraph: 'Every remarkable film begins with a story. At Kaleido Pictures, we take your ideas from spark to script, carefully shaping narratives that inspire, engage, and resonate. From brainstorming concepts and developing characters to storyboarding scenes and refining arcs, we lay the foundation for cinematic experiences that captivate audiences and leave a lasting impression. Your vision becomes our blueprint — a story crafted with creativity, precision, and emotion.'
+    },
+    'direction': {
+      tag: 'DIRECTION & CINEMATOGRAPHY',
+      headline: 'VISUAL STORYTELLING<br>THAT MOVES',
+      paragraph: 'Our directors and cinematographers bring scripts to life through powerful visual language. We focus on composition, lighting, camera movement, and emotional beats to create stunning imagery that serves the story. Every frame is carefully crafted to evoke emotion, build tension, and immerse audiences in your world. From intimate close-ups to sweeping landscapes, we capture the essence of your narrative with cinematic excellence.'
+    },
+    'producing': {
+      tag: 'PRODUCING & FILMING',
+      headline: 'BRINGING VISIONS<br>TO REALITY',
+      paragraph: 'Production is where planning meets execution. Our producing team manages budgets, schedules, locations, casting, and crew coordination to ensure smooth, efficient shoots. We handle the logistics so you can focus on creativity. From pre-production to the final day of filming, we ensure every detail aligns with your vision while maintaining professional standards and creative integrity.'
+    },
+    'post-production': {
+      tag: 'POST-PRODUCTION & EDITING',
+      headline: 'CRAFTING THE<br>FINAL MASTERPIECE',
+      paragraph: 'The magic happens in post-production. Our editors, colorists, and sound designers transform raw footage into a polished, cohesive film. We handle editing, visual effects, color grading, sound design, and mixing to create a seamless viewing experience. Every cut, transition, and effect is meticulously refined until your story shines with clarity, emotion, and impact.'
     }
+  };
 
-    // Movement Hero - Auto rotating slides with left-to-right animation
-    // Movement Hero - Auto rotating slides with left-to-right animation for BOTH background and text
-    const slides = document.querySelectorAll('.movement-content');
-    const dots = document.querySelectorAll('.dot');
-    const backgroundSlides = document.querySelectorAll('.background-slide');
+  if (serviceItems.length > 0 && orangeBanner) {
+    serviceItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all items
+        serviceItems.forEach(i => i.classList.remove('active'));
+        // Add active class to clicked item
+        item.classList.add('active');
 
-    let currentSlide = 1;
-    let slideInterval;
-    let isAnimating = false;
+        // Get the service key
+        const serviceKey = item.getAttribute('data-service');
+        const content = serviceContent[serviceKey];
 
-    // Function to change slide
-    function changeSlide(slideNumber) {
-      if (isAnimating) return;
-      isAnimating = true;
-    
-      const currentActiveSlide = document.querySelector('.movement-content.active');
-      const currentBackgroundSlide = document.querySelector('.background-slide.active');
-      const targetSlide = document.querySelector(`.movement-content[data-slide="${slideNumber}"]`);
-      const targetBackground = document.querySelector(`.background-slide:nth-child(${slideNumber})`);
-      const currentActiveDot = document.querySelector('.dot.active');
-      const targetDot = document.querySelector(`.dot[data-slide="${slideNumber}"]`);
-    
-      // Add exit animations to current elements
-      if (currentActiveSlide) {
-        currentActiveSlide.classList.add('exit-left');
-      }
-      if (currentBackgroundSlide) {
-        currentBackgroundSlide.classList.add('exit-left');
-      }
-      if (targetBackground) {
-        targetBackground.classList.add('enter-from-right');
-      }
+        // Update the orange banner content
+        if (content) {
+          const tagElement = orangeBanner.querySelector('.banner-service-tag');
+          const headlineElement = orangeBanner.querySelector('.banner-headline');
+          const paragraphElement = orangeBanner.querySelector('.banner-paragraph');
 
-      // After exit animation, hide old elements and show new ones
-      setTimeout(() => {
-        if (currentActiveSlide) {
-          currentActiveSlide.classList.remove('active', 'exit-left');
+          if (tagElement) tagElement.textContent = content.tag;
+          if (headlineElement) headlineElement.innerHTML = content.headline;
+          if (paragraphElement) paragraphElement.textContent = content.paragraph;
         }
-        if (currentBackgroundSlide) {
-          currentBackgroundSlide.classList.remove('active', 'exit-left');
-        }
-        if (targetBackground) {
-          targetBackground.classList.remove('enter-from-right');
-        }
-        if (currentActiveDot) {
-          currentActiveDot.classList.remove('active');
-        }
-
-        if (targetSlide) {
-          targetSlide.classList.add('active');
-        }
-        if (targetBackground) {
-          targetBackground.classList.add('active');
-        }
-        if (targetDot) {
-          targetDot.classList.add('active');
-        }
-
-        currentSlide = slideNumber;
-        isAnimating = false;
-      }, 600);
-    }
-
-    // Function to go to next slide
-    function nextSlide() {
-      let next = currentSlide + 1;
-      if (next > slides.length) next = 1;
-      changeSlide(next);
-    }
-
-    // Add click event to dots
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const slideNumber = parseInt(dot.getAttribute('data-slide'));
-        if (slideNumber === currentSlide) return;
-        changeSlide(slideNumber);
-
-        // Reset interval timer
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 5000);
       });
     });
+  }
 
-    // Start auto-rotation (change every 5 seconds)
-    slideInterval = setInterval(nextSlide, 5000);
+  // ===== MOVEMENT HERO - AUTO ROTATING SLIDES =====
+  const slides = document.querySelectorAll('.movement-content');
+  const dots = document.querySelectorAll('.dot');
+  const backgroundSlides = document.querySelectorAll('.background-slide');
+
+  let currentSlide = 1;
+  let slideInterval;
+  let isAnimating = false;
+
+  // Function to change slide
+  function changeSlide(slideNumber) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const currentActiveSlide = document.querySelector('.movement-content.active');
+    const currentBackgroundSlide = document.querySelector('.background-slide.active');
+    const targetSlide = document.querySelector(`.movement-content[data-slide="${slideNumber}"]`);
+    const targetBackground = document.querySelector(`.background-slide:nth-child(${slideNumber})`);
+    const currentActiveDot = document.querySelector('.dot.active');
+    const targetDot = document.querySelector(`.dot[data-slide="${slideNumber}"]`);
+
+    // Add exit animations to current elements
+    if (currentActiveSlide) {
+      currentActiveSlide.classList.add('exit-left');
+    }
+    if (currentBackgroundSlide) {
+      currentBackgroundSlide.classList.add('exit-left');
+    }
+    if (targetBackground) {
+      targetBackground.classList.add('enter-from-right');
+    }
+
+    // After exit animation, hide old elements and show new ones
+    setTimeout(() => {
+      if (currentActiveSlide) {
+        currentActiveSlide.classList.remove('active', 'exit-left');
+      }
+      if (currentBackgroundSlide) {
+        currentBackgroundSlide.classList.remove('active', 'exit-left');
+      }
+      if (targetBackground) {
+        targetBackground.classList.remove('enter-from-right');
+      }
+      if (currentActiveDot) {
+        currentActiveDot.classList.remove('active');
+      }
+
+      if (targetSlide) {
+        targetSlide.classList.add('active');
+      }
+      if (targetBackground) {
+        targetBackground.classList.add('active');
+      }
+      if (targetDot) {
+        targetDot.classList.add('active');
+      }
+
+      currentSlide = slideNumber;
+      isAnimating = false;
+    }, 600);
+  }
+
+  // Function to go to next slide
+  function nextSlide() {
+    let next = currentSlide + 1;
+    if (next > slides.length) next = 1;
+    changeSlide(next);
+  }
+
+  // Add click event to dots
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const slideNumber = parseInt(dot.getAttribute('data-slide'));
+      if (slideNumber === currentSlide) return;
+      changeSlide(slideNumber);
+
+      // Reset interval timer
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    });
+  });
+
+  // Start auto-rotation (change every 5 seconds)
+  slideInterval = setInterval(nextSlide, 5000);
+
+  // ===== SETUP INFINITE SLIDERS FOR SERVICES SECTION =====
+  function setupInfiniteSliders() {
+    // Setup Slider 1 (Left to Right)
+    const slider1Track = document.querySelector('.slider-1 .slider-track');
+    if (slider1Track) {
+      const cards1 = slider1Track.querySelectorAll('.service-slide-card');
+      const originalCards1 = Array.from(cards1);
+
+      // Clone cards multiple times for seamless infinite loop
+      for (let i = 0; i < 3; i++) {
+        originalCards1.forEach(card => {
+          const clone = card.cloneNode(true);
+          slider1Track.appendChild(clone);
+        });
+      }
+    }
+
+    // Setup Slider 2 (Right to Left)
+    const slider2Track = document.querySelector('.slider-2 .slider-track');
+    if (slider2Track) {
+      const cards2 = slider2Track.querySelectorAll('.service-slide-card');
+      const originalCards2 = Array.from(cards2);
+
+      // Clone cards multiple times for seamless infinite loop
+      for (let i = 0; i < 3; i++) {
+        originalCards2.forEach(card => {
+          const clone = card.cloneNode(true);
+          slider2Track.appendChild(clone);
+        });
+      }
+    }
+  }
+
+  // Call the function when page loads
+  setupInfiniteSliders();
 </script>
 
 </body>

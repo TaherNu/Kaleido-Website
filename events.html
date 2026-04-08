@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kaleido Pictures — Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/KLogo.png" alt="Kaleido Pictures" class="logo-img logo-primary">
+      <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="logo-img logo-secondary">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="creative.html">Creative Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="work-with-us">Work With Us</button></li>
+    </ul>
+  </nav>
+
+  <!-- EVENTS PAGE - HERO SECTION -->
+  <section class="events-hero">
+    <div class="events-hero-overlay"></div>
+    <div class="events-hero-rectangle">
+      <div class="events-hero-content">
+        <h1 class="events-hero-heading">WHERE STORIES<br>COME TOGETHER</h1>
+        
+        <div class="events-hero-buttons">
+          <button class="events-btn events-btn-solid">VIEW UPCOMING EVENTS</button>
+          <button class="events-btn events-btn-outline">WORK WITH US</button>
+        </div>
+        
+        <p class="events-hero-paragraph">
+          At Kaleido Pictures, we believe stories are meant to be shared. From exclusive premieres to community gatherings, our events are where filmmakers, brands, and audiences connect—celebrating the art of storytelling, together.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+      <!-- EVENTS - UP NEXT SECTION -->
+    <section class="events-upnext">
+      <div class="upnext-container">
+        
+        <!-- Option 1: No Upcoming Events -->
+        <div class="upnext-option no-events active">
+          <h2 class="no-events-heading">NO UPCOMING EVENTS</h2>
+        </div>
+        
+        <!-- Option 2: Events List -->
+        <div class="upnext-option events-list">
+          
+          <!-- Left Side - 25% -->
+          <div class="events-left">
+            <h2 class="events-left-heading">UP NEXT</h2>
+            <p class="events-left-paragraph">Join us at an upcoming screening, premiere, or gathering</p>
+          </div>
+          
+          <!-- Right Side - 75% -->
+          <div class="events-right">
+            
+            <!-- Event 1 -->
+            <div class="event-item" data-number="01">
+              <div class="event-hover-number">01</div>
+              <div class="event-rectangle">
+                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=200&auto=format');"></div>
+                <div class="event-details">
+                  <h3 class="event-title">KALEIDO SHOWCASE 2025</h3>
+                  <p class="event-date">📅 March 15, 2025 | 7:00 PM</p>
+                  <p class="event-location">📍 Dubai, UAE</p>
+                  <p class="event-description">An exclusive screening of our latest films followed by a Q&A with the filmmakers.</p>
+                  <button class="event-btn">VIEW MORE →</button>
+                </div>
+              </div>
+              <div class="event-divider"></div>
+            </div>
+            
+            <!-- Event 2 -->
+            <div class="event-item" data-number="02">
+              <div class="event-hover-number">02</div>
+              <div class="event-rectangle">
+                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=200&auto=format');"></div>
+                <div class="event-details">
+                  <h3 class="event-title">FILM INDUSTRY PANEL</h3>
+                  <p class="event-date">📅 April 10, 2025 | 3:00 PM</p>
+                  <p class="event-location">📍 Abu Dhabi, UAE</p>
+                  <p class="event-description">Join industry experts as they discuss the future of storytelling and filmmaking.</p>
+                  <button class="event-btn">VIEW MORE →</button>
+                </div>
+              </div>
+              <div class="event-divider"></div>
+            </div>
+            
+            <!-- Event 3 -->
+            <div class="event-item" data-number="03">
+              <div class="event-hover-number">03</div>
+              <div class="event-rectangle">
+                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=200&auto=format');"></div>
+                <div class="event-details">
+                  <h3 class="event-title">CREATIVE WORKSHOP</h3>
+                  <p class="event-date">📅 May 5, 2025 | 10:00 AM</p>
+                  <p class="event-location">📍 Sharjah, UAE</p>
+                  <p class="event-description">A hands-on workshop exploring visual storytelling and cinematic techniques.</p>
+                  <button class="event-btn">VIEW MORE →</button>
+                </div>
+              </div>
+              <div class="event-divider"></div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+
+    <!-- BEYOND THE SCREEN SECTION -->
+    <section class="beyond-screen">
+      <div class="beyond-container">
+
+        <!-- Top Section -->
+        <div class="beyond-top">
+          <h2 class="beyond-heading">BEYOND<br>THE SCREEN</h2>
+          <p class="beyond-description">
+            <span class="star-icon">★ <br></span> Initiatives, programs, and ongoing efforts that shape our community
+          </p>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="beyond-cards">
+        
+          <!-- Card 1 - EMERGING FILMMAKERS PROGRAM -->
+          <div class="beyond-card active" data-card="1">
+            <div class="card-bg-img" style="background-image: url('Images/KEvents_2.png');"></div>
+            <!-- Title is OUTSIDE the content div -->
+            <h3 class="card-title">EMERGING<br>FILMMAKERS<br>PROGRAM</h3>
+            <div class="card-text-content">
+              <p class="card-description-bottom">A mentorship initiative supporting underrepresented voices in film. Selected participants receive production support, creative guidance, and a platform to share their work.</p>
+              <button class="card-learn-btn">Learn More →</button>
+            </div>
+          </div>
+
+          <!-- Card 2 - KALEIDO COMMUNITY FUND -->
+          <div class="beyond-card" data-card="2">
+            <div class="card-bg-img" style="background-image: url('Images/KEvents_3.png');"></div>
+            <h3 class="card-title">KALEIDO<br>COMMUNITY<br>FUND</h3>
+            <div class="card-text-content">
+              <p class="card-description-bottom">Supporting independent storytellers through grants, equipment access, and production resources. Applications open quarterly.</p>
+              <button class="card-learn-btn">Apply Now →</button>
+            </div>
+          </div>
+
+          <!-- Card 3 - BRAND COLLABORATION -->
+          <div class="beyond-card" data-card="3">
+            <div class="card-bg-img" style="background-image: url('Images/KEvents_4.png');"></div>
+            <h3 class="card-title">BRAND<br>COLLABORATION</h3>
+            <div class="card-text-content">
+              <p class="card-description-bottom">Partnering with purpose-driven brands to create meaningful content and community experiences. Let's build something together.</p>
+              <button class="card-learn-btn">Work With Us →</button>
+            </div>
+          </div>
+
+          <!-- Card 4 - WORKSHOP MASTERCLASSES -->
+          <div class="beyond-card" data-card="4">
+            <div class="card-bg-img" style="background-image: url('Images/KEvents_5.png');"></div>
+            <h3 class="card-title">WORKSHOP<br>MASTERCLASSES</h3>
+            <div class="card-text-content">
+              <p class="card-description-bottom">Hands-on sessions led by industry professionals covering directing, cinematography, editing, and the business of storytelling.</p>
+              <button class="card-learn-btn">View Calendar →</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+        <!-- NEVER MISS A MOMENT SECTION -->
+    <section class="never-miss">
+      <div class="never-miss-container">
+        
+        <h2 class="never-miss-heading">NEVER MISS A MOMENT</h2>
+        <p class="never-miss-text">
+          Follow us for updates on upcoming events, behind-the-scenes content, and community opportunities.
+        </p>
+        
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <img src="Images/Instagram.png" alt="Instagram">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="Images/KYoutube.png" alt="YouTube">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="Images/KTikTok.png" alt="TikTok">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="Images/KDiscord.png" alt="Discord">
+          </a>
+        </div>
+        
+      </div>
+    </section>
+
+
+        <!-- WANT TO PARTNER SECTION -->
+    <section class="want-partner">
+      <div class="want-partner-container">
+        
+        <h2 class="want-partner-heading">WANT TO PARTNER</h2>
+        <h3 class="want-partner-subheading">ON A EVENT?</h3>
+        <p class="want-partner-text">Let's create something unforgettable together.</p>
+        <button class="want-partner-btn">Work With Us</button>
+        
+      </div>
+    </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Left Section - 45% -->
+      <div class="footer-left">
+        <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
+        <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
+      </div>
+
+      <!-- Right Section - 55% -->
+      <div class="footer-right">
+      
+        <!-- Column 1 - Navigation Links -->
+        <div class="footer-col">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="creative.html">Creative services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2 - Socials with Icons (no text) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Socials</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+              <img src="Images/KInstagram.png" alt="YouTube" class="social-img">
+            </a>
+            <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+              <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
+            </a>
+            <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+              <img src="Images/KYouTube.png" alt="Instagram" class="social-img">
+            </a>
+            <a href="https://discord.gg/DtGMmvyp" class="social-icon-link" target="_blank">
+              <img src="Images/KDiscord.png" alt="Indeed" class="social-img">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 3 - Contact -->
+       <!-- Column 3 - Contact -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
+            <span class="contact-text">+971 00 000 0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <img src="Images/KEmail.png" alt="Email" class="contact-img">
+            <span class="contact-text">loremipsum@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+      // ===== SCROLL DETECTION FOR LOGO CHANGE =====
+    window.addEventListener('scroll', function() {
+      const heroSection = document.querySelector('.hero');
+      const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > heroHeight - 100) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+    // Toggle between "No Events" and "Events List" options
+    // Set this to true to show events list, false to show "No Upcoming Events"
+    const showEventsList = true; // Change to false to show "NO UPCOMING EVENTS"
+
+    const noEventsOption = document.querySelector('.upnext-option.no-events');
+    const eventsListOption = document.querySelector('.upnext-option.events-list');
+
+    if (noEventsOption && eventsListOption) {
+      if (showEventsList) {
+        noEventsOption.classList.remove('active');
+        eventsListOption.classList.add('active');
+      } else {
+        noEventsOption.classList.add('active');
+        eventsListOption.classList.remove('active');
+      }
+    }
+
+    // Beyond the Screen - Card expansion on hover
+    const beyondCards = document.querySelectorAll('.beyond-card');
+
+    function expandCard(selectedCard) {
+      // Remove expanded and shrunk classes from all cards
+      beyondCards.forEach(card => {
+        card.classList.remove('expanded', 'shrunk');
+      });
+
+      // Add expanded class to selected card
+      selectedCard.classList.add('expanded');
+
+      // Add shrunk class to all other cards
+      beyondCards.forEach(card => {
+        if (card !== selectedCard) {
+          card.classList.add('shrunk');
+        }
+      });
+    }
+
+    if (beyondCards.length > 0) {
+      // Set first card as expanded by default
+      expandCard(beyondCards[0]);
+    
+      // Add hover event to each card
+      beyondCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          expandCard(card);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
