@@ -257,7 +257,7 @@ body.scrolled .logo-secondary {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url('Images/KHome_3.png');
+  background-image: url('Images/BG_KHome_2_2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -308,7 +308,7 @@ body.scrolled .logo-secondary {
 }
 .rectangles-wrapper {
   display: flex;
-  gap: 3rem;
+  gap: 7rem;
   justify-content: center;
   align-items: flex-start;
   padding-top: 2.5%;
@@ -317,7 +317,7 @@ body.scrolled .logo-secondary {
 
 /* Base rectangle styles */
 .rectangle {
-  flex: 1 1 0;
+  flex: 1 0;
   width: auto;
   min-width: 0;
   max-width: 850px;
@@ -328,25 +328,16 @@ body.scrolled .logo-secondary {
   padding: 2.5rem;
   text-align: left;
   transition: transform 0.3s ease, margin 0.3s ease;
+  margin-top: 8%;
 }
 
-
-/* Left rectangle - positioned lower + angled */
-.rectangle-left {
-  transform: translateY(120px) rotate(-4deg);
-}
-
-/* Right rectangle - positioned higher + angled */
-.rectangle-right {
-  transform: translateY(70px) rotate(-4deg);
-}
 
 .rectangle-title {
   font-family: 'Anton', sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   letter-spacing: 4px;
   color: #ffffff;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.2rem;
   text-transform: uppercase;
   font-weight: 1;
 }
@@ -363,14 +354,6 @@ body.scrolled .logo-secondary {
 @media (min-width: 1000px) and (max-width: 1500px) {
   .rectangle {
     max-width: 800px;
-  }
-
-  .rectangle-left{
-    transform: translateY(170px) rotate(-4deg);
-  }
-
-  .rectangle-right{
-    transform: translateY(110px) rotate(-4deg);
   }
 
   .rectangle-title{
