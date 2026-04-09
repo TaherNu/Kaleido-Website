@@ -1334,7 +1334,6 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .why-matters {
-        background-size: contain;
         background-color: #101010;
     }
 
