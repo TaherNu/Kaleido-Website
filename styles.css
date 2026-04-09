@@ -1389,9 +1389,6 @@ body.scrolled .logo-secondary {
   .movement-hero{
     min-height: 80vh;
   }
-  .background-slide {
-    background-size: contain;
-  }
 
   .movement-subtitle {
     font-size: 2rem;
