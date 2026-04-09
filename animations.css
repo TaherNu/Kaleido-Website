@@ -1,0 +1,456 @@
+/* ============================================================
+   KALEIDO PICTURES — ANIMATION ENHANCEMENTS
+   Drop this <link> AFTER your styles.css
+   ============================================================ */
+
+/* ── Intersection Observer Reveal System ── */
+.k-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-reveal.k-reveal--left {
+  transform: translateX(-50px);
+}
+
+.k-reveal.k-reveal--right {
+  transform: translateX(50px);
+}
+
+.k-reveal.k-reveal--scale {
+  transform: scale(0.88);
+}
+
+.k-reveal.k-reveal--visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered children */
+.k-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-stagger.k-stagger--visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(3) { transition-delay: 0.19s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(4) { transition-delay: 0.26s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(5) { transition-delay: 0.33s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: none; }
+
+/* ── Hero Text Split Animation ── */
+.hero-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%) skewY(5deg);
+  animation: charReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes charReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0deg);
+  }
+}
+
+/* ── Heading Clip Reveal ── */
+.k-clip-reveal {
+  overflow: hidden;
+  display: block;
+}
+
+.k-clip-reveal span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-clip-reveal.k-clip-reveal--visible span {
+  transform: translateY(0);
+}
+
+/* ── Navbar scroll refinement ── */
+.navbar {
+  transition: padding 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.navbar.nav--compact {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 143, 53, 0.15);
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #FF8F35;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+/* ── Work With Us button pulse ── */
+.work-with-us {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-with-us::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: rgba(255, 143, 53, 0);
+  transition: background 0.3s ease;
+}
+
+.work-with-us:hover::after {
+  background: rgba(255, 143, 53, 0.08);
+}
+
+/* ── Hero floating words ── */
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.top-right,
+.bottom-right {
+  animation-delay: -3s;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ── Parallax layer ── */
+.hero {
+  will-change: background-position;
+}
+
+/* ── Story heading marquee underline ── */
+.story-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.story-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #FF8F35;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+
+.story-heading.heading-line-visible::after {
+  width: 60%;
+}
+
+/* ── Rectangle cards tilt ── */
+.rectangle {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  transform-origin: center bottom;
+}
+
+.rectangle-left:hover {
+  transform: rotate(-1deg) translateY(-6px) !important;
+}
+
+.rectangle-right:hover {
+  transform: rotate(1deg) translateY(-6px) !important;
+}
+
+/* ── Film cards ── */
+.film-card {
+  position: relative;
+}
+
+.film-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 143, 53, 0);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  pointer-events: none;
+}
+
+.film-card:hover::after {
+  border-color: rgba(255, 143, 53, 0.5);
+  box-shadow: 0 0 30px rgba(255, 143, 53, 0.15);
+}
+
+/* ── Join button shimmer ── */
+.join-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.5s ease;
+}
+
+.join-btn:hover::before {
+  left: 100%;
+}
+
+.join-btn:hover {
+  background-color: rgba(255, 143, 53, 0.2) !important;
+  border-color: #FF8F35 !important;
+  transform: translateX(4px);
+  transition: all 0.3s ease !important;
+}
+
+/* ── Service items reveal ── */
+.service-item {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.service-item:hover:not(.active) {
+  transform: translateX(8px) !important;
+  letter-spacing: 3px !important;
+}
+
+.service-item.active {
+  animation: activePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes activePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 143, 53, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(255, 143, 53, 0.15); }
+}
+
+/* ── Orange banner transition ── */
+.orange-banner-full {
+  transition: none;
+}
+
+.banner-service-tag,
+.banner-headline,
+.banner-paragraph {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.banner-content-changing .banner-service-tag,
+.banner-content-changing .banner-headline,
+.banner-content-changing .banner-paragraph {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* ── Studio Reel hover ── */
+.main-reel {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.5s ease !important;
+}
+
+.side-rectangle {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              border-color 0.4s ease !important;
+}
+
+.reel-container:hover .side-rectangle {
+  transform: translateX(-10px) scaleY(1.05);
+  border-color: rgba(255, 143, 53, 0.6);
+}
+
+/* Play icon on reel hover */
+.reel-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 143, 53, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.reel-play-icon::after {
+  content: '';
+  border-left: 22px solid #fff;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  margin-left: 5px;
+}
+
+.main-reel:hover .reel-play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ── Filter buttons ── */
+.filter-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #F1B020;
+  transition: width 0.35s ease;
+  border-radius: 1px;
+}
+
+.filter-btn:hover::before,
+.filter-btn.active::before {
+  width: 40%;
+}
+
+/* ── Movement dots ── */
+.dot {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* ── Movement button ── */
+.movement-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.movement-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: rgba(241, 176, 32, 0);
+  transform: scale(0.8);
+  transition: all 0.35s ease;
+}
+
+.movement-btn:hover::after {
+  background: rgba(241, 176, 32, 0.08);
+  transform: scale(1);
+}
+
+/* ── Footer links ── */
+.footer-links a {
+  transition: color 0.25s ease, padding-left 0.25s ease !important;
+  display: inline-block;
+}
+
+/* ── Go to top button ── */
+#go-top-btn {
+  animation: none;
+}
+
+#go-top-btn.visible {
+  animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bounceIn {
+  from { transform: translateY(20px) scale(0.7); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* ── Scroll progress bar ── */
+#k-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #B4030E, #FF8F35);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ── Cursor spotlight (subtle) ── */
+#k-cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 143, 53, 0.04) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+body:hover #k-cursor-glow {
+  opacity: 1;
+}
+
+/* ── Section counter lines ── */
+.k-line-draw {
+  position: relative;
+}
+
+.k-line-draw::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: rgba(255, 143, 53, 0.3);
+  transition: width 1.5s ease 0.3s;
+}
+
+.k-line-draw.k-line-draw--visible::before {
+  width: 100%;
+}
+
+/* ── Slide card 3D tilt ── */
+.service-slide-card {
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+/* ── Orange banner content fade on change ── */
+@keyframes contentFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.banner-content-in {
+  animation: contentFadeIn 0.4s ease forwards;
+}

@@ -1,0 +1,407 @@
+/* ============================================================
+   KALEIDO PICTURES — ABOUT PAGE ANIMATIONS
+   Add <link rel="stylesheet" href="about-animations.css">
+   AFTER your about.css in the <head>
+   ============================================================ */
+
+/* ── Scroll Progress Bar ── */
+#k-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #B4030E, #FF8F35);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ── Cursor Glow ── */
+#k-cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,143,53,0.05) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+body:hover #k-cursor-glow { opacity: 1; }
+
+/* ── Navbar compact ── */
+.navbar {
+  transition: padding 0.4s ease, box-shadow 0.4s ease !important;
+}
+.navbar.nav--compact {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,143,53,0.15);
+}
+.nav-links a {
+  position: relative;
+}
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: #FF8F35;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::before { width: 100%; }
+
+/* ── Reveal base ── */
+.k-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1),
+              transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.k-reveal.k-reveal--left  { transform: translateX(-60px); }
+.k-reveal.k-reveal--right { transform: translateX(60px); }
+.k-reveal.k-reveal--scale { transform: scale(0.9); }
+.k-reveal.k-reveal--visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* ── Clip reveal for headings ── */
+.k-clip-reveal { overflow: hidden; display: block; }
+.k-clip-reveal span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.k-clip-reveal.k-clip-reveal--visible span { transform: translateY(0); }
+
+/* ── Stagger children ── */
+.k-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1),
+              transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.k-stagger.k-stagger--visible > *:nth-child(1) { transition-delay:0.05s; opacity:1; transform:none; }
+.k-stagger.k-stagger--visible > *:nth-child(2) { transition-delay:0.14s; opacity:1; transform:none; }
+.k-stagger.k-stagger--visible > *:nth-child(3) { transition-delay:0.23s; opacity:1; transform:none; }
+.k-stagger.k-stagger--visible > *:nth-child(4) { transition-delay:0.32s; opacity:1; transform:none; }
+
+/* ── HERO ── */
+.about-hero-heading {
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.about-hero-heading.hero-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.about-hero-buttons {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease 0.55s, transform 0.7s ease 0.55s;
+}
+.about-hero-buttons.hero-in { opacity:1; transform:none; }
+
+.about-hero-paragraph {
+  opacity: 0;
+  transition: opacity 0.7s ease 0.9s;
+}
+.about-hero-paragraph.hero-in { opacity: 0.9; }
+
+/* Button shimmer */
+.about-btn {
+  position: relative;
+  overflow: hidden;
+}
+.about-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  transition: left 0.5s ease;
+}
+.about-btn:hover::before { left: 100%; }
+
+/* ── WHO ARE WE - split slide ── */
+.who-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1),
+              transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.who-left.who-in { opacity: 1; transform: translateX(0); }
+
+.who-image {
+  opacity: 0;
+  transform: translateX(60px) scale(0.97);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s,
+              transform 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s;
+}
+.who-image.who-in { opacity: 1; transform: translateX(0) scale(1); }
+
+/* Parallax on images */
+.who-image,
+.vision-image {
+  will-change: background-position;
+}
+
+/* ── OUR VISION - mirror slide ── */
+.vision-image {
+  opacity: 0;
+  transform: translateX(-60px) scale(0.97);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1),
+              transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.vision-image.vision-in { opacity: 1; transform: translateX(0) scale(1); }
+
+.vision-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s,
+              transform 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s;
+}
+.vision-right.vision-in { opacity: 1; transform: translateX(0); }
+
+
+
+
+
+/* ── Work Gallery heading underline ── */
+.gallery-main-title {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #FF8F35;
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-main-title.heading-line-visible::after {
+  width: 30%;
+}
+
+/* ── Gallery cards ── */
+.gallery-card {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease !important;
+  position: relative;
+}
+
+.gallery-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 143, 53, 0);
+  transition: border-color 0.35s ease;
+  pointer-events: none;
+}
+
+.gallery-card:hover::after {
+  border-color: rgba(255, 143, 53, 0.5);
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+}
+
+
+
+.gallery-card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 143, 53, 0.2), transparent);
+  transition: left 0.4s ease;
+}
+
+.gallery-card-btn:hover::before {
+  left: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── OUR APPROACH ── */
+.approach-orange {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.approach-orange.approach-in { opacity: 1; transform: translateY(0); }
+
+.approach-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.approach-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(to top, rgba(255,143,53,0.08) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.approach-card:hover::after { opacity: 1; }
+.approach-card:hover { box-shadow: 0 25px 50px rgba(0,0,0,0.4); }
+
+/* Step number badges that appear on hover */
+.approach-card .card-white-box::before {
+  content: attr(data-step);
+  position: absolute;
+  bottom: 0.8rem; right: 1rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.12);
+  line-height: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+.approach-card:hover .card-white-box::before {
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+}
+
+/* ── WHY DOES IT MATTER ── */
+.matters-heading {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s cubic-bezier(0.16,1,0.3,1),
+              transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.matters-heading.matters-in { opacity: 1; transform: translateX(0); }
+
+.matters-paragraph {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1s cubic-bezier(0.16,1,0.3,1) 0.2s,
+              transform 1s cubic-bezier(0.16,1,0.3,1) 0.2s;
+}
+.matters-paragraph.matters-in { opacity: 1; transform: translateX(0); }
+
+
+/* ── STORIES CRAFTED ── */
+.crafted-heading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.crafted-heading.crafted-in { opacity: 1; transform: translateY(0); }
+
+.crafted-paragraph {
+  opacity: 0;
+  transition: opacity 0.7s ease 0.4s;
+}
+.crafted-paragraph.crafted-in { opacity: 1; }
+
+/* ── ECHOES OF SILENCE ── */
+.echoes-rectangle {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.echoes-rectangle.echoes-in { opacity: 1; transform: scale(1) translateY(0); }
+
+.echoes-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+}
+.echoes-heading.echoes-text-in { opacity: 1; transform: translateY(0); }
+
+.echoes-paragraph {
+  opacity: 0;
+  transition: opacity 0.7s ease 0.5s;
+}
+.echoes-paragraph.echoes-text-in { opacity: 1; }
+
+.echoes-btn {
+  opacity: 0;
+  transform: translateX(15px);
+  transition: opacity 0.6s ease 0.7s, transform 0.6s ease 0.7s;
+  position: relative; overflow: hidden;
+}
+.echoes-btn.echoes-text-in { opacity: 1; transform: translateX(0); }
+.echoes-btn::before {
+  content: '';
+  position: absolute;
+  top:0; left:-100%; width:100%; height:100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.5s ease;
+}
+.echoes-btn:hover::before { left: 100%; }
+
+/* Subtle Ken Burns on echoes background */
+@keyframes kenBurns {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.04); }
+}
+.echoes-rectangle.echoes-in {
+  animation: kenBurns 12s ease-in-out infinite alternate;
+}
+
+/* ── MOVEMENT / FOOTER ── */
+.dot {
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+.movement-btn {
+  position: relative; overflow: hidden;
+}
+.movement-btn::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50px;
+  background: rgba(241,176,32,0);
+  transform: scale(0.8);
+  transition: all 0.35s ease;
+}
+.movement-btn:hover::after {
+  background: rgba(241,176,32,0.08);
+  transform: scale(1);
+}
+
+/* Footer stagger */
+.footer-col {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.footer-col.footer-col-in { opacity: 1; transform: translateY(0); }
+
+/* Go-to-top bounce in */
+#go-top-btn.visible {
+  animation: bounceIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes bounceIn {
+  from { transform: translateY(20px) scale(0.7); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}

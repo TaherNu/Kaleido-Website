@@ -1,0 +1,488 @@
+/* ============================================================
+   KALEIDO PICTURES — SERVICES PAGE ANIMATIONS
+   Drop this <link> AFTER your services.css
+   ============================================================ */
+
+/* ── Scroll Progress Bar ── */
+#k-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #B4030E, #FF8F35);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ── Cursor Glow ── */
+#k-cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 143, 53, 0.04) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+body:hover #k-cursor-glow {
+  opacity: 1;
+}
+
+/* ── Navbar compact on scroll ── */
+.navbar {
+  transition: padding 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.navbar.nav--compact {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 143, 53, 0.15);
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #FF8F35;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+/* ── Reveal System ── */
+.k-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-reveal.k-reveal--left {
+  transform: translateX(-60px);
+}
+
+.k-reveal.k-reveal--right {
+  transform: translateX(60px);
+}
+
+.k-reveal.k-reveal--scale {
+  transform: scale(0.9);
+}
+
+.k-reveal.k-reveal--visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered children */
+.k-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-stagger.k-stagger--visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(2) { transition-delay: 0.13s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(3) { transition-delay: 0.21s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(4) { transition-delay: 0.29s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(5) { transition-delay: 0.37s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(6) { transition-delay: 0.45s; opacity: 1; transform: none; }
+
+/* ── Clip Reveal ── */
+.k-clip-reveal {
+  overflow: hidden;
+  display: block;
+}
+
+.k-clip-reveal span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-clip-reveal.k-clip-reveal--visible span {
+  transform: translateY(0);
+}
+
+/* ── Hero rectangle entrance ── */
+.services-hero-rectangle {
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Hero word split ── */
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px) skewX(-4deg);
+  animation: heroWordReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroWordReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) skewX(0deg);
+  }
+}
+
+/* ── Hero buttons & paragraph entrance ── */
+.services-hero-buttons {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 1s, transform 0.6s ease 1s;
+}
+
+.services-hero-buttons.k-btn-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services-hero-paragraph {
+  opacity: 0;
+  transition: opacity 0.7s ease 1.3s;
+}
+
+.services-hero-paragraph.k-para-visible {
+  opacity: 1;
+}
+
+/* ── Hero button shimmer ── */
+.services-btn-solid {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-btn-solid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.services-btn-solid:hover::before {
+  left: 100%;
+}
+
+/* ── Work With Us pulse ── */
+.work-with-us {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-with-us::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: rgba(255, 143, 53, 0);
+  transition: background 0.3s ease;
+}
+
+.work-with-us:hover::after {
+  background: rgba(255, 143, 53, 0.08);
+}
+
+/* ── WE / DO section — WE and DO entrance ── */
+.we-text,
+.do-text {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.we-text {
+  transform: translateX(-60px);
+}
+
+.do-text {
+  transform: translateX(60px);
+}
+
+.we-text.k-reveal--visible,
+.do-text.k-reveal--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Service items ── */
+.service-item {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.service-item:hover:not(.active) {
+  transform: translateX(8px) !important;
+  letter-spacing: 3px !important;
+}
+
+.service-item.active {
+  animation: activePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes activePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 143, 53, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(255, 143, 53, 0.15); }
+}
+
+/* ── Service cards ── */
+.service-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.service-card .card-bg {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card.expanded .card-bg {
+  transform: scale(1.03);
+}
+
+.card-explore-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 143, 53, 0.2), transparent);
+  transition: left 0.4s ease;
+}
+
+
+.card-explore-btn:hover::before {
+  left: 100%;
+  display: block;
+}
+
+/* ── Service cards entrance ── */
+.service-card {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.service-card.k-card-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Process section ── */
+.process-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.process-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #FF8F35;
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-heading.heading-line-visible::after {
+  width: 100%;
+}
+
+/* ── Process squares entrance ── */
+.process-square {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.process-square.k-square-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Process squares hover ── */
+.process-square:not(.square-image) {
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease !important;
+}
+
+.process-square:not(.square-image):hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* ── Work Gallery ── */
+.gallery-main-title {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #FF8F35;
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-main-title.heading-line-visible::after {
+  width: 30%;
+}
+
+/* ── Gallery cards ── */
+.gallery-card {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease !important;
+  position: relative;
+}
+
+.gallery-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 143, 53, 0);
+  transition: border-color 0.35s ease;
+  pointer-events: none;
+}
+
+.gallery-card:hover::after {
+  border-color: rgba(255, 143, 53, 0.5);
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+}
+
+
+
+.gallery-card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 143, 53, 0.2), transparent);
+  transition: left 0.4s ease;
+}
+
+.gallery-card-btn:hover::before {
+  left: 100%;
+}
+
+/* ── Why Kaleido cards ── */
+.why-kaleido-heading {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Why cards entrance */
+.why-card {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.why-card.k-card-visible {
+  opacity: 1;
+  /* Restore original rotations */
+}
+
+/* Why card hover flatten */
+.card-1 { transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease !important; }
+.card-2 { transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease !important; }
+.card-3 { transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease !important; }
+.card-4 { transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease !important; }
+
+/* White square shine */
+.white-square {
+  position: relative;
+  overflow: hidden;
+}
+
+.white-square::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-15deg);
+  transition: left 0.6s ease;
+}
+
+.why-card:hover .white-square::before {
+  left: 130%;
+}
+
+/* ── Movement dots ── */
+.dot {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* ── Movement btn ── */
+.movement-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.movement-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(241, 176, 32, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.movement-btn:hover::before {
+  left: 100%;
+}
+
+/* ── Footer ── */
+.footer-links a {
+  transition: color 0.25s ease, padding-left 0.25s ease !important;
+  display: inline-block;
+}
+
+/* ── Go to top button ── */
+#go-top-btn.visible {
+  animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bounceIn {
+  from { transform: translateY(20px) scale(0.7); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}

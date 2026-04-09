@@ -1,0 +1,431 @@
+/* ============================================================
+   KALEIDO PICTURES — CREATIVE PAGE ANIMATIONS
+   Drop this <link> AFTER your creative.css
+   ============================================================ */
+
+/* ── Scroll Progress Bar ── */
+#k-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #B4030E, #FF8F35);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ── Cursor Glow ── */
+#k-cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 143, 53, 0.04) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+body:hover #k-cursor-glow {
+  opacity: 1;
+}
+
+/* ── Navbar compact on scroll ── */
+.navbar {
+  transition: padding 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.navbar.nav--compact {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 143, 53, 0.15);
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #FF8F35;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+/* ── Intersection Observer Reveal System ── */
+.k-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-reveal.k-reveal--left {
+  transform: translateX(-60px);
+}
+
+.k-reveal.k-reveal--right {
+  transform: translateX(60px);
+}
+
+.k-reveal.k-reveal--scale {
+  transform: scale(0.88);
+}
+
+.k-reveal.k-reveal--visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered children */
+.k-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-stagger.k-stagger--visible > *:nth-child(1)  { transition-delay: 0.05s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(2)  { transition-delay: 0.13s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(3)  { transition-delay: 0.21s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(4)  { transition-delay: 0.29s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(5)  { transition-delay: 0.37s; opacity: 1; transform: none; }
+.k-stagger.k-stagger--visible > *:nth-child(6)  { transition-delay: 0.45s; opacity: 1; transform: none; }
+
+/* ── Clip Reveal (headings) ── */
+.k-clip-reveal {
+  overflow: hidden;
+  display: block;
+}
+
+.k-clip-reveal span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.k-clip-reveal.k-clip-reveal--visible span {
+  transform: translateY(0);
+}
+
+/* ── Hero: Creative Rectangle entrance ── */
+.creative-rectangle {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.9s ease,
+              opacity 0.9s ease;
+}
+
+/* ── Hero char split ── */
+.hero-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%) skewY(6deg);
+  animation: charReveal 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes charReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0deg);
+  }
+}
+
+/* ── Creative title word reveal ── */
+.creative-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px) skewX(-4deg);
+  animation: wordReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes wordReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) skewX(0deg);
+  }
+}
+
+/* ── Creative buttons entrance ── */
+.creative-buttons {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 1s, transform 0.6s ease 1s;
+}
+
+.creative-buttons.k-btn-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Creative description entrance ── */
+.creative-description {
+  opacity: 0;
+  transition: opacity 0.7s ease 1.3s;
+}
+
+.creative-description.k-desc-visible {
+  opacity: 1;
+}
+
+/* ── Shimmer on solid button ── */
+.creative-btn-solid {
+  position: relative;
+  overflow: hidden;
+}
+
+.creative-btn-solid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.creative-btn-solid:hover::before {
+  left: 100%;
+}
+
+/* ── Outline button arrow nudge ── */
+.creative-btn-outline {
+  transition: all 0.3s ease !important;
+}
+
+.creative-btn-outline:hover {
+  letter-spacing: 2px !important;
+}
+
+/* ── Work With Us button pulse ── */
+.work-with-us {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-with-us::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: rgba(255, 143, 53, 0);
+  transition: background 0.3s ease;
+}
+
+.work-with-us:hover::after {
+  background: rgba(255, 143, 53, 0.08);
+}
+
+/* ── Sliding frames section ── */
+.frames-nav-btn {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.frames-nav-btn:hover {
+  transform: scale(1.15) !important;
+}
+
+/* Frame slides — title pop-in when active ── */
+.frame-slide.active .frame-main-title,
+.frame-slide.active .frame-title {
+  animation: frameTitleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.frame-slide.active .frame-text {
+  animation: frameTitleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+  opacity: 0;
+}
+
+@keyframes frameTitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Portfolio cards ── */
+.portfolio-card {
+  transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  position: relative;
+}
+
+.portfolio-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 143, 53, 0);
+  transition: border-color 0.35s ease;
+  pointer-events: none;
+}
+
+.portfolio-card:hover::after {
+  border-color: rgba(255, 143, 53, 0.5);
+}
+
+
+
+
+
+.portfolio-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(241, 176, 32, 0.25), transparent);
+  transition: left 0.5s ease;
+}
+
+.portfolio-btn:hover::before {
+  left: 100%;
+}
+
+/* ── Why rectangles tilt ── */
+.why-rect {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease !important;
+}
+
+.rect-1:hover { transform: rotate(-10.6deg) scale(1.04) !important; box-shadow: 0 20px 40px rgba(255, 125, 21, 0.3); }
+.rect-2:hover { transform: rotate(2.66deg)  scale(1.04) !important; box-shadow: 0 20px 40px rgba(241, 176, 32, 0.3); }
+.rect-3:hover { transform: rotate(-7.61deg) scale(1.04) !important; box-shadow: 0 20px 40px rgba(236, 69, 57,  0.3); }
+
+/* ── Why Kaleido heading underline ── */
+.why-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.why-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #FF8F35;
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-heading.heading-line-visible::after {
+  width: 50%;
+}
+
+/* ── Ready section heading ── */
+.ready-heading-white,
+.ready-heading-yellow {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ready-heading-white.k-reveal--visible,
+.ready-heading-yellow.k-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ── Footer logo reveal ── */
+.footer-logo-img {
+  transition: filter 0.4s ease;
+}
+
+.footer-logo-img:hover {
+  filter: brightness(1.1);
+}
+
+.footer-links a {
+  transition: color 0.25s ease, padding-left 0.25s ease !important;
+  display: inline-block;
+}
+
+/* ── Go to top button ── */
+#go-top-btn.visible {
+  animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bounceIn {
+  from { transform: translateY(20px) scale(0.7); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* ── Section line draw ── */
+.k-line-draw::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: rgba(255, 143, 53, 0.3);
+  transition: width 1.5s ease 0.3s;
+}
+
+.k-line-draw.k-line-draw--visible::before {
+  width: 100%;
+}
+
+/* ── Badge pop ── */
+.portfolio-badge,
+.ready-subheading {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.portfolio-badge.k-reveal--visible,
+.ready-subheading.k-reveal--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Frame slide transition polish ── */
+.frame-slide {
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.55s ease !important;
+}
+
+/* ── Frames dot transition ── */
+.frames-dot {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* ── Service slide cards ── */
+.service-slide-card {
+  transition: width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              height 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.45s ease !important;
+}
+
+/* ── Banner content fade on slide change ── */
+@keyframes contentFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.banner-content-in {
+  animation: contentFadeIn 0.45s ease forwards;
+}

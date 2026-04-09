@@ -1,0 +1,265 @@
+/* ============================================================
+   KALEIDO PICTURES — CONTACT PAGE ANIMATIONS
+   Add <link rel="stylesheet" href="contact-animations.css">
+   AFTER your contact.css in the <head>
+   ============================================================ */
+
+/* ── Scroll Progress Bar ── */
+#k-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px; width: 0%;
+  background: linear-gradient(90deg, #B4030E, #FF8F35);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ── Cursor Glow ── */
+#k-cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,143,53,0.05) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+body:hover #k-cursor-glow { opacity: 1; }
+
+/* ── Navbar compact ── */
+.navbar { transition: padding 0.4s ease, box-shadow 0.4s ease !important; }
+.navbar.nav--compact {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,143,53,0.15);
+}
+.nav-links a { position: relative; }
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: #FF8F35;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::before { width: 100%; }
+
+/* ── Reveal base ── */
+.k-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1),
+              transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.k-reveal.k-reveal--visible { opacity: 1; transform: none; }
+
+/* ── HERO SECTION ── */
+.contact-rectangle {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
+  transition: opacity 1s cubic-bezier(0.16,1,0.3,1),
+              transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.contact-rectangle.rect-in { opacity: 1; transform: scale(1) translateY(0); }
+
+/* Subtle Ken Burns on hero bg */
+@keyframes kenBurnsContact {
+  0%   { background-size: 100%; }
+  100% { background-size: 106%; }
+}
+.contact-rectangle.rect-in {
+  animation: kenBurnsContact 14s ease-in-out infinite alternate;
+}
+
+.contact-title {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.9s ease 0.3s, transform 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s;
+}
+.contact-title.title-in { opacity: 1; transform: translateY(0); }
+
+.contact-description {
+  opacity: 0;
+  transition: opacity 0.7s ease 0.7s;
+}
+.contact-description.desc-in { opacity: 0.9; }
+
+/* ── GET IN TOUCH SECTION ── */
+/* Orange rectangle slides up */
+.orange-rectangle {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1),
+              transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.orange-rectangle.orange-in { opacity: 1; transform: translateY(0); }
+
+/* White inner scales in */
+.white-inner {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.7s ease 0.2s, transform 0.7s cubic-bezier(0.16,1,0.3,1) 0.2s;
+}
+.orange-rectangle.orange-in .white-inner { opacity: 1; transform: scale(1); }
+
+/* Form heading clip reveal */
+.form-heading {
+  overflow: hidden;
+  display: block;
+}
+.form-heading span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s;
+}
+.orange-rectangle.orange-in .form-heading span { transform: translateY(0); }
+
+.form-description {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.7s ease 0.5s, transform 0.7s ease 0.5s;
+}
+.orange-rectangle.orange-in .form-description { opacity: 1; transform: translateY(0); }
+
+/* Contact cards stagger */
+.contact-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1),
+              transform 0.6s cubic-bezier(0.34,1.56,0.64,1);
+}
+.contact-card.card-in { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Card hover glow per colour */
+.card-whatsapp {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.card-whatsapp:hover {
+  box-shadow: 0 20px 40px rgba(255,125,21,0.35) !important;
+}
+
+.card-phone {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.card-phone:hover {
+  box-shadow: 0 20px 40px rgba(236,69,57,0.35) !important;
+}
+
+.card-email {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.card-email:hover {
+  box-shadow: 0 20px 40px rgba(241,176,32,0.35) !important;
+}
+
+/* Card icon bounce on card hover */
+.card-icon {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+.contact-card:hover .card-icon {
+  transform: translateY(-6px) scale(1.1) !important;
+}
+
+/* Card button shimmer */
+.card-btn {
+  position: relative; overflow: hidden;
+}
+.card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.5s ease;
+}
+.card-btn:hover::before { left: 100%; }
+
+/* ── AVAILABILITY SECTION ── */
+.availability-square {
+  opacity: 0;
+  transform: translateX(-40px) scale(0.97);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1),
+              transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.availability-square.avail-in { opacity: 1; transform: translateX(0) scale(1); }
+
+/* Ken Burns on availability square */
+@keyframes kenBurnsAvail {
+  0%   { background-size: 105%; }
+  100% { background-size: 112%; }
+}
+.availability-square.avail-in {
+  animation: kenBurnsAvail 12s ease-in-out infinite alternate;
+}
+
+.square-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+}
+.availability-square.avail-in .square-heading { opacity: 1; transform: translateY(0); }
+
+.square-text {
+  opacity: 0;
+  transition: opacity 0.6s ease 0.5s;
+}
+.availability-square.avail-in .square-text { opacity: 0.9; }
+
+.availability-paragraph {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s,
+              transform 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s;
+}
+.availability-paragraph.avail-text-in { opacity: 0.85; transform: translateX(0); }
+
+/* Animated highlight on "24–48 hours" */
+.avail-highlight {
+  position: relative;
+  display: inline-block;
+}
+.avail-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 0;
+  width: 0; height: 2px;
+  background: #FF8F35;
+  transition: width 1s ease 1s;
+  border-radius: 1px;
+}
+.availability-paragraph.avail-text-in .avail-highlight::after { width: 100%; }
+
+/* ── MOVEMENT / FOOTER SHARED ── */
+.dot { transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1) !important; }
+
+.movement-btn { position: relative; overflow: hidden; }
+.movement-btn::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50px;
+  background: rgba(241,176,32,0);
+  transform: scale(0.8);
+  transition: all 0.35s ease;
+}
+.movement-btn:hover::after { background: rgba(241,176,32,0.08); transform: scale(1); }
+
+.footer-col {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.footer-col.footer-col-in { opacity: 1; transform: translateY(0); }
+
+#go-top-btn.visible {
+  animation: bounceIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes bounceIn {
+  from { transform: translateY(20px) scale(0.7); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
