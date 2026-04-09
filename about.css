@@ -1757,10 +1757,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
   .movement-hero{
-    min-height: 80vh;
-  }
-  .background-slide {
-    background-size: contain;
+    min-height: 100vh;
   }
 
   .movement-subtitle {
