@@ -412,8 +412,66 @@
     </div>
   </footer>
 
+  <!-- Go To Top Button -->
+  <button id="go-top-btn" aria-label="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
-  <script>
+<script>
+  
+    // ===== GO TO TOP BUTTON =====
+  const goTopBtn = document.getElementById('go-top-btn');
+ 
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      goTopBtn.classList.add('visible');
+    } else {
+      goTopBtn.classList.remove('visible');
+    }
+  });
+ 
+  goTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+
+  // More robust active link highlighting
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the current path
+    const currentPath = window.location.pathname;
+    
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      
+      // Skip if link is empty or just a hash
+      if (!linkPath || linkPath === '#' || linkPath.startsWith('#')) return;
+      
+      // Create a regex to match the link
+      // Remove leading './' or '/' for comparison if needed
+      let cleanLinkPath = linkPath.replace(/^\.\//, '').replace(/^\//, '');
+      let cleanCurrentPath = currentPath.replace(/^\//, '').split('/').pop();
+      
+      if (cleanCurrentPath === '') {
+        cleanCurrentPath = 'index.html';
+      }
+      
+      // Check if the link matches the current page
+      if (cleanLinkPath === cleanCurrentPath) {
+        link.classList.add('active');
+      }
+      
+      // Also check if it's the index page
+      if ((cleanCurrentPath === 'index.html' || cleanCurrentPath === '') && 
+          (cleanLinkPath === 'index.html' || cleanLinkPath === '' || cleanLinkPath === '/')) {
+        link.classList.add('active');
+      }
+    });
+  });
 
          // ===== SCROLL DETECTION FOR LOGO CHANGE =====
      window.addEventListener('scroll', function() {

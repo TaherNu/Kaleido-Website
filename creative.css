@@ -237,6 +237,39 @@ body.scrolled .logo-secondary {
   white-space: nowrap;
 }
 
+/* Active navigation link styling */
+.nav-links a.active {
+  color: #FF8F35;
+}
+
+/* Optional: Add a nice underline effect */
+.nav-links a.active {
+  color: #FF8F35;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FF8F35;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* For the Work With Us button - never gets active class */
+.nav-links .work-with-us.active {
+  color: #FDFDF6;
+}
+
+.nav-links .work-with-us.active::after {
+  display: none;
+}
+
+
 .nav-links a:hover {
   color: #FF8F35;
 }
@@ -2794,4 +2827,62 @@ body.scrolled .logo-secondary {
   font-size: 0.8rem;
   color: rgba(253, 253, 246, 0.5);
   letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== GO TO TOP BUTTON ========== */
+#go-top-btn {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 999;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #FF8F35;
+  border: 2px solid transparent;
+  color: #FDFDF6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+ 
+#go-top-btn svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+ 
+#go-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+ 
+#go-top-btn:hover {
+  background-color: transparent;
+  border-color: #FF8F35;
+  color: #FF8F35;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 143, 53, 0.35);
 }
