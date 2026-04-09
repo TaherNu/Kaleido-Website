@@ -1438,11 +1438,10 @@ body.scrolled .logo-secondary {
     transform: translateX(-100%);
   }
 }
-
 .movement-subtitle {
   font-family: 'Anton', sans-serif;
   font-size: clamp(3rem, 4.5vw, 5.8rem);
-  letter-spacing: 8px;
+  letter-spacing: 2px;
   color: #FDFDF6;
   text-transform: uppercase;
   font-weight: 400;
@@ -1454,7 +1453,7 @@ body.scrolled .logo-secondary {
 .movement-title {
   font-family: 'Anton', sans-serif;
   font-size: clamp(3.5rem, 5.5vw, 7rem);
-  letter-spacing: 10px;
+  letter-spacing: 2px;
   color: #F1B020;
   text-transform: uppercase;
   font-weight: 500;
