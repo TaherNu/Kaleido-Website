@@ -1905,7 +1905,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .contact-title {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
@@ -2097,7 +2097,7 @@ body.scrolled .logo-secondary {
     }
 
     .form-heading {
-        font-size: 4rem;
+        font-size: 3.2rem;
     }
 
     .form-description {
@@ -2225,7 +2225,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .square-heading {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
         line-height: 1;
     }
 

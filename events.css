@@ -499,7 +499,7 @@ body.scrolled .logo-secondary {
   }
 
   .rectangle-title{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .rectangle-text{
@@ -1992,7 +1992,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .events-hero-heading {
-        font-size: 6rem;
+        font-size: 4.2rem;
     }
 
     .events-hero-paragraph {
@@ -2229,7 +2229,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .events-left-heading {
-        font-size: 5rem;
+        font-size: 4.2rem;
     }
 
     .events-left-paragraph {
@@ -2481,7 +2481,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .beyond-heading {
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-weight: 1;
     }
 
@@ -2599,7 +2599,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .never-miss-heading {
-        font-size: 5rem;
+        font-size: 4.2rem;
         line-height: 1;
     }
 }
@@ -2702,7 +2702,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .want-partner-heading {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 1;
     }
 

@@ -1936,7 +1936,7 @@ body.scrolled .logo-secondary {
 @media (min-width: 1000px) and (max-width: 1500px) {
 
     .creative-title {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .creative-description {
@@ -2154,7 +2154,7 @@ body.scrolled .logo-secondary {
     }
 
     .frame-main-title {
-        font-size: 6rem;
+        font-size: 4.2rem;
     }
 
     .frame-overlay-left{
@@ -2496,7 +2496,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .why-heading {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 

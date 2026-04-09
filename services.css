@@ -496,7 +496,7 @@ body.scrolled .logo-secondary {
   }
 
   .rectangle-title{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .rectangle-text{
@@ -1952,7 +1952,7 @@ body.scrolled .logo-secondary {
         width: 95%;
     }
     .services-hero-heading {
-        font-size: 6rem;
+        font-size: 4.4rem;
     }
     .services-hero-paragraph {
         font-size: 1.3rem;
@@ -2190,7 +2190,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .we-text, .do-text {
-        font-size: 10rem;
+        font-size: 8rem;
     }
 
     .service-item {
@@ -2403,12 +2403,12 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .process-heading {
-        font-size: 3rem;
+        font-size: 2.6rem;
         padding-left: 10%;
     }
 
     .square-header {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -2567,7 +2567,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .gallery-main-title {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     .gallery-main-description {
@@ -2745,7 +2745,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .why-kaleido-heading {
-        font-size: 5rem;
+        font-size: 3.4rem;
         line-height: 1;
     }
 

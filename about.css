@@ -753,7 +753,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .about-hero-heading {
-        font-size: 4rem;
+        font-size: 3.4rem;
     }
 
 }
@@ -837,7 +837,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .who-heading {
-        font-size: 4rem;
+        font-size: 3.4rem;
     }
 
     .who-paragraph {
@@ -920,7 +920,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .vision-heading {
-        font-size: 4rem;
+        font-size: 3.4rem;
     }
 
     .vision-paragraph {
@@ -1082,7 +1082,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .gallery-main-title {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     .gallery-main-description {
@@ -1242,7 +1242,7 @@ body.scrolled .logo-secondary {
     }
 
     .approach-heading {
-        font-size: 4rem;
+        font-size: 3.2rem;
     }
 
     .approach-text {
@@ -1338,7 +1338,7 @@ body.scrolled .logo-secondary {
     }
 
     .matters-heading{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .matters-paragraph {
@@ -1515,7 +1515,7 @@ body.scrolled .logo-secondary {
         width: 100%;
     }
     .echoes-heading {
-        font-size: 4rem;
+        font-size: 3.2rem;
     }
 
     .echoes-paragraph {

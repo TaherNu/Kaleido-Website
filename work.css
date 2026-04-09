@@ -572,14 +572,6 @@ body.scrolled .logo-secondary {
     max-width: 800px;
   }
 
-  .rectangle-left{
-    transform: translateY(170px) rotate(-4deg);
-  }
-
-  .rectangle-right{
-    transform: translateY(110px) rotate(-4deg);
-  }
-
   .rectangle-title{
     font-size: 1.8rem;
   }
@@ -1991,7 +1983,7 @@ body.scrolled .logo-secondary {
         background-size: contain;
     }
     .work-title {
-        font-size: 6.5rem;
+        font-size: 4.5rem;
     }
 
     .work-description {
@@ -2160,7 +2152,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .gallery-main-title {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     .gallery-main-description {
@@ -2460,7 +2452,7 @@ body.scrolled .logo-secondary {
     }
 
     .stories-stay-heading {
-        font-size: 6rem;
+        font-size: 4.8rem;
     }
 }
 
@@ -2655,7 +2647,7 @@ body.scrolled .logo-secondary {
         width: 40%;
     }
     .slide-title {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 
     .slide-description {
