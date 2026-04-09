@@ -2087,10 +2087,10 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .orange-rectangle{
-        height: 100vh;
+        height: 130vh;
     }
     .white-inner {
-        height: 400px;
+        height: 600px;
     }
 
     .form-heading {
