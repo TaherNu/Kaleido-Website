@@ -1935,9 +1935,6 @@ body.scrolled .logo-secondary {
 
 
 @media (min-width: 1000px) and (max-width: 1500px) {
-    .creative-page {
-        background-size: contain;
-    }
 
     .creative-title {
         font-size: 5rem;
@@ -2154,10 +2151,7 @@ body.scrolled .logo-secondary {
 @media (min-width: 1000px) and (max-width: 1500px) {
 
     .frames-slider-container{
-          height: calc(50vh);
-    }
-    .frame-bg {
-        background-size: contain;
+          height: calc(85vh);
     }
 
     .frame-main-title {
