@@ -2090,7 +2090,7 @@ body.scrolled .logo-secondary {
         height: 100vh;
     }
     .white-inner {
-        height: auto;
+        height: 100px;
     }
 
     .form-heading {
