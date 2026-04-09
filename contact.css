@@ -2086,6 +2086,13 @@ body.scrolled .logo-secondary {
 
 
 @media (min-width: 1000px) and (max-width: 1500px) {
+    .contact-page {
+        margin-bottom: 400px;
+    }
+
+    .contact-page {
+        margin-bottom: 400px;
+    }
     .orange-rectangle{
         height: 130vh;
     }
