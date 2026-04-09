@@ -261,18 +261,7 @@ body:hover #k-cursor-glow { opacity: 1; }
   transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
               box-shadow 0.4s ease !important;
 }
-.approach-card::after {
-  content: '';
-  position: absolute; inset: 0;
-  border-radius: 20px;
-  background: linear-gradient(to top, rgba(255,143,53,0.08) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-.approach-card:hover::after { opacity: 1; }
-.approach-card:hover { box-shadow: 0 25px 50px rgba(0,0,0,0.4); }
+
 
 /* Step number badges that appear on hover */
 .approach-card .card-white-box::before {
@@ -293,7 +282,8 @@ body:hover #k-cursor-glow { opacity: 1; }
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .approach-card .card-white-box::before {
-      bottom: 1rem;
+      bottom: 6rem;
+      font-size: 2rem;
     }
 }
 
