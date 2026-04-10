@@ -224,6 +224,12 @@ body:hover #k-cursor-glow {
   width: 59%;
 }
 
+@media (max-width: 767px) {
+  .events-left-heading.heading-line-visible::after {
+    display: none;
+  }
+}
+
 /* ── Event items ── */
 .event-item {
   transition: background 0.3s ease;
@@ -292,6 +298,12 @@ body:hover #k-cursor-glow {
 
 .beyond-heading.heading-line-visible::after {
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .beyond-heading.heading-line-visible::after {
+    display: none;
+  }
 }
 
 /* ── Beyond cards ── */

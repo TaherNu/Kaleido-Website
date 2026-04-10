@@ -272,7 +272,7 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 420px) and (max-width: 767px) {
   .hero{
     margin-top: 20%;
   }
@@ -286,11 +286,11 @@ body.scrolled .logo-secondary {
   }
 
   .center-group .kaleido-main, .presents {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .bottom-paragraph {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1275,7 +1275,7 @@ body.scrolled .logo-secondary {
     }
 
     .reel-footer-text {
-      font-size: 0.8rem;
+      font-size: 0.5rem;
     }
 }
 
@@ -1677,7 +1677,7 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 420px) and (max-width: 767px) {
   .movement-hero {
     min-height: 150vh;
   }
@@ -1686,8 +1686,19 @@ body.scrolled .logo-secondary {
   }
 
   .movement-subtitle {
-    margin-top: 30%;
+    margin-top: 40%;
+    font-size: 2rem;
   }
+
+  .movement-title {
+    font-size: 2rem;
+  }
+
+  .movement-description {
+    font-size: 1rem;
+    width: 70%;
+  }
+
 }
 
 
@@ -1719,57 +1730,44 @@ body.scrolled .logo-secondary {
   padding: 4rem 4rem 2rem 4rem;
   border-top: 1px solid rgba(253, 253, 246, 0.1);
 }
-
+/* ========== FOOTER - UPDATED LAYOUT ========== */
 .footer-container {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  gap: 0%;
+  flex-direction: row;
+  gap: clamp(2rem, 4vw, 5rem);
   justify-content: space-between;
+  align-items: flex-start;
 }
 
-/* Left Section - 45% */
+/* Left Section */
 .footer-left {
-  width: 34%;
+  width: auto;
+  flex: 1.4;
+  min-width: 0;
+}
+
+/* Right Section */
+.footer-right {
+  flex: 3;
+  padding-left: 0;
+  display: contents; /* dissolves into the flex row */
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-col {
+  flex: 1.8;
+  min-width: 0;
 }
 
 .footer-logo-img {
   width: 100%;
-  max-width: 850px;
-  height: auto;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.footer-tagline {
-  font-family: 'Archivo Narrow', sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  color: rgb(255, 255, 255);
-  text-align: right;
-  max-width: 80%;
-  margin-left: auto;
-  font-weight: 10;
-}
-
-/* Right Section - 55% */
-.footer-right {
-  width: 66%;
-  padding-left: clamp(2rem, 6vw, 200px);
-  display: flex;
-  gap: clamp(2rem, 4vw, 7.5rem);
-  flex-wrap: wrap;
-}
-
-/* Footer Columns */
-.footer-col {
-  flex: 0 1 auto;
-}
-
-/* NEW: Navigation column with grid for 2 columns */
-.nav-col {
-  min-width: 240px;
 }
 
 .footer-nav-grid {
@@ -1893,8 +1891,51 @@ body.scrolled .logo-secondary {
 }
 
 
+@media (max-width: 767px) {
+  .footer {
+    padding: 2.5rem 1.5rem 2rem;
+  }
 
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
 
+  /* footer-right uses display:contents so its children
+     become direct grid children alongside footer-left */
+  .footer-right {
+    display: contents;
+  }
+
+  .footer-left {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer-logo-img {
+    max-width: 100%;
+  }
+
+  .footer-tagline {
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .nav-col {
+    flex: none;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social-icons {
+    gap: 0.8rem;
+  }
+}
 
 
 

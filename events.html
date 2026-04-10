@@ -470,6 +470,81 @@
       document.body.classList.remove('menu-open');
     }
   });
+
+
+
+
+
+
+
+
+  // ===== BEYOND THE SCREEN - MOBILE VERTICAL EXPANSION =====
+function initBeyondScreenMobile() {
+  const isMobile = window.innerWidth <= 767;
+  const beyondCards = document.querySelectorAll('.beyond-card');
+  
+  if (isMobile) {
+    // Remove any existing inline styles
+    beyondCards.forEach(card => {
+      card.style.flex = '';
+      card.style.width = '';
+    });
+    
+    // Set initial state - first card expanded, others shrunk
+    beyondCards.forEach((card, index) => {
+      if (index === 0) {
+        card.classList.add('expanded');
+        card.classList.remove('shrunk');
+      } else {
+        card.classList.add('shrunk');
+        card.classList.remove('expanded');
+      }
+    });
+    
+    // Add click handlers for mobile (since hover doesn't work well on touch)
+    beyondCards.forEach(card => {
+      card.removeEventListener('click', mobileCardHandler);
+      card.addEventListener('click', mobileCardHandler);
+    });
+  } else {
+    // Desktop mode - reset to horizontal behavior
+    beyondCards.forEach(card => {
+      card.classList.remove('expanded', 'shrunk');
+    });
+    // Set first card as expanded by default on desktop
+    if (beyondCards[0]) {
+      beyondCards[0].classList.add('expanded');
+    }
+    beyondCards.forEach((card, index) => {
+      if (index !== 0) {
+        card.classList.add('shrunk');
+      }
+    });
+  }
+}
+
+  // Mobile card click handler
+  function mobileCardHandler(e) {
+    const clickedCard = e.currentTarget;
+    const beyondCards = document.querySelectorAll('.beyond-card');
+    
+    // If clicked card is already expanded, do nothing
+    if (clickedCard.classList.contains('expanded')) return;
+    
+    // Remove expanded from all cards
+    beyondCards.forEach(card => {
+      card.classList.remove('expanded');
+      card.classList.add('shrunk');
+    });
+    
+    // Add expanded to clicked card, remove shrunk
+    clickedCard.classList.remove('shrunk');
+    clickedCard.classList.add('expanded');
+  }
+  
+  // Initialize on load and resize
+  initBeyondScreenMobile();
+  window.addEventListener('resize', initBeyondScreenMobile);
   </script>
   <script src="events-animations.js"></script>
 </body>
