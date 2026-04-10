@@ -337,6 +337,8 @@ body.scrolled .logo-secondary {
   
   .navbar {
     padding: 1rem 1.5rem;
+    padding-bottom: 0;
+    margin: 0;
   }
   
   .nav-links {
