@@ -2417,7 +2417,7 @@ body.scrolled .logo-secondary {
   }
 
   .service-card.active-card .card-description {
-    width: 60%;
+    width: 50%;
     font-size: 0.9rem;
     opacity: 1;
     visibility: visible;
