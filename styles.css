@@ -1239,8 +1239,23 @@ body.scrolled .logo-secondary {
 
 
 @media (min-width: 100px) and (max-width: 767px) {
+    .studio-reel {
+      min-height: 100vh;
+    }  
+
     .side-rectangle {
       display: none;
+    }
+
+
+    .main-reel{
+      min-height: 120vh;
+      background-image: url(Images/PH_KHome_18.png);
+      background-size: contain;
+    }
+
+    .reel-footer-text {
+      font-size: 0.8rem;
     }
 }
 
@@ -1648,6 +1663,10 @@ body.scrolled .logo-secondary {
   }
   .background-slide {
     background-size: cover;
+  }
+
+  .movement-subtitle {
+    margin-top: 10%;
   }
 }
 
