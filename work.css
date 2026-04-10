@@ -2568,6 +2568,11 @@ body.scrolled .logo-secondary {
   .film-card .card-title {
     font-size: 2rem;
   }
+
+  .film-card {
+    height: 450px;
+    width: 330px;
+  }
 }
 
 
