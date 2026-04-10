@@ -937,7 +937,15 @@ body.scrolled .logo-secondary {
 
 
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .about-hero-heading {
+    font-size: 3rem;
+  }
 
+  .about-hero-paragraph {
+    font-size: 1rem;
+  }
+}
 
 
 
@@ -1022,7 +1030,15 @@ body.scrolled .logo-secondary {
     }
 }
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .who-heading {
+    font-size: 2rem;
+  }
 
+  .who-paragraph {
+    font-size: 1rem;
+  }
+}
 
 
 
@@ -1105,7 +1121,15 @@ body.scrolled .logo-secondary {
     }
 }
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .vision-heading {
+    font-size: 2rem;
+  }
 
+  .vision-paragraph {
+    font-size: 1rem;
+  }
+}
 
 
 
@@ -1257,6 +1281,7 @@ body.scrolled .logo-secondary {
   transform: translateX(5px);
 }
 
+
 @media (min-width: 1000px) and (max-width: 1500px) {
     .gallery-main-title {
         font-size: 2.4rem;
@@ -1266,6 +1291,30 @@ body.scrolled .logo-secondary {
         font-size: 1.2rem;
     }
 
+}
+
+
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .work-gallery {
+    padding: 1rem;
+  }
+  .gallery-main-title {
+    font-size: 2rem;
+  }
+
+  .gallery-main-description {
+    font-size: 0.9rem;
+  }
+
+  .gallery-card {
+    height: 450px;
+    width: 330px;
+  }
+
+  .gallery-card-paragraph {
+    padding-top: 50%;
+  }
 }
 
 
@@ -1442,7 +1491,31 @@ body.scrolled .logo-secondary {
 }
 
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .approach-orange {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .approach-heading {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .approach-text {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .approach-card .card-heading {
+    font-size: 2rem;
+  }
+
+  .approach-card .card-paragraph {
+    font-size: 1rem;
+  }
+
+}
 
 
 
@@ -1524,6 +1597,15 @@ body.scrolled .logo-secondary {
     }
 }
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .matters-heading {
+    font-size: 3rem;
+  }
+
+  .matters-paragraph {
+    font-size: 1rem;
+  }
+}
 
 
 /* ========== STORIES WE'VE CRAFTED SECTION ========== */
@@ -1582,7 +1664,15 @@ body.scrolled .logo-secondary {
 }
 
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .crafted-heading {
+    font-size: 3rem;
+  }
 
+  .crafted-paragraph {
+    font-size: 1rem;
+  }
+}
 
 
 
@@ -1702,7 +1792,62 @@ body.scrolled .logo-secondary {
 }
 
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .echoes-heading {
+    font-size: 2rem;
+  }
 
+  .echoes-paragraph {
+    font-size: 1rem;
+  }
+
+    /* ECHOES OF SILENCE SECTION - Mobile Styles */
+  .echoes-rectangle {
+    height: auto;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .echoes-content-wrapper {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: last baseline;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+  }
+  
+  .echoes-text {
+    max-width: 100%;
+    order: 2; /* Text comes second */
+    text-align: left;
+  }
+  
+  .echoes-heading {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
+  .echoes-paragraph {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .echoes-btn {
+    order: 1; /* Button comes first (above heading) */
+    margin-left: 0;
+    margin-bottom: 1rem;
+    white-space: normal;
+    width: auto;
+    padding: 0.7rem 1.5rem;
+  }
+}
 
 
 
@@ -1951,6 +2096,22 @@ body.scrolled .logo-secondary {
   .movement-description {
     width: 45%;
     font-size: 1rem;
+  }
+}
+
+
+
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .movement-hero {
+    min-height: 150vh;
+  }
+  .background-slide {
+    background-size: cover;
+  }
+
+  .movement-subtitle {
+    margin-top: 10%;
   }
 }
 
