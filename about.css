@@ -1031,12 +1031,36 @@ body.scrolled .logo-secondary {
 }
 
 @media (min-width: 100px) and (max-width: 767px) {
+
+  .who-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .who-left {
+    width: 100%;
+  }
+
   .who-heading {
     font-size: 2rem;
+    text-align: center;
   }
 
   .who-paragraph {
     font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .who-right {
+    width: 90%;
+  }
+
+  .who-image {
+    border-radius: 20px;
   }
 }
 
@@ -1122,12 +1146,37 @@ body.scrolled .logo-secondary {
 }
 
 @media (min-width: 100px) and (max-width: 767px) {
+  .vision-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vision-left{
+    width: 90%;
+    order: 2;
+  }
+
   .vision-heading {
     font-size: 2rem;
+    text-align: center;
   }
 
   .vision-paragraph {
     font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .vision-right {
+    width: 100%;
+    order: 1;
+  }
+
+  .vision-image {
+    border-radius: 20px;
   }
 }
 
@@ -1500,6 +1549,7 @@ body.scrolled .logo-secondary {
   .approach-heading {
     font-size: 3rem;
     text-align: center;
+    line-height: 1.1;
   }
 
   .approach-text {
@@ -1600,6 +1650,7 @@ body.scrolled .logo-secondary {
 @media (min-width: 100px) and (max-width: 767px) {
   .matters-heading {
     font-size: 3rem;
+    margin-bottom: 2rem;
   }
 
   .matters-paragraph {
@@ -1665,6 +1716,10 @@ body.scrolled .logo-secondary {
 
 
 @media (min-width: 100px) and (max-width: 767px) {
+  .stories-crafted {
+    min-height: 60vh;
+  } 
+
   .crafted-heading {
     font-size: 3rem;
   }
