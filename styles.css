@@ -646,6 +646,13 @@ body.scrolled .logo-secondary {
   }
 }
 
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .film-card {
+    width: 250px !important;
+  }
+}
+
 /* Individual card background images */
 .featured-card {
   background-image: url('Images/KHome_5.png');
