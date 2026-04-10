@@ -2656,11 +2656,11 @@ body.scrolled .logo-secondary {
   }
 
   .square-header {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .square-text {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 }
 
