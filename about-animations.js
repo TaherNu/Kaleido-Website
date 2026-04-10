@@ -208,6 +208,7 @@ if (galleryDesc) {
   }
 
 
+  
   /* ── 14. ECHOES OF SILENCE ── */
   const echoesRect = document.querySelector('.echoes-rectangle');
   const echoesH    = document.querySelector('.echoes-heading');

@@ -135,6 +135,7 @@ body:hover #k-cursor-glow { opacity: 1; }
               transform 0.9s cubic-bezier(0.16,1,0.3,1);
 }
 .who-left.who-in { opacity: 1; transform: translateX(0); }
+ 
 
 .who-image {
   opacity: 0;
