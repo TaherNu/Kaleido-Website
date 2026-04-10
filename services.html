@@ -83,39 +83,43 @@
         
         <!-- 4 Cards Container -->
         <div class="services-we-do-cards">
-        
-          <!-- Card 1 - NARRATIVE FILM PRODUCTION -->
-          <div class="service-card" data-category="narrative">
+  
+          <!-- Card 1 - STORY DEVELOPMENT -->
+          <div class="service-card" data-service="story-development">
             <div class="card-bg" style="background-image: url('Images/KServices_2.png');"></div>
-            <h3 class="card-header">NARRATIVE FILM<br>PRODUCTION</h3>
-            <p class="card-description">We craft cinematic stories driven by emotion, character, and meaning...</p>
-            <button class="card-explore-btn">Explore Films →</button>
+            <div class="card-overlay"></div>
+            <div class="card-header">STORY<br>DEVELOPMENT</div>
+            <div class="card-description">From concept to script, we shape compelling narratives that captivate audiences and bring your vision to life with emotional depth and cinematic structure.</div>
+            <button class="card-explore-btn">Explore →</button>
           </div>
-          
-          <!-- Card 2 - COMMERCIAL & BRAND FILMS -->
-          <div class="service-card" data-category="commercial">
+
+          <!-- Card 2 - DIRECTION & CINEMATOGRAPHY -->
+          <div class="service-card" data-service="direction">
             <div class="card-bg" style="background-image: url('Images/KServices_3.png');"></div>
-            <h3 class="card-header">COMMERCIAL &<br>BRAND FILMS</h3>
-            <p class="card-description">Strategic visuals designed to elevate brands and connect with audiences.</p>
-            <button class="card-explore-btn">Explore Films →</button>
+            <div class="card-overlay"></div>
+            <div class="card-header">DIRECTION &<br>CINEMATOGRAPHY</div>
+            <div class="card-description">Visual storytelling that moves. Our directors and cinematographers craft every frame with purpose, emotion, and striking composition.</div>
+            <button class="card-explore-btn">Explore →</button>
           </div>
-          
-          <!-- Card 3 - CREATIVE DIRECTIONS -->
-          <div class="service-card" data-category="creative">
+
+          <!-- Card 3 - PRODUCING & FILMING -->
+          <div class="service-card" data-service="producing">
             <div class="card-bg" style="background-image: url('Images/KServices_4.png');"></div>
-            <h3 class="card-header">CREATIVE<br>DIRECTIONS</h3>
-            <p class="card-description">Shaping the vision behind every frame.</p>
-            <button class="card-explore-btn">Explore Films →</button>
+            <div class="card-overlay"></div>
+            <div class="card-header">PRODUCING &<br>FILMING</div>
+            <div class="card-description">From planning to production, we manage crews, locations, and logistics to bring your story to life efficiently and creatively.</div>
+            <button class="card-explore-btn">Explore →</button>
           </div>
-          
-          <!-- Card 4 - FULL PRODUCTION SERVICES -->
-          <div class="service-card" data-category="full">
+
+          <!-- Card 4 - POST-PRODUCTION & EDITING -->
+          <div class="service-card" data-service="post-production">
             <div class="card-bg" style="background-image: url('Images/KServices_5.png');"></div>
-            <h3 class="card-header">FULL PRODUCTION<br>SERVICES</h3>
-            <p class="card-description">End-to-end production handled with precision.</p>
-            <button class="card-explore-btn">Explore Films →</button>
+            <div class="card-overlay"></div>
+            <div class="card-header">POST-PRODUCTION<br>& EDITING</div>
+            <div class="card-description">Final touches that elevate your film. Our editors, colorists, and sound designers craft a seamless, polished experience.</div>
+            <button class="card-explore-btn">Explore →</button>
           </div>
-          
+
         </div>
         
       </div>
@@ -129,7 +133,7 @@
         
         <!-- Left Side - 25% -->
         <div class="process-left">
-          <h2 class="process-heading">OUR<br>PROCESS</h2>
+          <h2 class="process-heading">OUR <br> PROCESS</h2>
         </div>
         
         <!-- Right Side - 75% - 3x3 Grid -->
@@ -304,12 +308,28 @@
     <section class="movement-hero">
     
       <!-- Background Image Slider -->
+      <!-- Updated HTML with mobile images -->
       <div class="background-slider">
-        <div class="background-slide active" style="background-image: url('Images/BG_KHome_26.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_27.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_28.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_29.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_30.png');"></div>
+        <div class="background-slide active" 
+             data-desktop="Images/BG_KHome_26.png" 
+             data-mobile="Images/PH_KHome_23.png"
+             style="background-image: url('Images/BG_KHome_26');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_27.png" 
+             data-mobile="Images/PH_KHome_24.png"
+             style="background-image: url('Images/BG_KHome_27.png');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_28.png" 
+             data-mobile="Images/PH_KHome_25.png"
+             style="background-image: url('Images/BG_KHome_28.png');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_29.png" 
+             data-mobile="Images/PH_KHome_26.png"
+             style="background-image: url('Images/BG_KHome_29.png');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_30.png" 
+             data-mobile="Images/PH_KHome_27.png"
+             style="background-image: url('Images/BG_KHome_30.png');"></div>
       </div>
 
       <div class="movement-container">
@@ -369,6 +389,9 @@
 
       </div>
     </section>
+
+
+
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -694,6 +717,161 @@
       document.body.classList.remove('menu-open');
     }
   });
+
+  // ===== MOBILE SERVICE CARDS FUNCTIONALITY =====
+  // ===== MOBILE SERVICE CARDS FUNCTIONALITY =====
+  function initMobileServiceCards() {
+    const isMobile = window.innerWidth <= 767;
+    const serviceItems = document.querySelectorAll('.services-we-do .service-item');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    if (isMobile) {
+      // First, remove all desktop-specific classes
+      serviceCards.forEach(card => {
+        card.classList.remove('expanded', 'shrunk', 'active-card');
+        // Reset any inline styles
+        card.style.display = '';
+        card.style.position = '';
+        card.style.opacity = '';
+      });
+
+      // Hide all cards initially
+      serviceCards.forEach(card => {
+        card.classList.add('mobile-hidden');
+      });
+
+      // Find the active service item and show corresponding card
+      const activeServiceItem = document.querySelector('.services-we-do .service-item.active');
+      let activeServiceType = 'story-development'; // default
+
+      if (activeServiceItem) {
+        const itemText = activeServiceItem.textContent.trim();
+        // Map text to card data-service
+        if (itemText.includes('STORY DEVELOPMENT')) activeServiceType = 'story-development';
+        else if (itemText.includes('DIRECTION & CINEMATOGRAPHY')) activeServiceType = 'direction';
+        else if (itemText.includes('PRODUCING & FILMING')) activeServiceType = 'producing';
+        else if (itemText.includes('POST-PRODUCTION & EDITING')) activeServiceType = 'post-production';
+      }
+
+      // Show the matching card
+      const targetCard = document.querySelector(`.service-card[data-service="${activeServiceType}"]`);
+      if (targetCard) {
+        targetCard.classList.remove('mobile-hidden');
+        targetCard.classList.add('active-card');
+      } else if (serviceCards[0]) {
+        // Fallback to first card
+        serviceCards[0].classList.remove('mobile-hidden');
+        serviceCards[0].classList.add('active-card');
+      }
+
+      // Add click handlers to service items
+      serviceItems.forEach(item => {
+        // Remove existing listeners to avoid duplicates
+        item.removeEventListener('click', mobileItemClickHandler);
+        // Add new listener
+        item.addEventListener('click', mobileItemClickHandler);
+      });
+    } else {
+      // Desktop mode - remove mobile styles and restore desktop behavior
+      serviceCards.forEach(card => {
+        card.classList.remove('mobile-hidden', 'active-card');
+        card.style.display = '';
+        card.style.position = '';
+        card.style.opacity = '';
+      });
+
+      // Re-run desktop expansion based on active item
+      const activeServiceItem = document.querySelector('.services-we-do .service-item.active');
+      if (activeServiceItem) {
+        const itemText = activeServiceItem.textContent.trim();
+        let selectedCategory = 'narrative';
+        if (itemText.includes('STORY DEVELOPMENT')) selectedCategory = 'narrative';
+        else if (itemText.includes('DIRECTION & CINEMATOGRAPHY')) selectedCategory = 'commercial';
+        else if (itemText.includes('PRODUCING & FILMING')) selectedCategory = 'creative';
+        else if (itemText.includes('POST-PRODUCTION & EDITING')) selectedCategory = 'full';
+        expandCard(selectedCategory);
+      } else {
+        expandCard('narrative');
+      }
+    }
+  }
+
+  // Separate handler function for mobile clicks
+  function mobileItemClickHandler(e) {
+    const item = e.currentTarget;
+    const serviceItems = document.querySelectorAll('.services-we-do .service-item');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    // Update active class on slider items
+    serviceItems.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+
+    // Determine which card to show
+    const itemText = item.textContent.trim();
+    let activeServiceType = 'story-development';
+    if (itemText.includes('STORY DEVELOPMENT')) activeServiceType = 'story-development';
+    else if (itemText.includes('DIRECTION & CINEMATOGRAPHY')) activeServiceType = 'direction';
+    else if (itemText.includes('PRODUCING & FILMING')) activeServiceType = 'producing';
+    else if (itemText.includes('POST-PRODUCTION & EDITING')) activeServiceType = 'post-production';
+
+    // Hide all cards
+    serviceCards.forEach(card => {
+      card.classList.add('mobile-hidden');
+      card.classList.remove('active-card');
+    });
+
+    // Show selected card
+    const targetCard = document.querySelector(`.service-card[data-service="${activeServiceType}"]`);
+    if (targetCard) {
+      targetCard.classList.remove('mobile-hidden');
+      targetCard.classList.add('active-card');
+    }
+  }
+
+  // Desktop expand card function (keep your existing one)
+  function expandCard(selectedCategory) {
+    const serviceCards = document.querySelectorAll('.service-card');
+    // Remove expanded and shrunk classes from all cards
+    serviceCards.forEach(card => {
+      card.classList.remove('expanded', 'shrunk');
+    });
+
+    // Add expanded class to matching card
+    const targetCard = document.querySelector(`.service-card[data-category="${selectedCategory}"]`);
+    if (targetCard) {
+      targetCard.classList.add('expanded');
+    }
+
+    // Add shrunk class to all other cards
+    serviceCards.forEach(card => {
+      if (card !== targetCard) {
+        card.classList.add('shrunk');
+      }
+    });
+  }
+
+  // Initialize on load and resize
+  initMobileServiceCards();
+  window.addEventListener('resize', initMobileServiceCards);
+
+      // ===== RESPONSIVE BACKGROUND IMAGES FOR MOVEMENT HERO =====
+  function updateMovementBackgrounds() {
+    const isMobile = window.innerWidth <= 767;
+    const backgroundSlides = document.querySelectorAll('.background-slide');
+
+    backgroundSlides.forEach(slide => {
+      const imageUrl = isMobile ? slide.getAttribute('data-mobile') : slide.getAttribute('data-desktop');
+      if (imageUrl) {
+        slide.style.backgroundImage = `url('${imageUrl}')`;
+      }
+    });
+  }
+
+  // Call on load
+  updateMovementBackgrounds();
+
+  // Call on resize
+  window.addEventListener('resize', updateMovementBackgrounds);
   </script>
   <script src="services-animations.js"></script>
 </body>
