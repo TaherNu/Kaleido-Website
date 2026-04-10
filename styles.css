@@ -650,6 +650,7 @@ body.scrolled .logo-secondary {
 @media (min-width: 100px) and (max-width: 767px) {
   .film-card {
     width: 300px !important;
+    height: 400px !important;
   }
 }
 
