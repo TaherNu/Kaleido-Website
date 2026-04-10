@@ -936,13 +936,33 @@ body.scrolled .logo-secondary {
 
 
 @media (min-width: 100px) and (max-width: 767px) {
+
+  .services-top {
+    gap: 0rem;
+    justify-content:center;
+    flex-direction: column;
+  }
+
   .we-text, .do-text {
-    font-size: 6rem;
+    font-size: 5rem;
+    gap: 0;
+  }
+
+  .vertical-slider-wrapper {
+    display: flex;
   }
 
   .service-item {
     font-size: 0.8rem;
     font-weight: 1;
+  }
+
+    .banner-left {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .banner-service-tag {
@@ -951,10 +971,18 @@ body.scrolled .logo-secondary {
 
   .banner-headline {
     font-size: 3rem;
+    text-align: center;
   }
 
   .banner-paragraph {
     font-size: 1rem;
+    text-align: center;
+  }
+
+  .orange-banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
