@@ -2314,6 +2314,9 @@ body.scrolled .logo-secondary {
 
 
 @media (min-width: 100px) and (max-width: 767px) {
+  .work-gallery {
+    padding: 1rem;
+  }
   .gallery-main-title {
     font-size: 2rem;
   }
