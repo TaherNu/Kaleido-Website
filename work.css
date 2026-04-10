@@ -2576,19 +2576,6 @@ body.scrolled .logo-secondary {
 }
 
 
-@media (min-width: 100px) and (max-width: 767px) {
-  .movement-hero {
-    min-height: 150vh;
-  }
-  .background-slide {
-    background-size: cover;
-  }
-
-  .movement-subtitle {
-    margin-top: 10%;
-  }
-}
-
 
 
 
@@ -3197,6 +3184,21 @@ body.scrolled .logo-secondary {
   }
 }
 
+
+
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .movement-hero {
+    min-height: 150vh;
+  }
+  .background-slide {
+    background-size: cover;
+  }
+
+  .movement-subtitle {
+    margin-top: 10%;
+  }
+}
 
 
 
