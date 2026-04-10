@@ -2132,7 +2132,16 @@ body.scrolled .logo-secondary {
     }
 }
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .work-title {
+    font-size: 4rem;
+  }
 
+  .work-description {
+    font-size: 1rem;
+    width: 80%;
+  }
+}
 
 
 
@@ -2304,7 +2313,23 @@ body.scrolled .logo-secondary {
 
 
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .gallery-main-title {
+    font-size: 2rem;
+  }
 
+  .gallery-main-description {
+    font-size: 0.9rem;
+  }
+
+  .gallery-card {
+    height: 450px;
+  }
+
+  .gallery-card-paragraph {
+    padding-top: 50%;
+  }
+}
 
 
 
@@ -2531,7 +2556,15 @@ body.scrolled .logo-secondary {
   }
 }
 
+@media (min-width: 100px) and (max-width: 767px) {
+  .films-heading {
+    font-size: 4rem;
+  }
 
+  .film-card .card-title {
+    font-size: 2rem;
+  }
+}
 
 
 
@@ -2543,7 +2576,7 @@ body.scrolled .logo-secondary {
   width: 100%;
   min-height: 100vh;
   background-image: url('Images/KWork_21.png');
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -2597,7 +2630,21 @@ body.scrolled .logo-secondary {
     }
 }
 
+@media (min-width: 100px) and (max-width: 767px) {
 
+  .stories-stay{
+    background-size: cover;
+  }
+  .stories-stay-heading {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 5%;
+  }
+
+  .stories-stay-paragraph {
+    font-size: 1rem;
+  }
+}
 
 
 /* ========== SLIDING RECTANGLE SECTION ========== */
@@ -2796,7 +2843,90 @@ body.scrolled .logo-secondary {
     }
 }
 
-
+@media (min-width: 100px) and (max-width: 767px) {
+  
+  .sliding-rectangle-section {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  
+  .sliding-rectangle {
+    width: 100%;
+    height: 80vh;
+    border-radius: 20px;
+  }
+  
+  /* Remove the left overlay completely */
+  .left-overlay {
+    display: none;
+  }
+  
+  /* Create a bottom overlay instead */
+  .sliding-rectangle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+    pointer-events: none;
+  }
+  
+  /* Position content at bottom */
+  .sliding-content {
+    width: 100%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 1.5rem 2.5rem 1.5rem;
+    text-align: left;
+    z-index: 2;
+  }
+  
+  .slide-title {
+    font-size: 1.8rem;
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 0.75rem;
+  }
+  
+  .slide-description {
+    font-size: 0.85rem;
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+  
+  .slide-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Navigation elements stay in place */
+  .navigation-circles {
+    top: 1rem;
+    right: 1rem;
+    z-index: 5;
+  }
+  
+  .rectangle-buttons {
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 5;
+  }
+  
+  .nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+  }
+}
 
 
 /* ========== PAGE 7 - JOIN THE MOVEMENT ========== */

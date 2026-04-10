@@ -527,7 +527,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 100px) and (max-width: 767px) {
   .our-story {
-    background-image: url(Images/);
+    background-image: url(Images/PH_KHome_3.png);
   }
   .rectangles-wrapper {
     padding-top: 0;
@@ -1638,6 +1638,38 @@ body.scrolled .logo-secondary {
     font-size: 1rem;
   }
 }
+
+
+
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .movement-hero {
+    min-height: 150vh;
+  }
+  .background-slide {
+    background-size: cover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
