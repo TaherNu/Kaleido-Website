@@ -1254,8 +1254,13 @@ body.scrolled .logo-secondary {
       background-size: contain;
     }
 
+    .reel-subtitle {
+      margin-top: 15%;
+    }
+
     .reel-footer-text {
       font-size: 0.8rem;
+      margin-bottom: 15%;
     }
 }
 
