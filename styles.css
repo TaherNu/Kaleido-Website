@@ -1249,9 +1249,18 @@ body.scrolled .logo-secondary {
 
 
     .main-reel{
-      min-height: 120vh;
+      min-height: 100vh;
       background-image: url(Images/PH_KHome_18.png);
       background-size: contain;
+    }
+
+    .reel-heading {
+      font-size: 3.2rem;
+      margin: 0;
+    }
+
+    .reel-line {
+      max-width: 30px;
     }
 
     .reel-subtitle {
