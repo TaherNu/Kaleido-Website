@@ -272,7 +272,7 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 420px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero{
     margin-top: 30%;
   }
