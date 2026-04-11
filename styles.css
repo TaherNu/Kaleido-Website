@@ -282,15 +282,15 @@ body.scrolled .logo-secondary {
   }
 
   .top-left, .top-right, .bottom-left, .bottom-right {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .center-group .kaleido-main, .presents {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .bottom-paragraph {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
