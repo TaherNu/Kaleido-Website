@@ -274,7 +274,7 @@ body.scrolled .logo-secondary {
 
 @media (max-width: 767px) {
   .hero{
-    margin-top: 30%;
+    margin-top: 10%;
   }
 
   .hero-content {
@@ -330,7 +330,7 @@ body.scrolled .logo-secondary {
 }
 
 /* Mobile Styles */
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
   .hamburger {
     display: flex;
   }
@@ -525,7 +525,7 @@ body.scrolled .logo-secondary {
 }
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
   .our-story {
     background-image: url(Images/PH_KHome_3.png);
   }
@@ -647,7 +647,7 @@ body.scrolled .logo-secondary {
 }
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .film-card {
     width: 300px !important;
     height: 400px !important;
@@ -1048,7 +1048,7 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
 
   .services-top {
     gap: 0rem;
@@ -1245,8 +1245,7 @@ body.scrolled .logo-secondary {
     }
 }
 
-
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
     .studio-reel {
       min-height: 100vh;
     }  
@@ -1394,7 +1393,7 @@ body.scrolled .logo-secondary {
 }
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
   .gallery-subtitle {
     font-size: 3rem;
     line-height: 1;
