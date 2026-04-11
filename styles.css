@@ -1693,7 +1693,7 @@ body.scrolled .logo-secondary {
   }
 
   .movement-content {
-    margin: auto;
+    margin:  0 auto;
   }
 
   .movement-subtitle {
