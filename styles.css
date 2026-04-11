@@ -274,7 +274,7 @@ body.scrolled .logo-secondary {
 
 @media (min-width: 420px) and (max-width: 767px) {
   .hero{
-    margin-top: 20%;
+    margin-top: 30%;
   }
 
   .hero-content {
@@ -1686,16 +1686,16 @@ body.scrolled .logo-secondary {
   }
 
   .movement-subtitle {
-    margin-top: 40%;
-    font-size: 2rem;
+    margin-top: 60%;
+    font-size: 1.5rem;
   }
 
   .movement-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .movement-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 70%;
   }
 
