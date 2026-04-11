@@ -272,9 +272,9 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero{
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   .hero-content {
@@ -282,15 +282,15 @@ body.scrolled .logo-secondary {
   }
 
   .top-left, .top-right, .bottom-left, .bottom-right {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .center-group .kaleido-main, .presents {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .bottom-paragraph {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -330,7 +330,16 @@ body.scrolled .logo-secondary {
 }
 
 /* Mobile Styles */
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
+
+  .navbar {
+    height: 8%;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -400,9 +409,9 @@ body.scrolled .logo-secondary {
 
   .navbar {
     z-index: 150;
-    width: 100vw;
   }
 }
+
 
 
 

@@ -272,9 +272,9 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero{
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   .hero-content {
@@ -282,15 +282,15 @@ body.scrolled .logo-secondary {
   }
 
   .top-left, .top-right, .bottom-left, .bottom-right {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .center-group .kaleido-main, .presents {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .bottom-paragraph {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -330,7 +330,16 @@ body.scrolled .logo-secondary {
 }
 
 /* Mobile Styles */
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
+
+  .navbar {
+    height: 8%;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -400,9 +409,9 @@ body.scrolled .logo-secondary {
 
   .navbar {
     z-index: 150;
-    width: 100vw;
   }
 }
+
 
 
 
@@ -829,7 +838,7 @@ body.scrolled .logo-secondary {
 
 .films-heading {
   font-family: 'Anton', sans-serif;
-  font-size: 8rem;
+  font-size: clamp(4rem, 6.5vw, 8rem);
   letter-spacing: 4px;
   color: #FDFDF6;
   text-transform: uppercase;
@@ -879,6 +888,29 @@ body.scrolled .logo-secondary {
 
 .film-card:hover {
   transform: translateY(-10px);
+}
+
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+  .film-card {
+    height: 500px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .film-card {
+    width: 300px !important;
+    height: 400px !important;
+  }
+
+  .films-heading {
+    font-size: 2.5rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
 }
 
 /* Individual card background images */
@@ -1015,27 +1047,6 @@ body.scrolled .logo-secondary {
 .scroll-btn:hover {
   background: #FF8F35;
   border-color: #B4030E;
-}
-
-@media (min-width: 1000px) and (max-width: 1500px) {
-  .film-card {
-    height: 500px;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 767px) {
-  .films-heading {
-    font-size: 3rem;
-  }
-
-  .film-card .card-title {
-    font-size: 1.5rem;
-  }
-
-  .film-card {
-    height: 450px;
-    width: 330px;
-  }
 }
 
 
@@ -1542,7 +1553,7 @@ body.scrolled .logo-secondary {
 
 .movement-subtitle {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, 4.5vw, 5.8rem);
+  font-size: clamp(1.5rem, 4.5vw, 5.8rem);
   letter-spacing: 2px;
   color: #FDFDF6;
   text-transform: uppercase;
@@ -1554,7 +1565,7 @@ body.scrolled .logo-secondary {
 
 .movement-title {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3.5rem, 5.5vw, 7rem);
+  font-size: clamp(1.5rem, 5.5vw, 7rem);
   letter-spacing: 2px;
   color: #F1B020;
   text-transform: uppercase;
@@ -1650,7 +1661,7 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 420px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .movement-hero {
     min-height: 150vh;
   }
@@ -1658,17 +1669,21 @@ body.scrolled .logo-secondary {
     background-size: cover;
   }
 
+  .movement-content {
+    margin:  0 auto;
+  }
+
   .movement-subtitle {
-    margin-top: 40%;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 1;
   }
 
   .movement-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .movement-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 70%;
   }
 

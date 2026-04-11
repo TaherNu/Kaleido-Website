@@ -272,9 +272,9 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero{
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   .hero-content {
@@ -282,15 +282,15 @@ body.scrolled .logo-secondary {
   }
 
   .top-left, .top-right, .bottom-left, .bottom-right {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .center-group .kaleido-main, .presents {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .bottom-paragraph {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -330,7 +330,16 @@ body.scrolled .logo-secondary {
 }
 
 /* Mobile Styles */
-@media (min-width: 100px) and (max-width: 767px) {
+@media (max-width: 767px)  {
+
+  .navbar {
+    height: 8%;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -400,9 +409,10 @@ body.scrolled .logo-secondary {
 
   .navbar {
     z-index: 150;
-    width: 100vw;
   }
 }
+
+
 
 
 
@@ -1710,7 +1720,7 @@ body.scrolled .logo-secondary {
 
 .movement-subtitle {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, 4.5vw, 5.8rem);
+  font-size: clamp(1.5rem, 4.5vw, 5.8rem);
   letter-spacing: 2px;
   color: #FDFDF6;
   text-transform: uppercase;
@@ -1722,7 +1732,7 @@ body.scrolled .logo-secondary {
 
 .movement-title {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3.5rem, 5.5vw, 7rem);
+  font-size: clamp(1.5rem, 5.5vw, 7rem);
   letter-spacing: 2px;
   color: #F1B020;
   text-transform: uppercase;
@@ -1818,7 +1828,7 @@ body.scrolled .logo-secondary {
 
 
 
-@media (min-width: 420px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .movement-hero {
     min-height: 150vh;
   }
@@ -1826,22 +1836,25 @@ body.scrolled .logo-secondary {
     background-size: cover;
   }
 
+  .movement-content {
+    margin:  0 auto;
+  }
+
   .movement-subtitle {
-    margin-top: 40%;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 1;
   }
 
   .movement-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .movement-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 70%;
   }
 
 }
-
 
 
 
