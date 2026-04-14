@@ -133,12 +133,28 @@
     <section class="movement-hero">
     
       <!-- Background Image Slider -->
+      <!-- Updated HTML with mobile images -->
       <div class="background-slider">
-        <div class="background-slide active" style="background-image: url('Images/BG_KHome_26.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_27.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_28.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_29.png');"></div>
-        <div class="background-slide" style="background-image: url('Images/BG_KHome_30.png');"></div>
+        <div class="background-slide active" 
+             data-desktop="Images/BG_KHome_26.png" 
+             data-mobile="Images/PH_KHome_23.png"
+             style="background-image: url('Images/BG_KHome_26');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_27.png" 
+             data-mobile="Images/PH_KHome_24.png"
+             style="background-image: url('Images/BG_KHome_27.png');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_28.png" 
+             data-mobile="Images/PH_KHome_25.png"
+             style="background-image: url('Images/BG_KHome_28.png');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_29.png" 
+             data-mobile="Images/PH_KHome_26.png"
+             style="background-image: url('Images/BG_KHome_29.png');"></div>
+        <div class="background-slide" 
+             data-desktop="Images/BG_KHome_30.png" 
+             data-mobile="Images/PH_KHome_27.png"
+             style="background-image: url('Images/BG_KHome_30.png');"></div>
       </div>
 
       <div class="movement-container">
@@ -198,6 +214,7 @@
 
       </div>
     </section>
+
 
 
 
@@ -473,6 +490,26 @@
       document.body.classList.remove('menu-open');
     }
   });
+
+
+      // ===== RESPONSIVE BACKGROUND IMAGES FOR MOVEMENT HERO =====
+  function updateMovementBackgrounds() {
+    const isMobile = window.innerWidth <= 767;
+    const backgroundSlides = document.querySelectorAll('.background-slide');
+
+    backgroundSlides.forEach(slide => {
+      const imageUrl = isMobile ? slide.getAttribute('data-mobile') : slide.getAttribute('data-desktop');
+      if (imageUrl) {
+        slide.style.backgroundImage = `url('${imageUrl}')`;
+      }
+    });
+  }
+
+  // Call on load
+  updateMovementBackgrounds();
+
+  // Call on resize
+  window.addEventListener('resize', updateMovementBackgrounds);
   </script>
   <script src="contact-animations.js"></script>
 </body>
