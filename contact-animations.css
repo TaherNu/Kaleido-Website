@@ -263,3 +263,19 @@ body:hover #k-cursor-glow { opacity: 1; }
   from { transform: translateY(20px) scale(0.7); opacity: 0; }
   to   { transform: translateY(0) scale(1); opacity: 1; }
 }
+
+
+
+@media (max-width: 767px) {
+  .contact-rectangle {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .contact-rectangle.rect-in {
+    transform: none !important;
+    animation: none !important;
+  }
+}
