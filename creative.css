@@ -1755,3 +1755,265 @@ body.scrolled .logo-secondary {
 
 
 
+
+
+
+
+
+
+
+
+/* NAVBAR - already handled in the existing tablet block at bottom of doc 2, same applies */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    height: 8%;
+    padding: 1rem 2rem;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #101010;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 2rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 150;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    white-space: normal;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a.active::after {
+    bottom: 0;
+  }
+
+  .work-with-us {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 140;
+    pointer-events: auto;
+  }
+
+  .navbar {
+    z-index: 150;
+  }
+}
+
+/* CREATIVE PAGE HERO */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .creative-page {
+    background-repeat: no-repeat;
+  }
+  .creative-title {
+    font-size: 4rem;
+  }
+
+  .creative-description {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+}
+
+/* SLIDING FRAMES SECTION */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .frames-slider-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+  }
+
+  .frame-main-title {
+    font-size: 3.5rem;
+  }
+
+  /* Change overlay from left-side to bottom gradient like mobile */
+  .frame-overlay-left {
+    width: 100%;
+    height: 50%;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  /* Move content to bottom like mobile */
+  .frame-content-left {
+    width: 100%;
+    padding: 2rem 2rem;
+    text-align: left;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .frame-title {
+    font-size: 3.5rem;
+    text-align: left;
+    margin-bottom: 0.8rem;
+    width: 50%;
+  }
+
+  .frame-title br {
+    display: none;
+  }
+
+  .frame-text {
+    font-size: 1.5rem;
+    text-align: left;
+    max-width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .frame-content-center {
+    padding: 1.5rem;
+  }
+
+  .frames-buttons {
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
+
+  .frames-nav-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .frames-dots {
+    bottom: 1rem;
+    left: 1rem;
+    transform: none;
+    z-index: 10;
+  }
+}
+
+/* PORTFOLIO SHOWCASE */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .portfolio-badge {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-heading {
+    font-size: 3rem;
+  }
+
+  .portfolio-subheading {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-btn {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* WHY KALEIDO */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .why-heading {
+    font-size: 4rem;
+  }
+}
+
+/* READY TO CREATE */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ready-heading-white {
+    font-size: 3rem;
+    font-weight: 1;
+  }
+
+  .ready-heading-yellow {
+    font-size: 3rem;
+    font-weight: 1;
+  }
+}
+
+/* FOOTER */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .footer-right {
+    display: contents;
+  }
+
+  .footer-left {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer-logo-img {
+    max-width: 100%;
+  }
+
+  .footer-tagline {
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .nav-col {
+    flex: none;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social-icons {
+    gap: 0.8rem;
+  }
+}

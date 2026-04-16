@@ -2278,6 +2278,429 @@ body.scrolled .logo-secondary {
 
 
 
+/* ========== TABLET (768px - 1024px) ========== */
+
+/* NAVBAR */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    height: 8%;
+    padding: 1rem 2rem;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #101010;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 2rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 150;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    white-space: normal;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a.active::after {
+    bottom: 0;
+  }
+
+  .work-with-us {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 140;
+    pointer-events: auto;
+  }
+
+  .navbar {
+    z-index: 150;
+  }
+}
+
+/* HERO */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    margin-top: 8%;
+  }
+
+  .hero-content {
+    line-height: 1;
+  }
+
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    font-size: 1rem;
+  }
+
+  .center-group .kaleido-main, .presents {
+    font-size: 4rem;
+  }
+
+  .bottom-paragraph {
+    font-size: 0.9rem;
+  }
+}
+
+/* SERVICES HERO */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .services-hero-heading {
+    font-size: 4rem;
+  }
+
+  .services-hero-paragraph {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .services-hero-buttons {
+    font-size: 1rem;
+  }
+}
+
+/* SERVICES WE DO */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .services-we-do-top {
+    gap: 0rem;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .we-text, .do-text {
+    font-size: 6rem;
+    gap: 0;
+  }
+
+  .vertical-slider-container {
+    gap: 0;
+  }
+
+  .vertical-slider-wrapper {
+    display: flex;
+  }
+
+  .service-item {
+    font-size: 1.1rem;
+    white-space: normal;
+    padding: 0.5rem 1rem;
+  }
+
+  .services-we-do-cards {
+    position: relative;
+    min-height: 450px;
+    margin-top: 1rem;
+  }
+
+  .service-card.mobile-hidden {
+    display: none !important;
+  }
+
+  .service-card.active-card {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    height: 500px;
+  }
+
+  .service-card.active-card .card-header {
+    font-size: 3rem;
+  }
+
+  .service-card.active-card .card-description {
+    width: 55%;
+    font-size: 1.1rem;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .service-card.active-card .card-explore-btn {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .service-card {
+    height: 500px;
+  }
+}
+
+/* OUR PROCESS - TABLET LAYOUT */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .our-process {
+    padding: 4rem 2rem;
+    min-height: auto;
+  }
+
+  .process-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Title at the top - full width */
+  .process-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .process-heading {
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  /* Squares below - full width grid */
+  .process-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Adjust square content for tablet */
+  .process-square {
+    padding: 1.2rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  .square-header {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .square-text {
+    font-size: 0.75rem;
+    max-width: 75%;
+  }
+
+  .square-number {
+    font-size: 2.5rem;
+    bottom: 0.5rem;
+    right: 0.8rem;
+  }
+
+  /* Square 1 - Orange */
+  .process-square:nth-child(1) {
+    border-radius: 20px 0 0 0;
+    border-right: 2px solid rgba(253, 253, 246, 0.2);
+    border-bottom: 2px solid rgba(253, 253, 246, 0.2);
+  }
+
+  /* Square 2 - Black */
+  .process-square:nth-child(2) {
+    border-right: 2px solid rgba(253, 253, 246, 0.2);
+    border-bottom: 2px solid rgba(253, 253, 246, 0.2);
+  }
+
+  /* Square 3 - Black */
+  .process-square:nth-child(3) {
+    border-bottom: 2px solid rgba(253, 253, 246, 0.2);
+    border-radius: 0 20px 0 0;
+  }
+
+  /* Square 4 - Black */
+  .process-square:nth-child(4) {
+    border-right: 2px solid rgba(253, 253, 246, 0.2);
+  }
+
+  /* Square 5 - Black */
+  .process-square:nth-child(5) {
+    border: none;
+  }
+
+  /* Square 6 - Image */
+  .process-square:nth-child(6) {
+    border-left: 2px solid rgba(253, 253, 246, 0.2);
+    border-top: 2px solid rgba(253, 253, 246, 0.2);
+    border-radius: 0 0 20px 0;
+  }
+}
+
+/* WORK GALLERY */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* WORK GALLERY SECTION */
+  .work-gallery {
+    padding: 3rem 1.5rem;
+    background-size: cover;
+  }
+  
+  .gallery-header {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  
+  .gallery-main-description {
+    font-size: 1rem;
+    text-align: right;
+    max-width: 100%;
+  }
+  
+  .gallery-cards {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .gallery-card {
+    width: 320px;
+    height: 450px;
+  }
+  
+  .gallery-card-heading {
+    font-size: 1.4rem;
+  }
+  
+  .gallery-card-paragraph {
+    font-size: 0.85rem;
+    padding-top: 200px;
+  }
+  
+  .gallery-card-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* WHY KALEIDO */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .why-kaleido-heading {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+}
+
+/* JOIN THE MOVEMENT */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Join The Movement Section - Mobile layout */
+  .movement-hero {
+    min-height: 145vh;
+  }
+  
+  .background-slide {
+    background-size: cover;
+  }
+
+  .movement-content {
+    margin: 0 auto;
+  }
+
+  .movement-subtitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .movement-title {
+    font-size: 3rem;
+  }
+
+  .movement-description {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  .movement-btn {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* FOOTER */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .footer-right {
+    display: contents;
+  }
+
+  .footer-left {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer-logo-img {
+    max-width: 100%;
+  }
+
+  .footer-tagline {
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .nav-col {
+    flex: none;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social-icons {
+    gap: 0.8rem;
+  }
+}
+
+
+
 
 
 

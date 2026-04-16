@@ -1993,3 +1993,452 @@ body.scrolled .logo-secondary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== TABLET (768px - 1024px) ========== */
+
+/* NAVBAR */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    height: 8%;
+    padding: 1rem 2rem;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #101010;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 2rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 150;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    white-space: normal;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a.active::after {
+    bottom: 0;
+  }
+
+  .work-with-us {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 140;
+    pointer-events: auto;
+  }
+
+  .navbar {
+    z-index: 150;
+  }
+}
+
+/* HERO SECTION */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    margin-top: 8%;
+  }
+
+  .hero-content {
+    line-height: 1;
+  }
+
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    font-size: 1rem;
+  }
+
+  .center-group .kaleido-main, .presents {
+    font-size: 4rem;
+  }
+
+  .bottom-paragraph {
+    font-size: 0.9rem;
+  }
+}
+
+/* EVENTS PAGE HERO */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .events-hero-heading {
+    font-size: 4rem;
+  }
+
+
+
+  .events-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 2rem;
+  }
+
+  .events-hero-paragraph {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+}
+
+/* UP NEXT EVENTS SECTION - Tablet Mobile Layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .upnext-option.events-list {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  /* Left Section - Full width at top */
+  .events-left {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .events-left-heading {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .events-left-paragraph {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Right Section - Full width below */
+  .events-right {
+    width: 100%;
+  }
+
+  /* Event Items - Full width */
+  .event-item {
+    width: 100%;
+  }
+
+  .event-rectangle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .event-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .event-details {
+    width: 100%;
+  }
+
+  .event-title {
+    font-size: 2rem;
+  }
+
+  .event-date, 
+  .event-location {
+    font-size: 0.9rem;
+  }
+
+  .event-description {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .event-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  /* Adjust hover number position for tablet */
+  .event-hover-number {
+    left: 0.5rem;
+    top: 0.5rem;
+    transform: none;
+    font-size: 1.5rem;
+    display: none;
+  }
+
+  /* Divider spacing */
+  .event-divider {
+    margin: 0;
+  }
+}
+
+/* BEYOND THE SCREEN SECTION - Tablet Mobile Layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .beyond-screen {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+
+  .beyond-top {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .beyond-heading {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .beyond-description {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Cards Container - Vertical stacking */
+  .beyond-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Individual Card - Vertical layout */
+  .beyond-card {
+    width: 100%;
+    height: auto;
+    min-height: 140px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Expanded card - takes more height */
+  .beyond-card.expanded {
+    min-height: 550px;
+    flex: none;
+  }
+
+  /* Shrunk cards - take less height */
+  .beyond-card.shrunk {
+    min-height: 90px;
+    flex: none;
+  }
+
+  /* Card Title positioning for tablet */
+  .beyond-card .card-title {
+    font-size: 1.8rem;
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .beyond-card.expanded .card-title {
+    font-size: 2.5rem;
+  }
+
+  .beyond-card.shrunk .card-title {
+    font-size: 1.2rem;
+    top: 1rem;
+    left: 1.5rem;
+  }
+
+  /* Card Text Content - Bottom positioning for expanded cards */
+  .beyond-card .card-text-content {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .card-description-bottom {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    width: 70%;
+  }
+
+  .card-learn-btn {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.85rem;
+  }
+
+  /* Overlay adjustments for tablet */
+  .beyond-card.expanded .card-overlay-dark {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .beyond-card.shrunk .card-overlay-dark {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .beyond-description br {
+    display: none;
+  }
+}
+
+/* NEVER MISS A MOMENT SECTION */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .never-miss-heading {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  .never-miss-text {
+    font-size: 1rem;
+  }
+
+  .social-icon img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* WANT TO PARTNER SECTION */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .want-partner-heading {
+    font-size: 3rem;
+    font-weight: 1;
+  }
+
+  .want-partner-subheading {
+    font-weight: 1;
+    font-size: 3rem;
+  }
+
+  .want-partner-text {
+    font-size: 1rem;
+  }
+
+  .want-partner-btn {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* FOOTER */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .footer-right {
+    display: contents;
+  }
+
+  .footer-left {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer-logo-img {
+    max-width: 100%;
+  }
+
+  .footer-tagline {
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .nav-col {
+    flex: none;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social-icons {
+    gap: 0.8rem;
+  }
+
+  .footer-col-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .social-img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* GO TO TOP BUTTON */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #go-top-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  #go-top-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}

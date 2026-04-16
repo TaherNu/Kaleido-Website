@@ -224,7 +224,7 @@ body:hover #k-cursor-glow {
   width: 59%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1440px) {
   .events-left-heading.heading-line-visible::after {
     display: none;
   }
@@ -300,7 +300,7 @@ body:hover #k-cursor-glow {
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .beyond-heading.heading-line-visible::after {
     display: none;
   }
