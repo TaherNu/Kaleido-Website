@@ -713,6 +713,7 @@ body.scrolled .logo-secondary {
   padding: 2rem 1.5rem;
   text-align: center;
   transition: transform 0.3s ease;
+  height: 400px;
 }
 
 .contact-card:hover {
@@ -837,7 +838,7 @@ body.scrolled .logo-secondary {
     }
 
     .contact-card {
-        height: auto;
+        height: 350px ;
     }
 
     .contact-card .card-title {
