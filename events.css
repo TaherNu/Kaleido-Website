@@ -260,7 +260,7 @@ body.scrolled .logo-secondary {
   padding: 1rem 1rem 0.5rem 1rem;
 }
 
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
   .hero{
     margin-top: 4%;
   }
@@ -268,6 +268,12 @@ body.scrolled .logo-secondary {
   .bottom-paragraph{
     width: 700px;
   }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet styles go here */
 }
 
 
@@ -683,7 +689,7 @@ body.scrolled .logo-secondary {
   color: #FF8F35;
 }
 
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .events-hero-heading {
         font-size: 4.2rem;
     }
@@ -692,6 +698,14 @@ body.scrolled .logo-secondary {
         font-size: 1rem;
     }
 }
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet styles go here */
+}
+
+
 
 
 @media (max-width: 767px) {
@@ -933,7 +947,7 @@ body.scrolled .logo-secondary {
 }
 
 
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .events-left-heading {
         font-size: 4.2rem;
     }
@@ -959,6 +973,14 @@ body.scrolled .logo-secondary {
         font-size: 0.8rem;
     }
 }
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet styles go here */
+}
+
+
 
 
 @media (max-width: 767px) {
@@ -1273,8 +1295,7 @@ body.scrolled .logo-secondary {
   color: #FDFDF6;
   transform: translateX(5px);
 }
-
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .beyond-heading {
         font-size: 3rem;
         font-weight: 1;
@@ -1304,6 +1325,14 @@ body.scrolled .logo-secondary {
         font-size: 1.2rem;
     }
 }
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet styles go here */
+}
+
+
 
 
 @media (max-width: 767px) {
@@ -1494,7 +1523,7 @@ body.scrolled .logo-secondary {
 }
 
 
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .never-miss-heading {
         font-size: 4.2rem;
         line-height: 1;
@@ -1511,6 +1540,11 @@ body.scrolled .logo-secondary {
   }
 }
 
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet styles go here */
+}
 
 
 
@@ -1605,7 +1639,7 @@ body.scrolled .logo-secondary {
 }
 
 
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .want-partner-heading {
         font-size: 4rem;
         font-weight: 1;
@@ -1615,6 +1649,11 @@ body.scrolled .logo-secondary {
         font-weight: 1;
         font-size: 5rem;
     }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet styles go here */
 }
 
 
