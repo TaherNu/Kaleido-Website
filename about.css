@@ -2389,11 +2389,6 @@ body.scrolled .logo-secondary {
 
 
 
-
-  /* ABOUT US - HERO SECTION */
-  .about-hero {
-    min-height: 80vh;
-  }
   
   .about-hero-heading {
     font-size: 3.5rem;
@@ -2410,78 +2405,25 @@ body.scrolled .logo-secondary {
     width: 85%;
     bottom: 2rem;
   }
-  
-  
-  .who-left {
-    width: 70%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    text-align: left;
-  }
-  
+
   .who-heading {
     font-size: 3rem;
-    text-align: left;
-  }
-  
-  .who-paragraph {
-    font-size: 1.1rem;
-    text-align: left;
-    width: 80%;
-    max-width: 100%;
-  }
-  
-  .who-right {
-    width: 90%;
-    margin-top: 2rem;
-  }
-  
-  .who-image {
-    width: 100%;
-    height: 50vh;
-    border-radius: 20px;
-  }
-  
-  /* OUR VISION SECTION - Mobile layout */
-  .vision-container {
-  }
-  
-  .vision-left {
-    width: 100%;
-    order: 2;
-    margin-top: 0rem;
-  }
-  
-  .vision-image {
-    width: 100%;
-    height: 50vh;
-    border-radius: 20px;
-  }
-  
-  .vision-right {
-    width: 100%;
-    order: 1;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    text-align: center;
   }
 
-  
+  .who-paragraph {
+    font-size: 1.2rem;
+  }
+
   .vision-heading {
     font-size: 3rem;
-    text-align: left;
   }
-  
-  .vision-paragraph {
-    font-size: 1.1rem;
-    text-align: left;
-    width: 80%;
-    max-width: 100%;
-  }
-  
 
-  
-  /* WORK GALLERY SECTION */
+  .vision-paragraph {
+    font-size: 1.2rem;
+  }
+
+
+    /* WORK GALLERY SECTION */
   .work-gallery {
     padding: 3rem 1.5rem;
     background-size: cover;
@@ -2527,67 +2469,35 @@ body.scrolled .logo-secondary {
     font-size: 0.75rem;
   }
 
-  
-  /* OUR APPROACH SECTION */
-  .our-approach {
-    padding: 4rem 1.5rem;
-  }
-  
-  
+
   .approach-heading {
-    font-size: 2.5rem;
-  }
-  
-  .approach-text {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-  
-  .approach-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .approach-card {
-    min-width: auto;
-    height: 580px;
-  }
-  
-  .card-heading {
-    font-size: 2.8rem;
-    padding-top: 30%;
-  }
-  
-  .card-paragraph {
-    font-size: 1.4rem;
+    font-size: 3rem;
   }
 
-  
-  
-  /* STORIES WE'VE CRAFTED SECTION */
-  .stories-crafted {
-    min-height: 70vh;
-    padding: 3rem 1.5rem;
-  }
-  
-  .crafted-heading {
-    font-size: 3rem;
-    letter-spacing: 3px;
-  }
-  
-  .crafted-paragraph {
-    font-size: 1rem;
-  }
-  
-  /* ECHOES OF SILENCE SECTION - Mobile layout */
-  .echoes-rectangle {
-    margin-top: 0;
-    height: auto;
-    min-height: 80vh;
+  .approach-text {
+    font-size: 1.2rem;
     width: 100%;
+    text-align: left;
+  }
+
+  .approach-cards {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .approach-card {
+    height: 500px;
+  }
+
+
+
+  
+ .echoes-rectangle {
+    height: auto;
+    min-height: 70vh;
     display: flex;
     align-items: flex-end;
+    position: relative;
   }
   
   .echoes-content-wrapper {
@@ -2601,6 +2511,7 @@ body.scrolled .logo-secondary {
     padding: 2rem 1.5rem;
     background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
     border-radius: 0 0 30px 30px;
+    width: 100%;
   }
   
   .echoes-text {
@@ -2610,13 +2521,13 @@ body.scrolled .logo-secondary {
   }
   
   .echoes-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: left;
     margin-bottom: 0.5rem;
   }
   
   .echoes-paragraph {
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 100%;
     text-align: left;
   }
@@ -2628,6 +2539,7 @@ body.scrolled .logo-secondary {
     white-space: normal;
     width: auto;
     padding: 0.7rem 1.5rem;
+    align-self: flex-start;
   }
   
 
@@ -2728,4 +2640,12 @@ body.scrolled .logo-secondary {
     width: 18px;
     height: 18px;
   }
+
+
+
+
+
+
+
+
 }

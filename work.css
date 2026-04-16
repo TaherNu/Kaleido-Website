@@ -2347,4 +2347,104 @@ body.scrolled .logo-secondary {
   .circle.active {
     width: 20px;
   }
+
+
+
+    /* Join The Movement Section - Mobile layout */
+  .movement-hero {
+    min-height: 145vh;
+  }
+  
+  .background-slide {
+    background-size: cover;
+  }
+
+  .movement-content {
+    margin: 0 auto;
+  }
+
+  .movement-subtitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .movement-title {
+    font-size: 3rem;
+  }
+
+  .movement-description {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  .movement-btn {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  
+  /* Footer - Mobile layout */
+  .footer {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .footer-right {
+    display: contents;
+  }
+
+  .footer-left {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer-logo-img {
+    max-width: 100%;
+  }
+
+  .nav-col {
+    flex: none;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-social-icons {
+    gap: 0.8rem;
+  }
+  
+  .footer-col-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+  
+  .social-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Go to Top Button */
+  #go-top-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  
+  #go-top-btn svg {
+    width: 18px;
+    height: 18px;
+  }
 }

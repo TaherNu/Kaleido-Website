@@ -2264,7 +2264,7 @@ body.scrolled .logo-secondary {
   }
   
   .rectangles-wrapper {
-    padding-top: 10%;
+    padding-top: 30%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -2437,6 +2437,7 @@ body.scrolled .logo-secondary {
     padding: 0.5rem 1.2rem;
     font-size: 0.8rem;
   }
+
 
   /* Join The Movement Section - Mobile layout */
   .movement-hero {
