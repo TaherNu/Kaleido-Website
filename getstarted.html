@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kaleido Pictures — Pitch Your Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="getstarted.css">
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="k-progress"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/KLogo.png" alt="Kaleido Pictures" class="logo-img logo-primary">
+      <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="logo-img logo-secondary">
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="creative.html">Creative Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="work-with-us" onclick="window.location.href='workwithus.html';">Work With Us</button></li>
+    </ul>
+  </nav>
+
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+  <section class="pitch-hero">
+    <div class="pitch-hero-rectangle">
+      <div class="pitch-hero-center">
+        <h1 class="pitch-hero-title">BRING YOUR STORY<br>TO LIFE</h1>
+      </div>
+      <p class="pitch-hero-paragraph">
+        Every great film starts with an idea. Whether it's a fully written script or just a concept in your mind, this is your space to share it. At Kaleido Pictures, we're always looking for original stories and fresh perspectives that deserve to be seen and heard.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 2 — WHAT YOU CAN PITCH
+  ============================================================ -->
+  <section class="pitch-types-section">
+    <div class="pitch-types-container">
+
+      <h2 class="pitch-types-heading">WHAT YOU CAN PITCH</h2>
+      <p class="pitch-types-subtext">We welcome a wide range of narrative and creative ideas, including:</p>
+
+      <!-- 3×2 layered card grid (5 cards) -->
+      <div class="pitch-cards-grid">
+
+        <div class="pitch-card">
+          <img src="Images/film.png" alt="Short Films" class="pitch-card-logo">
+          <h3 class="pitch-card-header">SHORT FILMS</h3>
+        </div>
+
+        <div class="pitch-card">
+          <img src="Images/series.png" alt="Series" class="pitch-card-logo">
+          <h3 class="pitch-card-header">SERIES OR EPISODIC CONCEPTS</h3>
+        </div>
+
+        <div class="pitch-card">
+          <img src="Images/experiment.png" alt="Experimental" class="pitch-card-logo">
+          <h3 class="pitch-card-header">EXPERIMENTAL OR ARTISTIC PROJECTS</h3>
+        </div>
+
+        <div class="pitch-card">
+          <img src="Images/script.png" alt="Scripts" class="pitch-card-logo">
+          <h3 class="pitch-card-header">SCRIPTS [FINISHED OR IN PROGRESS]</h3>
+        </div>
+
+        <div class="pitch-card pitch-card-wide">
+          <img src="Images/ideas.png" alt="Ideas" class="pitch-card-logo">
+          <h3 class="pitch-card-header">SIMPLE IDEAS OR STORY CONCEPTS</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 3 — WHAT WE LOOK FOR
+  ============================================================ -->
+  <section class="look-for-section">
+    <div class="look-for-container">
+
+      <!-- LEFT 40% -->
+      <div class="look-for-left">
+        <h2 class="look-for-heading">WHAT WE<br>LOOK FOR?</h2>
+        <p class="look-for-subtext">We're interested in ideas that stand out and have something to say. Even if your idea is still developing, we value passion and intention.</p>
+      </div>
+
+      <!-- RIGHT 60% — 2×2 grid -->
+      <div class="look-for-right">
+
+        <div class="look-card look-card-outline">
+          <h3 class="look-card-title">ORIGINALITY AND CREATIVITY</h3>
+          <span class="look-card-number">1</span>
+        </div>
+
+        <div class="look-card look-card-orange">
+          <h3 class="look-card-title">A CLEAR OR UNIQUE PERSPECTIVE</h3>
+          <span class="look-card-number">2</span>
+        </div>
+
+        <div class="look-card look-card-orange">
+          <h3 class="look-card-title">EMOTIONAL DEPTH OR MEANING</h3>
+          <span class="look-card-number">3</span>
+        </div>
+
+        <div class="look-card look-card-outline">
+          <h3 class="look-card-title">STRONG VISUAL OR STORYTELLING POTENTIAL</h3>
+          <span class="look-card-number">4</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 4 — HOW IT WORKS
+  ============================================================ -->
+  <section class="how-works-section">
+    <div class="how-works-container">
+
+      <h2 class="how-works-heading">HOW IT WORKS</h2>
+
+      <div class="how-works-cards">
+
+        <div class="hw-card hw-orange">
+          <img src="Images/submit.png" alt="Submit" class="hw-card-logo">
+          <h3 class="hw-card-title">SUBMIT YOUR IDEA</h3>
+          <p class="hw-card-text">Tell us about your concept, story, or script.</p>
+        </div>
+
+        <div class="hw-card hw-red">
+          <img src="Images/process.png" alt="Review" class="hw-card-logo">
+          <h3 class="hw-card-title">REVIEW PROCESS</h3>
+          <p class="hw-card-text">Our team will go through your submission and explore its potential.</p>
+        </div>
+
+        <div class="hw-card hw-yellow">
+          <img src="Images/connect.png" alt="Connect" class="hw-card-logo">
+          <h3 class="hw-card-title">CONNECT &amp; DEVELOP</h3>
+          <p class="hw-card-text">If your idea aligns, we'll reach out to discuss how we can shape it together.</p>
+        </div>
+
+        <div class="hw-card hw-teal">
+          <img src="Images/life.png" alt="Produce" class="hw-card-logo">
+          <h3 class="hw-card-title">BRING IT TO LIFE</h3>
+          <p class="hw-card-text">From development to production, we collaborate to turn your idea into a finished project.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 5 — PITCH FORM
+  ============================================================ -->
+  <section class="pitch-form-section">
+    <div class="pitch-form-container">
+
+      <h2 class="pitch-form-heading">SUBMIT YOUR PITCH</h2>
+      <p class="pitch-form-subtext">Ready to share your story? Fill in the details below and we'll be in touch.</p>
+
+      <form class="pitch-form" onsubmit="handlePitchSubmit(event)">
+
+        <!-- Name -->
+        <div class="form-row">
+          <label class="form-label" for="pitch-name">Name</label>
+          <input class="form-input" type="text" id="pitch-name" name="name" placeholder="Your full name" autocomplete="name">
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+          <label class="form-label" for="pitch-email">Email</label>
+          <input class="form-input" type="email" id="pitch-email" name="email" placeholder="your@email.com" autocomplete="email">
+        </div>
+
+        <!-- Project Title -->
+        <div class="form-row">
+          <label class="form-label" for="pitch-title">Project Title</label>
+          <input class="form-input" type="text" id="pitch-title" name="project_title" placeholder="Working title of your project">
+        </div>
+
+        <!-- Type of Project -->
+        <div class="form-row-collab">
+          <span class="collab-type-label">Type of Project</span>
+          <div class="collab-type-buttons">
+            <button type="button" class="collab-type-btn" data-type="short-film">Short Film</button>
+            <button type="button" class="collab-type-btn" data-type="series">Series</button>
+            <button type="button" class="collab-type-btn" data-type="experimental">Experimental</button>
+            <button type="button" class="collab-type-btn" data-type="other">Other</button>
+          </div>
+        </div>
+
+        <!-- Logline -->
+        <div class="form-row-message">
+          <label class="form-label-message" for="pitch-logline">Logline <span class="form-label-hint">(Brief idea in 1–2 sentences)</span></label>
+          <textarea class="form-textarea form-textarea-short" id="pitch-logline" name="logline" placeholder="Describe your story in one or two sentences..."></textarea>
+        </div>
+
+        <!-- Full Concept / Upload Script toggle -->
+        <div class="form-row-toggle">
+          <div class="toggle-tabs">
+            <button type="button" class="toggle-tab active" id="tab-concept" onclick="switchTab('concept')">Full Concept / Description</button>
+            <button type="button" class="toggle-tab" id="tab-upload" onclick="switchTab('upload')">Upload Script</button>
+          </div>
+
+          <!-- Concept textarea -->
+          <div id="panel-concept" class="toggle-panel active">
+            <textarea class="form-textarea" id="pitch-concept" name="concept" placeholder="Share the full concept, characters, story arc, themes, tone, or any details that help us understand your vision..."></textarea>
+          </div>
+
+          <!-- Upload area -->
+          <div id="panel-upload" class="toggle-panel">
+            <div class="upload-area" id="upload-area" onclick="document.getElementById('script-file').click()">
+              <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <p class="upload-label">Click to upload your script</p>
+              <p class="upload-hint">PDF, Final Draft, Fountain, Word — max 20MB</p>
+              <p class="upload-filename" id="upload-filename"></p>
+              <input type="file" id="script-file" name="script" accept=".pdf,.fdx,.fountain,.docx,.doc" style="display:none" onchange="handleFileSelect(this)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-submit-wrapper">
+          <button type="submit" class="form-submit-btn">Submit Pitch</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 6 — EVERY STORY STARTS SOMEWHERE
+  ============================================================ -->
+  <section class="story-starts-section">
+    <div class="story-starts-container">
+      <h2 class="story-starts-heading">EVERY STORY<br>STARTS SOMEWHERE</h2>
+      <p class="story-starts-text">You don't need a perfect script or a finished plan to begin. Some of the most powerful ideas start small. If you have a story you believe in, this is your chance to take the first step toward bringing it to life.</p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
+        <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-col nav-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <div class="footer-nav-grid">
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="work.html">Work</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="creative.html">Creative Services</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Socials</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+              <img src="Images/KInstagram.png" alt="Instagram" class="social-img">
+            </a>
+            <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+              <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
+            </a>
+            <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+              <img src="Images/KYouTube.png" alt="YouTube" class="social-img">
+            </a>
+            <a href="https://discord.gg/DtGMmvyp" class="social-icon-link" target="_blank">
+              <img src="Images/KDiscord.png" alt="Discord" class="social-img">
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
+            <span class="contact-text">+971 00 000 0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <img src="Images/KEmail.png" alt="Email" class="contact-img">
+            <span class="contact-text">loremipsum@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Kaleido Pictures. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GO TO TOP -->
+  <button id="go-top-btn" aria-label="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+
+  <script>
+    /* ── SCROLL PROGRESS BAR ── */
+    const progressBar = document.getElementById('k-progress');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (total > 0) progressBar.style.width = ((scrolled / total) * 100).toFixed(1) + '%';
+    }, { passive: true });
+
+    /* ── LOGO SWAP ── */
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('.pitch-hero');
+      const h = hero ? hero.offsetHeight : 0;
+      document.body.classList.toggle('scrolled', window.scrollY > h - 100);
+    }, { passive: true });
+
+    /* ── GO TO TOP ── */
+    const goTopBtn = document.getElementById('go-top-btn');
+    window.addEventListener('scroll', () => {
+      goTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    goTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ── ACTIVE NAV LINK ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname;
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        const lp = link.getAttribute('href');
+        if (!lp || lp.startsWith('#')) return;
+        let cl = lp.replace(/^\.\/|^\//, '');
+        let cc = currentPath.replace(/^\//, '').split('/').pop() || 'index.html';
+        if (cl === cc) link.classList.add('active');
+      });
+    });
+
+    /* ── HAMBURGER ── */
+    const hamburger = document.getElementById('hamburger');
+    const navLinksEl = document.getElementById('nav-links');
+    if (hamburger && navLinksEl) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinksEl.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+      navLinksEl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinksEl.classList.remove('active');
+          document.body.classList.remove('menu-open');
+        });
+      });
+      const wwu = navLinksEl.querySelector('.work-with-us');
+      if (wwu) wwu.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinksEl.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    }
+    document.body.addEventListener('click', e => {
+      if (document.body.classList.contains('menu-open') &&
+          !hamburger.contains(e.target) && !navLinksEl.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinksEl.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    /* ── PROJECT TYPE TOGGLE ── */
+    const collabBtns = document.querySelectorAll('.collab-type-btn');
+    collabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        collabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    /* ── CONCEPT / UPLOAD TAB SWITCH ── */
+    function switchTab(tab) {
+      document.getElementById('tab-concept').classList.toggle('active', tab === 'concept');
+      document.getElementById('tab-upload').classList.toggle('active', tab === 'upload');
+      document.getElementById('panel-concept').classList.toggle('active', tab === 'concept');
+      document.getElementById('panel-upload').classList.toggle('active', tab === 'upload');
+    }
+
+    /* ── FILE SELECT ── */
+    function handleFileSelect(input) {
+      const fn = document.getElementById('upload-filename');
+      if (input.files && input.files[0]) {
+        fn.textContent = '✓ ' + input.files[0].name;
+        fn.style.color = '#FF8F35';
+      } else {
+        fn.textContent = '';
+      }
+    }
+
+    /* ── DRAG & DROP ── */
+    const uploadArea = document.getElementById('upload-area');
+    if (uploadArea) {
+      uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+      uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+      uploadArea.addEventListener('drop', e => {
+        e.preventDefault();
+        uploadArea.classList.remove('drag-over');
+        const fileInput = document.getElementById('script-file');
+        fileInput.files = e.dataTransfer.files;
+        handleFileSelect(fileInput);
+      });
+    }
+
+    /* ── FORM SUBMIT FOR PITCH ── */
+/* ── FORM SUBMIT FOR PITCH ── */
+async function handlePitchSubmit(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('pitch-name').value.trim();
+    const email = document.getElementById('pitch-email').value.trim();
+    const projectTitle = document.getElementById('pitch-title').value.trim();
+    const typeBtn = document.querySelector('.collab-type-btn.active');
+    const projectType = typeBtn ? typeBtn.dataset.type : '';
+    const logline = document.getElementById('pitch-logline').value.trim();
+    const concept = document.getElementById('pitch-concept').value.trim();
+    
+    if (!name || !email || !projectTitle) {
+        alert('Please fill in your name, email, and project title.');
+        return;
+    }
+    
+    const submitBtn = document.querySelector('.form-submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    
+    try {
+        const response = await fetch('http://localhost:5000/api/submit-collaboration', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                type: projectType,
+                message: `Project Title: ${projectTitle}\n\nLogline: ${logline}\n\nConcept: ${concept}`,
+                formType: "pitch"
+            })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            alert('Thank you for your pitch! We\'ll review it and be in touch soon.');
+            e.target.reset();
+            document.querySelectorAll('.collab-type-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('upload-filename').textContent = '';
+            switchTab('concept');
+        } else {
+            throw new Error(result.error);
+        }
+        
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error: ' + error.message);
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+}
+  </script>
+
+</body>
+</html>

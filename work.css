@@ -536,6 +536,7 @@ body.scrolled .logo-secondary {
 
 /* ========== WORK PAGE - FULL SCREEN RECTANGLE ========== */
 .work-page {
+  padding-top: 80px;
   position: relative;
   width: 100%;
   min-height: 100vh;

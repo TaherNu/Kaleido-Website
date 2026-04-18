@@ -1,0 +1,1261 @@
+/* ============================================================
+   KALEIDO PICTURES — PITCH YOUR STORY
+   pitchstory.css
+============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Archivo Narrow', sans-serif;
+  background-color: #101010;
+  color: #FDFDF6;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+============================================================ */
+#k-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #B4030E, #FF8F35);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+.navbar {
+  width: 100%;
+  background-color: #101010;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.logo { display: flex; align-items: center; }
+
+.logo-img { height: 40px; width: auto; transition: opacity 0.3s ease; }
+.logo-primary  { opacity: 1; }
+.logo-secondary { opacity: 0; position: absolute; height: 60px; }
+body.scrolled .logo-primary  { opacity: 0; }
+body.scrolled .logo-secondary { opacity: 1; }
+
+.nav-links {
+  display: flex;
+  gap: clamp(0.8rem, 1.2vw, 1.8rem);
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.78rem, 0.85vw, 1rem);
+  text-decoration: none;
+  color: #FDFDF6;
+  transition: color 0.2s ease;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover { color: #FF8F35; }
+
+.nav-links a.active {
+  color: #FF8F35;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 100%; height: 2px;
+  background-color: #FF8F35;
+  border-radius: 2px;
+}
+
+.nav-links .work-with-us.active { color: #FDFDF6; }
+.nav-links .work-with-us.active::after { display: none; }
+
+.work-with-us {
+  background: transparent;
+  border: 2px solid #FDFDF6;
+  border-radius: 40px;
+  padding: 0.5rem 1.4rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #FDFDF6;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.work-with-us:hover {
+  background-color: #FF8F35;
+  border-color: #B4030E;
+  color: #FDFDF6;
+}
+
+/* ============================================================
+   HAMBURGER
+============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px; height: 21px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%; height: 3px;
+  background-color: #FDFDF6;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+
+/* ============================================================
+   SECTION 1 — HERO
+============================================================ */
+.pitch-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.pitch-hero-rectangle {
+  position: relative;
+  width: 95%;
+  height: calc(92vh - 80px);
+  background-image: url('Images/KPTCHButton_1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pitch-hero-rectangle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%);
+  z-index: 1;
+}
+
+.pitch-hero-rectangle::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.pitch-hero-center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 1100px;
+  width: 90%;
+}
+
+.pitch-hero-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3.5rem, 7vw, 9rem);
+  letter-spacing: clamp(3px, 0.5vw, 8px);
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.pitch-hero-paragraph {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 75%;
+  max-width: 860px;
+  text-align: center;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1.2rem);
+  line-height: 1.65;
+  color: rgba(253,253,246,0.88);
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   SECTION 2 — WHAT YOU CAN PITCH
+============================================================ */
+.pitch-types-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem;
+}
+
+.pitch-types-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pitch-types-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 5.5vw, 7rem);
+  letter-spacing: clamp(3px, 0.5vw, 7px);
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.pitch-types-subtext {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(253,253,246,0.75);
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+  font-weight: 400;
+}
+
+.pitch-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pitch-card {
+  width: 400px;
+}
+
+.pitch-card {
+  position: relative;
+  background-color: #FDFDF6;
+  border-radius: 20px;
+  padding: 2rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease;
+  cursor: default;
+  overflow: hidden;
+}
+
+.pitch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* 5th card spans 2 columns, centred in row 2 */
+.pitch-card-wide {
+  grid-column: 2 / 4;
+}
+
+.pitch-card-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  align-self: flex-end;
+}
+
+
+.pitch-card-header {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  color: #101010;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+
+/* ============================================================
+   SECTION 3 — WHAT WE LOOK FOR
+============================================================ */
+.look-for-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem;
+}
+
+.look-for-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* LEFT 40% */
+.look-for-left {
+  width: 40%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.look-for-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 4.5vw, 6rem);
+  letter-spacing: clamp(2px, 0.4vw, 6px);
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.look-for-subtext {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: clamp(1rem, 1.15vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(253,253,246,0.75);
+  font-weight: 400;
+  max-width: 400px;
+}
+
+/* RIGHT 60% — 2×2 grid */
+.look-for-right {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.look-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease;
+  cursor: default;
+  overflow: hidden;
+}
+
+.look-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.look-card-outline {
+  background: transparent;
+  border: 2px solid #FDFDF6;
+}
+
+.look-card-orange {
+  background-color: #FF7D15;
+  border: none;
+}
+
+.look-card-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1.5px;
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.look-card-number {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 4vw, 5rem);
+  font-weight: 400;
+  color: rgba(253,253,246,0.2);
+  line-height: 1;
+  text-align: right;
+  align-self: flex-end;
+  transition: color 0.3s ease;
+}
+
+.look-card:hover .look-card-number { color: rgba(253,253,246,0.35); }
+
+
+/* ============================================================
+   SECTION 4 — HOW IT WORKS
+============================================================ */
+.how-works-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem;
+}
+
+.how-works-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how-works-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 5.5vw, 7rem);
+  letter-spacing: clamp(3px, 0.5vw, 7px);
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.how-works-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.hw-card {
+  flex: 1;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease;
+  cursor: default;
+  min-height: 380px;
+}
+
+.hw-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 56px rgba(0,0,0,0.4);
+}
+
+.hw-orange { background-color: #FF7D15; }
+.hw-red    { background-color: #EC4539; }
+.hw-yellow { background-color: #F1B020; }
+.hw-teal   { background-color: #316C80; }
+
+.hw-card-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+  margin-top: 2.5rem;
+}
+
+.hw-card-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.hw-card-text {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(253,253,246,0.88);
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   SECTION 5 — PITCH FORM
+============================================================ */
+.pitch-form-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('Images/KPTCHButton_2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6rem 2rem 7rem 2rem;
+}
+
+.pitch-form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.62);
+  z-index: 1;
+}
+
+.pitch-form-section > * { position: relative; z-index: 2; }
+
+.pitch-form-container {
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pitch-form-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 5vw, 6.5rem);
+  letter-spacing: clamp(3px, 0.5vw, 8px);
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+.pitch-form-subtext {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: clamp(1rem, 1.15vw, 1.2rem);
+  line-height: 1.6;
+  color: rgba(253,253,246,0.82);
+  font-weight: 400;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── FORM SHARED STYLES ── */
+.pitch-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: left;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.form-label {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FDFDF6;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.form-input {
+  flex: 1;
+  background: transparent;
+  border: 2px solid #FDFDF6;
+  border-radius: 5px;
+  padding: 0.75rem 1.4rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1rem;
+  color: #FDFDF6;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input::placeholder { color: rgba(253,253,246,0.35); }
+.form-input:focus {
+  border-color: #FF8F35;
+  box-shadow: 0 0 0 3px rgba(255,143,53,0.15);
+}
+
+.form-row-collab {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.collab-type-label {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FDFDF6;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.collab-type-buttons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.collab-type-btn {
+  background: transparent;
+  border: 2px solid #FDFDF6;
+  border-radius: 5px;
+  padding: 0.6rem 2rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #FDFDF6;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  user-select: none;
+}
+
+.collab-type-btn:hover { border-color: #FF8F35; color: #FF8F35; transform: translateY(-2px); }
+
+.collab-type-btn.active {
+  background-color: #FF8F35;
+  border-color: #FF8F35;
+  color: #FDFDF6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,143,53,0.3);
+}
+
+.form-row-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-label-message {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FDFDF6;
+  letter-spacing: 0.5px;
+}
+
+.form-label-hint {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(253,253,246,0.55);
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 180px;
+  background: transparent;
+  border: 2px solid #FDFDF6;
+  border-radius: 5px;
+  padding: 1.2rem 1.5rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1rem;
+  color: #FDFDF6;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1.6;
+}
+
+.form-textarea-short { min-height: 100px; }
+
+.form-textarea::placeholder { color: rgba(253,253,246,0.35); }
+.form-textarea:focus {
+  border-color: #FF8F35;
+  box-shadow: 0 0 0 3px rgba(255,143,53,0.15);
+}
+
+/* ── TOGGLE TABS ── */
+.form-row-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.toggle-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid rgba(253,253,246,0.3);
+  margin-bottom: 1rem;
+}
+
+.toggle-tab {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  padding: 0.8rem 1.8rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(253,253,246,0.5);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.toggle-tab:hover { color: #FDFDF6; }
+
+.toggle-tab.active {
+  color: #FF8F35;
+  border-bottom-color: #FF8F35;
+}
+
+.toggle-panel { display: none; }
+.toggle-panel.active { display: block; }
+
+/* ── UPLOAD AREA ── */
+.upload-area {
+  width: 100%;
+  min-height: 180px;
+  border: 2px dashed rgba(253,253,246,0.4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  padding: 2rem;
+}
+
+.upload-area:hover,
+.upload-area.drag-over {
+  border-color: #FF8F35;
+  background: rgba(255,143,53,0.06);
+}
+
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  stroke: rgba(253,253,246,0.5);
+  transition: stroke 0.3s ease;
+}
+
+.upload-area:hover .upload-icon,
+.upload-area.drag-over .upload-icon { stroke: #FF8F35; }
+
+.upload-label {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(253,253,246,0.8);
+  letter-spacing: 0.5px;
+}
+
+.upload-hint {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(253,253,246,0.4);
+}
+
+.upload-filename {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FF8F35;
+  margin-top: 0.3rem;
+}
+
+/* ── SUBMIT ── */
+.form-submit-wrapper { display: flex; justify-content: center; margin-top: 0.5rem; }
+
+.form-submit-btn {
+  background: transparent;
+  border: 2px solid #FDFDF6;
+  border-radius: 50px;
+  padding: 0.9rem 3rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #FDFDF6;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.form-submit-btn:hover {
+  background-color: #FF8F35;
+  border-color: #FF8F35;
+  color: #FDFDF6;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(255,143,53,0.35);
+}
+
+.form-submit-btn:active { transform: translateY(0); }
+
+
+/* ============================================================
+   SECTION 6 — EVERY STORY STARTS SOMEWHERE
+============================================================ */
+.story-starts-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('Images/KPTCHButton_3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.story-starts-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.58);
+  z-index: 1;
+}
+
+.story-starts-section > * { position: relative; z-index: 2; }
+
+.story-starts-container {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.story-starts-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 7vw, 7rem);
+  letter-spacing: clamp(4px, 0.6vw, 10px);
+  color: #FDFDF6;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.story-starts-text {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(253,253,246,0.88);
+  font-weight: 400;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.footer {
+  background-color: #0a0a0a;
+  width: 100%;
+  padding: 4rem 4rem 2rem 4rem;
+  border-top: 1px solid rgba(253,253,246,0.1);
+}
+
+.footer-container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: clamp(2rem, 4vw, 5rem);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left   { width: auto; flex: 1.4; min-width: 0; }
+.footer-right  { flex: 3; padding-left: 0; display: contents; }
+.footer-col    { flex: 1; min-width: 0; }
+.nav-col       { flex: 1.8; min-width: 0; }
+.footer-logo-img { width: 100%; }
+
+.footer-tagline {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(253,253,246,0.55);
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-nav-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem 2rem; }
+
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: 0.8rem; }
+
+.footer-links a {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(253,253,246,0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.footer-links a:hover { color: #FF8F35; padding-left: 5px; }
+
+.footer-col-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #FDFDF6;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.footer-social-icons { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.social-icon-link { display: inline-block; transition: all 0.3s ease; }
+.social-icon-link:hover { transform: translateY(-5px); }
+.social-img { width: 35px; height: 35px; object-fit: cover; transition: all 0.3s ease; }
+.social-icon-link:hover .social-img { filter: brightness(1.2); }
+
+.footer-contact-item { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+.contact-img { width: 24px; height: 24px; object-fit: contain; transition: all 0.3s ease; }
+.contact-text { font-family: 'Archivo Narrow', sans-serif; font-size: 0.9rem; color: rgba(253,253,246,0.7); letter-spacing: 0.5px; word-break: break-all; }
+.footer-contact-item:hover .contact-img { transform: scale(1.1); filter: brightness(1.2); }
+.footer-contact-item:hover .contact-text { color: #FF8F35; }
+
+.footer-bottom { max-width: 1600px; width: 100%; margin: 3rem auto 0 auto; padding-top: 2rem; border-top: 1px solid rgba(253,253,246,0.1); text-align: center; }
+.footer-bottom p { font-family: 'Archivo Narrow', sans-serif; font-size: 0.8rem; color: rgba(253,253,246,0.5); letter-spacing: 1px; }
+
+
+/* ============================================================
+   GO TO TOP BUTTON
+============================================================ */
+#go-top-btn {
+  position: fixed;
+  bottom: 2.5rem; right: 2.5rem;
+  z-index: 999;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background-color: #FF8F35;
+  border: 2px solid transparent;
+  color: #FDFDF6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+#go-top-btn svg { width: 22px; height: 22px; display: block; }
+
+#go-top-btn.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+#go-top-btn:hover {
+  background-color: transparent;
+  border-color: #FF8F35;
+  color: #FF8F35;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255,143,53,0.35);
+}
+
+
+/* ============================================================
+   LAPTOP / DESKTOP  1025px – 1440px
+============================================================ */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+  /* HERO */
+  .pitch-hero-title     { font-size: 5rem; }
+  .pitch-hero-paragraph { font-size: 1rem; width: 82%; }
+
+  /* WHAT YOU CAN PITCH */
+  .pitch-types-heading  { font-size: 4rem; }
+  .pitch-card           { min-height: 170px; }
+  .pitch-card-header    { font-size: 1.3rem; }
+
+  /* WHAT WE LOOK FOR */
+  .look-for-heading     { font-size: 3.5rem; }
+  .look-for-subtext     { font-size: 1rem; }
+  .look-card            { min-height: 190px; }
+  .look-card-title      { font-size: 1.35rem; }
+
+  /* HOW IT WORKS */
+  .how-works-heading    { font-size: 4rem; }
+  .hw-card              { min-height: 320px; }
+  .hw-card-title        { font-size: 1.4rem; }
+  .hw-card-text         { font-size: 0.9rem; }
+
+  /* FORM */
+  .pitch-form-heading   { font-size: 4rem; }
+  .pitch-form-subtext   { font-size: 1rem; }
+  .collab-type-btn      { font-size: 1rem; padding: 0.55rem 1.5rem; }
+
+  /* STORY STARTS */
+  .story-starts-heading { font-size: 5rem; }
+  .story-starts-text    { font-size: 1.1rem; }
+
+  /* FOOTER */
+  .footer { padding: 3rem 3rem 2rem 3rem; }
+}
+
+
+/* ============================================================
+   TABLET  768px – 1024px
+============================================================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* NAVBAR */
+  .navbar { height: 8%; padding: 1rem 2rem; padding-bottom: 0; margin: 0; z-index: 150; }
+  .hamburger { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 70%; max-width: 300px;
+    height: 100vh;
+    background-color: #101010;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 2rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 150;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-links.active { right: 0; }
+  .nav-links li { width: 100%; }
+  .nav-links a { font-size: 1.2rem; white-space: normal; display: block; padding: 0.5rem 0; }
+  .nav-links a.active::after { bottom: 0; }
+  .work-with-us { width: 100%; text-align: center; margin-top: 0.5rem; padding: 0.7rem 1.4rem; }
+
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 140;
+    pointer-events: auto;
+  }
+
+  /* HERO */
+  .pitch-hero-rectangle { width: 95%; height: 80vh; }
+  .pitch-hero-title     { font-size: 4rem; }
+  .pitch-hero-paragraph { font-size: 0.95rem; width: 88%; bottom: 2rem; }
+
+  /* WHAT YOU CAN PITCH */
+  .pitch-types-section  { padding: 4rem 2rem; min-height: auto; }
+  .pitch-types-heading  { font-size: 3.5rem; }
+  .pitch-cards-grid     { grid-template-columns: repeat(2, 1fr); }
+  .pitch-card-wide      { grid-column: 1 / 3; }
+  .pitch-card           { min-height: 160px; }
+  .pitch-card-header    { font-size: 1.2rem; }
+
+  /* WHAT WE LOOK FOR */
+  .look-for-section     { padding: 4rem 2rem; min-height: auto; }
+  .look-for-container   { flex-direction: column; gap: 2.5rem; }
+  .look-for-left        { width: 100%; }
+  .look-for-heading     { font-size: 3.5rem; }
+  .look-for-subtext     { font-size: 1rem; max-width: 100%; }
+  .look-for-right       { width: 100%; }
+  .look-card            { min-height: 180px; }
+  .look-card-title      { font-size: 1.3rem; }
+
+  /* HOW IT WORKS */
+  .how-works-section    { padding: 4rem 2rem; min-height: auto; }
+  .how-works-heading    { font-size: 3.5rem; }
+  .how-works-cards      { flex-wrap: wrap; gap: 1rem; }
+  .hw-card              { flex: 1 1 calc(50% - 0.5rem); min-height: 280px; }
+  .hw-card-title        { font-size: 1.3rem; }
+  .hw-card-text         { font-size: 0.9rem; }
+
+  /* FORM */
+  .pitch-form-section   { padding: 4rem 2rem 5rem 2rem; min-height: auto; }
+  .pitch-form-heading   { font-size: 3.5rem; }
+  .pitch-form-subtext   { font-size: 1rem; }
+  .collab-type-btn      { font-size: 1rem; padding: 0.55rem 1.4rem; }
+
+  /* STORY STARTS */
+  .story-starts-heading { font-size: 4rem; }
+  .story-starts-text    { font-size: 1rem; }
+
+  /* FOOTER */
+  .footer { padding: 2.5rem 1.5rem 2rem; }
+  .footer-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+  .footer-right     { display: contents; }
+  .footer-left      { width: 100%; flex: none; }
+  .footer-logo-img  { max-width: 100%; }
+  .footer-tagline   { font-size: 1rem; }
+  .nav-col          { flex: none; }
+  .footer-nav-grid  { grid-template-columns: 1fr; }
+  .footer-social-icons { gap: 0.8rem; }
+}
+
+
+/* ============================================================
+   MOBILE  max-width: 767px
+============================================================ */
+@media (max-width: 767px) {
+
+  /* NAVBAR */
+  .navbar { height: 8%; padding: 1rem 2.5rem; padding-bottom: 0; margin: 0; z-index: 150; }
+  .hamburger { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 70%; max-width: 300px;
+    height: 100vh;
+    background-color: #101010;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 2rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 150;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-links.active { right: 0; }
+  .nav-links li { width: 100%; }
+  .nav-links a { font-size: 1.2rem; white-space: normal; display: block; padding: 0.5rem 0; }
+  .nav-links a.active::after { bottom: 0; }
+  .work-with-us { width: 100%; text-align: center; margin-top: 0.5rem; padding: 0.7rem 1.4rem; }
+
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 140;
+    pointer-events: auto;
+  }
+
+  /* HERO */
+  .pitch-hero           { padding-top: 70px; }
+  .pitch-hero-rectangle { width: 100%; height: 85vh; border-radius: 20px; }
+  .pitch-hero-title     { font-size: 2.2rem; letter-spacing: 2px; }
+  .pitch-hero-paragraph { font-size: 0.78rem; width: 90%; bottom: 1.5rem; }
+
+  /* WHAT YOU CAN PITCH */
+  .pitch-types-section  { padding: 3rem 1.2rem; min-height: auto; }
+  .pitch-types-heading  { font-size: 2.5rem; }
+  .pitch-types-subtext  { font-size: 0.95rem; }
+  .pitch-cards-grid     { grid-template-columns: 1fr; }
+  .pitch-card-wide      { grid-column: 1; }
+  .pitch-card           { min-height: 150px; }
+  .pitch-card-header    { font-size: 1.2rem; }
+  .pitch-card-logo      { width: 36px; height: 36px; }
+
+  /* WHAT WE LOOK FOR */
+  .look-for-section     { padding: 3rem 1.2rem; min-height: auto; }
+  .look-for-container   { flex-direction: column; gap: 2rem; }
+  .look-for-left        { width: 100%; }
+  .look-for-heading     { font-size: 2.5rem; }
+  .look-for-subtext     { font-size: 0.95rem; max-width: 100%; }
+  .look-for-right       { width: 100%; grid-template-columns: 1fr; grid-template-rows: auto; }
+  .look-card            { min-height: 160px; }
+  .look-card-title      { font-size: 1.2rem; }
+
+  /* HOW IT WORKS */
+  .how-works-section    { padding: 3rem 1.2rem; min-height: auto; }
+  .how-works-heading    { font-size: 2.2rem; margin-bottom: 2.5rem; }
+  .how-works-cards      { flex-direction: column; gap: 1rem; }
+  .hw-card              { min-height: 240px; border-radius: 20px; }
+  .hw-card-title        { font-size: 1.3rem; }
+  .hw-card-text         { font-size: 0.9rem; }
+
+  /* FORM */
+  .pitch-form-section   { padding: 3.5rem 1.2rem 4rem 1.2rem; min-height: auto; }
+  .pitch-form-heading   { font-size: 2.2rem; letter-spacing: 2px; }
+  .pitch-form-subtext   { font-size: 0.9rem; margin-bottom: 2rem; }
+
+  .form-row { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+  .form-label { font-size: 1.1rem; min-width: unset; }
+  .form-input { width: 100%; font-size: 0.95rem; }
+
+  .form-row-collab { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  .collab-type-label { font-size: 1.1rem; }
+  .collab-type-buttons { gap: 0.5rem; }
+  .collab-type-btn { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
+
+  .toggle-tab { padding: 0.7rem 1rem; font-size: 0.95rem; }
+
+  .form-label-message { font-size: 1.1rem; }
+  .form-textarea      { font-size: 0.95rem; min-height: 140px; }
+  .form-textarea-short { min-height: 90px; }
+  .form-submit-btn    { width: 100%; font-size: 1rem; }
+
+  /* STORY STARTS */
+  .story-starts-heading { font-size: 2.5rem; }
+  .story-starts-text    { font-size: 0.9rem; }
+
+  /* FOOTER */
+  .footer { padding: 2.5rem 1.5rem 2rem; }
+  .footer-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+  .footer-right     { display: contents; }
+  .footer-left      { width: 100%; flex: none; }
+  .footer-logo-img  { max-width: 100%; }
+  .footer-tagline   { font-size: 1rem; }
+  .nav-col          { flex: none; }
+  .footer-nav-grid  { grid-template-columns: 1fr; }
+  .footer-social-icons { gap: 0.8rem; }
+}
