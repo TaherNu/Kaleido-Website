@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kaleido Pictures — Frames</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Archivo Narrow', sans-serif;
+      background-color: #101010;
+      color: #FDFDF6;
+      overflow-x: hidden;
+    }
+
+    /* ============================================================
+       SCROLL PROGRESS BAR
+    ============================================================ */
+    #k-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, #B4030E, #FF8F35);
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* ============================================================
+       NAVBAR  (identical to index)
+    ============================================================ */
+    .navbar {
+      width: 100%;
+      background-color: #101010;
+      padding: 1.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo { display: flex; align-items: center; }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-primary  { opacity: 1; }
+    .logo-secondary {
+      opacity: 0;
+      position: absolute;
+      height: 60px;
+    }
+
+    body.scrolled .logo-primary  { opacity: 0; }
+    body.scrolled .logo-secondary { opacity: 1; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px; height: 21px;
+      cursor: pointer;
+      z-index: 200;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%; height: 3px;
+      background-color: #FDFDF6;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    .nav-links {
+      display: flex;
+      gap: clamp(0.8rem, 1.2vw, 1.8rem);
+      align-items: center;
+      flex-wrap: nowrap;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 500;
+      font-size: clamp(0.78rem, 0.85vw, 1rem);
+      text-decoration: none;
+      color: #FDFDF6;
+      transition: color 0.2s ease;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover { color: #FF8F35; }
+
+    .nav-links a.active {
+      color: #FF8F35;
+      position: relative;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px; left: 0;
+      width: 100%; height: 2px;
+      background-color: #FF8F35;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links .work-with-us.active { color: #FDFDF6; }
+    .nav-links .work-with-us.active::after { display: none; }
+
+    .work-with-us {
+      background: transparent;
+      border: 2px solid #FDFDF6;
+      border-radius: 40px;
+      padding: 0.5rem 1.4rem;
+      font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #FDFDF6;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .work-with-us:hover {
+      background-color: #FF8F35;
+      border-color: #B4030E;
+      color: #FDFDF6;
+    }
+
+
+    /* ============================================================
+       FRAMES PAGE — MAIN SECTION
+    ============================================================ */
+    .frames-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-color: #0d0d0d;
+      display: flex;
+      align-items: stretch;
+      padding-top: 80px; /* navbar height */
+      overflow: hidden;
+    }
+
+    /* ── SLIDE WRAPPER (animates in/out) ── */
+    .frame-slide {
+      display: none;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .frame-slide.active {
+      display: flex;
+      animation: frameEnter 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .frame-slide.exit {
+      display: flex;
+      animation: frameExit 0.45s ease-in forwards;
+      position: absolute;
+      top: 80px; left: 0;
+      width: 100%;
+    }
+
+    @keyframes frameEnter {
+      from { opacity: 0; transform: translateX(60px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes frameExit {
+      from { opacity: 1; transform: translateX(0); }
+      to   { opacity: 0; transform: translateX(-60px); }
+    }
+
+    /* ── LEFT 40% — IMAGE RECTANGLE ── */
+    .frame-left {
+      width: 40%;
+      flex-shrink: 0;
+      padding: 2.5rem 0 2.5rem 2.5rem;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .frame-image-rect {
+      width: 100%;
+      height: 100%;
+      min-height: calc(100vh - 80px - 5rem);
+      border-radius: 24px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* subtle inner shadow for depth */
+    .frame-image-rect::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      box-shadow: inset 0 0 60px rgba(0,0,0,0.35);
+      pointer-events: none;
+    }
+
+    /* ── RIGHT 60% — CONTENT ── */
+    .frame-right {
+      width: 60%;
+      padding: 3.5rem 3rem 2.5rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .frame-content-top {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    /* Title */
+    .frame-title {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2.2rem, 3.5vw, 4.5rem);
+      letter-spacing: 2px;
+      color: #FDFDF6;
+      text-transform: uppercase;
+      line-height: 1.1;
+      font-weight: 400;
+    }
+
+    /* Badge */
+    .frame-badge {
+      display: inline-block;
+      background-color: #F1B020;
+      border: 2px solid #FDFDF6;
+      border-radius: 50px;
+      padding: 0.35rem 1.4rem;
+      font-family: 'Archivo Narrow', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #FDFDF6;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      align-self: flex-start;
+    }
+
+    /* Genres row */
+    .frame-genres {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.4rem;
+      font-family: 'Archivo Narrow', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(253, 253, 246, 0.75);
+      letter-spacing: 0.5px;
+    }
+
+    .frame-genres span.genre-word {
+      color: #FDFDF6;
+      font-weight: 500;
+    }
+
+    .frame-genres span.genre-sep {
+      color: rgba(253, 253, 246, 0.4);
+      font-size: 1rem;
+    }
+
+    /* Main paragraph */
+    .frame-paragraph {
+      font-family: 'Archivo Narrow', sans-serif;
+      font-size: clamp(0.95rem, 1.05vw, 1.15rem);
+      line-height: 1.7;
+      color: rgba(253, 253, 246, 0.92);
+      font-weight: 400;
+      max-width: 560px;
+    }
+
+    /* Sub-text */
+    .frame-subtext {
+      font-family: 'Archivo Narrow', sans-serif;
+      font-size: clamp(0.82rem, 0.9vw, 0.95rem);
+      line-height: 1.7;
+      color: rgba(253, 253, 246, 0.45);
+      font-weight: 400;
+      max-width: 560px;
+    }
+
+    /* Fading divider line */
+    .frame-divider {
+      position: relative;
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(to right, rgba(253,253,246,0.3) 0%, rgba(253,253,246,0.0) 100%);
+      margin: 0.5rem 0;
+    }
+
+    /* ── BOTTOM ROW ── */
+    .frame-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* "View Full Project" button */
+    .frame-view-btn {
+      background: transparent;
+      border: 2px solid #FDFDF6;
+      border-radius: 50px;
+      padding: 0.6rem 1.8rem;
+      font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #FDFDF6;
+      cursor: pointer;
+      letter-spacing: 0.8px;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      white-space: nowrap;
+    }
+
+    .frame-view-btn:hover {
+      background-color: #FF8F35;
+      border-color: #FF8F35;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255,143,53,0.3);
+    }
+
+    /* Heart + Share icon buttons */
+    .frame-action-btns {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .frame-icon-btn {
+      background: transparent;
+      border: 2px solid rgba(253,253,246,0.35);
+      border-radius: 50px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      color: #FDFDF6;
+    }
+
+    .frame-icon-btn:hover {
+      border-color: #FDFDF6;
+      background: rgba(253,253,246,0.08);
+      transform: translateY(-2px);
+    }
+
+/* Position the navigation buttons inside the card */
+.frame-nav-buttons {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  z-index: 10;
+}
+
+.frame-nav-btn {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(253, 253, 246, 0.3);
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FDFDF6;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.frame-nav-btn:hover {
+  background-color: #FF8F35;
+  border-color: #FF8F35;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(255, 143, 53, 0.3);
+}
+
+.frame-nav-btn:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Make sure .frame-right has position relative for absolute positioning */
+.frame-right {
+  width: 60%;
+  padding: 3.5rem 3rem 2.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+    /* ============================================================
+       FOOTER  (identical to index)
+    ============================================================ */
+    .footer {
+      background-color: #0a0a0a;
+      width: 100%;
+      padding: 4rem 4rem 2rem 4rem;
+      border-top: 1px solid rgba(253, 253, 246, 0.1);
+    }
+
+    .footer-container {
+      max-width: 1600px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      gap: clamp(2rem, 4vw, 5rem);
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left  { width: auto; flex: 1.4; min-width: 0; }
+    .footer-right { flex: 3; padding-left: 0; display: contents; }
+    .footer-col   { flex: 1; min-width: 0; }
+    .nav-col      { flex: 1.8; min-width: 0; }
+
+    .footer-logo-img { width: 100%; }
+
+    .footer-tagline {
+      font-family: 'Archivo Narrow', sans-serif;
+      font-size: 1rem;
+      color: rgba(253,253,246,0.55);
+      margin-top: 0.8rem;
+    }
+
+    .footer-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 2rem;
+    }
+
+    .footer-links { list-style: none; padding: 0; margin: 0; }
+    .footer-links li { margin-bottom: 0.8rem; }
+
+    .footer-links a {
+      font-family: 'Archivo Narrow', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(253, 253, 246, 0.7);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .footer-links a:hover { color: #FF8F35; padding-left: 5px; }
+
+    .footer-col-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: #FDFDF6;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .footer-social-icons { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .social-icon-link { display: inline-block; transition: all 0.3s ease; }
+    .social-icon-link:hover { transform: translateY(-5px); }
+
+    .social-img {
+      width: 35px; height: 35px;
+      border-radius: 0%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon-link:hover .social-img { filter: brightness(1.2); }
+
+    .footer-contact-item { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+    .contact-img { width: 24px; height: 24px; object-fit: contain; transition: all 0.3s ease; }
+
+    .contact-text {
+      font-family: 'Archivo Narrow', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(253, 253, 246, 0.7);
+      letter-spacing: 0.5px;
+      word-break: break-all;
+    }
+
+    .footer-contact-item:hover .contact-img { transform: scale(1.1); filter: brightness(1.2); }
+    .footer-contact-item:hover .contact-text { color: #FF8F35; }
+
+    /* GO TO TOP */
+    #go-top-btn {
+      position: fixed;
+      bottom: 2.5rem; right: 2.5rem;
+      z-index: 999;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background-color: #FF8F35;
+      border: 2px solid transparent;
+      color: #FDFDF6;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease, background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    #go-top-btn svg { width: 22px; height: 22px; display: block; }
+
+    #go-top-btn.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+    #go-top-btn:hover {
+      background-color: transparent;
+      border-color: #FF8F35;
+      color: #FF8F35;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255, 143, 53, 0.35);
+    }
+
+
+    /* ============================================================
+       RESPONSIVE — LAPTOP  1025px – 1440px
+    ============================================================ */
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      .frame-title { font-size: 3rem; }
+      .frame-paragraph { font-size: 0.98rem; }
+      .frame-subtext { font-size: 0.82rem; }
+      .frame-right { padding: 2.8rem 2.5rem 2rem 2.8rem; }
+      .frame-left  { padding: 2rem 0 2rem 2rem; }
+    }
+
+
+    /* ============================================================
+       RESPONSIVE — TABLET  768px – 1024px
+    ============================================================ */
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+      /* Navbar */
+      .navbar { padding: 1rem 2rem; padding-bottom: 0; }
+
+      .hamburger { display: flex; }
+
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 70%; max-width: 300px;
+        height: 100vh;
+        background-color: #101010;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 150;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+      }
+
+      .nav-links.active { right: 0; }
+      .nav-links li { width: 100%; }
+      .nav-links a { font-size: 1.2rem; white-space: normal; display: block; padding: 0.5rem 0; }
+      .nav-links a.active::after { bottom: 0; }
+
+      .work-with-us { width: 100%; text-align: center; margin-top: 0.5rem; padding: 0.7rem 1.4rem; }
+
+      body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 140;
+        pointer-events: auto;
+      }
+
+      .navbar { z-index: 150; }
+
+      /* Frames section — stack vertically on tablet */
+      .frames-section { padding-top: 70px; }
+
+      .frame-slide {
+        flex-direction: column;
+        min-height: auto;
+      }
+
+      .frame-slide.exit {
+        top: 70px;
+      }
+
+      .frame-left {
+        width: 100%;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        min-height: 50vw;
+      }
+
+      .frame-image-rect {
+        min-height: 52vw;
+        border-radius: 20px;
+      }
+
+      .frame-right {
+        width: 100%;
+        padding: 2rem 2rem 1.5rem 2rem;
+        gap: 1.2rem;
+      }
+
+      .frame-title { font-size: 2.5rem; }
+      .frame-paragraph { font-size: 0.95rem; max-width: 100%; }
+      .frame-subtext { font-size: 0.82rem; max-width: 100%; }
+
+      .frame-nav-section {
+        padding: 1rem 2rem 2rem 2rem;
+      }
+
+      /* Footer */
+      .footer { padding: 2.5rem 1.5rem 2rem; }
+      .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1.5rem;
+      }
+      .footer-right { display: contents; }
+      .footer-left  { width: 100%; flex: none; }
+      .footer-logo-img { max-width: 100%; }
+      .nav-col { flex: none; }
+      .footer-nav-grid { grid-template-columns: 1fr; }
+      .footer-social-icons { gap: 0.8rem; }
+    }
+
+
+    /* ============================================================
+       RESPONSIVE — MOBILE  max-width: 767px
+    ============================================================ */
+    @media (max-width: 767px) {
+
+      /* Navbar */
+      .navbar {
+        height: 8%;
+        padding: 1rem 2.5rem;
+        padding-bottom: 0;
+        margin: 0;
+        z-index: 150;
+      }
+
+      .logo-img { height: 40px; }
+      .hamburger { display: flex; }
+
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 70%; max-width: 300px;
+        height: 100vh;
+        background-color: #101010;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 150;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+      }
+
+      .nav-links.active { right: 0; }
+      .nav-links li { width: 100%; }
+      .nav-links a { font-size: 1.2rem; white-space: normal; display: block; padding: 0.5rem 0; }
+      .nav-links a.active::after { bottom: 0; }
+
+      .work-with-us { width: 100%; text-align: center; margin-top: 0.5rem; padding: 0.7rem 1.4rem; }
+
+      body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 140;
+        pointer-events: auto;
+      }
+
+      /* Frames section */
+      .frames-section { padding-top: 65px; }
+
+      .frame-slide {
+        flex-direction: column;
+        min-height: auto;
+      }
+
+      .frame-slide.exit { top: 65px; }
+
+      .frame-left {
+        width: 100%;
+        padding: 1.2rem 1.2rem 0 1.2rem;
+      }
+
+      .frame-image-rect {
+        min-height: 72vw;
+        border-radius: 16px;
+      }
+
+      .frame-right {
+        width: 100%;
+        padding: 1.8rem 1.2rem 1.2rem 1.2rem;
+        gap: 1rem;
+      }
+
+      .frame-content-top { gap: 1rem; }
+
+      .frame-title { font-size: 2rem; letter-spacing: 1.5px; }
+
+      .frame-badge { font-size: 0.78rem; padding: 0.3rem 1.1rem; }
+
+      .frame-genres { font-size: 0.78rem; gap: 0.3rem 0.2rem; }
+
+      .frame-paragraph {
+        font-size: 0.88rem;
+        line-height: 1.65;
+        max-width: 100%;
+      }
+
+      .frame-subtext {
+        font-size: 0.76rem;
+        max-width: 100%;
+      }
+
+      .frame-bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+
+      .frame-view-btn { font-size: 0.85rem; padding: 0.55rem 1.5rem; }
+
+      .frame-nav-section {
+        padding: 0.8rem 1.2rem 1.5rem 1.2rem;
+      }
+
+      .frame-nav-btn { width: 46px; height: 46px; font-size: 1.1rem; }
+
+      /* Footer */
+      .footer { padding: 2.5rem 1.5rem 2rem; }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1.5rem;
+      }
+
+      .footer-right { display: contents; }
+      .footer-left  { width: 100%; flex: none; }
+      .footer-logo-img { max-width: 100%; }
+      .footer-tagline { font-size: 1rem; max-width: 100%; text-align: left; margin-left: 0; }
+      .nav-col { flex: none; }
+      .footer-nav-grid { grid-template-columns: 1fr; }
+      .footer-social-icons { gap: 0.8rem; }
+    }
+
+
+    /* ============================================================
+   LAPTOP 1025px – 1440px  — stack image on top, content below
+============================================================ */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+  .frame-slide {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .frame-slide.exit {
+    top: 80px;
+  }
+
+  .frame-left {
+    width: 100%;
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .frame-image-rect {
+    min-height: 55vw;
+    max-height: 70vh;
+    border-radius: 20px;
+  }
+
+  .frame-right {
+    width: 100%;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  }
+
+  .frame-title        { font-size: 3rem; }
+  .frame-paragraph    { font-size: 0.98rem; max-width: 100%; }
+  .frame-subtext      { font-size: 0.82rem; max-width: 100%; }
+
+    /* Move heart/share below the View Full Project button */
+  .frame-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .frame-nav-section {
+    padding: 1rem 2.5rem 2rem 2.5rem;
+  }
+}
+
+
+/* ============================================================
+   TABLET 768px – 1024px  — prev/next sit beside heart & share
+============================================================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Move heart/share below the View Full Project button */
+  .frame-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  /* Nav section: keep bottom-right, but pull it up tight */
+  .frame-nav-section {
+    padding: 0.5rem 2rem 2rem 2rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="k-progress"></div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/KLogo.png"  alt="Kaleido Pictures" class="logo-img logo-primary">
+      <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="logo-img logo-secondary">
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="creative.html">Creative Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="work-with-us" onclick="window.location.href='workwithus.html';">Work With Us</button></li>
+    </ul>
+  </nav>
+
+
+<!-- ============================================================
+       FRAMES SECTION
+  ============================================================ -->
+  <section class="frames-section" id="frames-section">
+
+    <!-- ── FRAME 1 ── -->
+    <div class="frame-slide active" data-frame="1">
+      <div class="frame-left">
+        <div class="frame-image-rect" style="background-image: url('Images/KHome_5.png');"></div>
+      </div>
+
+      <div class="frame-right">
+        <div class="frame-content-top">
+
+          <h1 class="frame-title">The Last Frame of<br>Summer1</h1>
+
+          <span class="frame-badge">SHORT FILM — 2024</span>
+
+          <div class="frame-genres">
+            <span class="genre-word">Nostalgia</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Seaside</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Warm Tones</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Memory</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Coming-of-Age</span>
+          </div>
+
+          <p class="frame-paragraph">
+            Two childhood friends return to the quiet seaside town where they grew up. Through old photographs, sunsets, and memories, they rediscover moments that shaped their past and changed their future.
+          </p>
+
+          <p class="frame-subtext">
+            This piece explores the fragility of memory and the feeling of returning to something that no longer exists in the same way. The warm, sun-soaked tones reflect comfort and familiarity, while the stillness of the composition suggests distance—both emotional and temporal. It captures the quiet realization that some moments are meant to be remembered, not relived.
+          </p>
+
+          <div class="frame-divider"></div>
+
+          <div class="frame-bottom-row">
+            <button class="frame-view-btn">View Full Project</button>
+          </div>
+
+        </div><!-- /frame-content-top -->
+
+        <!-- Navigation buttons inside the card - bottom right -->
+        <div class="frame-nav-buttons">
+          <button class="frame-nav-btn" id="prev-btn" disabled>‹</button>
+          <button class="frame-nav-btn" id="next-btn">›</button>
+        </div>
+
+      </div><!-- /frame-right -->
+    </div><!-- /frame-slide 1 -->
+
+
+    <!-- ── FRAME 2 ── -->
+    <div class="frame-slide" data-frame="2">
+      <div class="frame-left">
+        <div class="frame-image-rect" style="background-image: url('Images/KHome_7.png');"></div>
+      </div>
+
+      <div class="frame-right">
+        <div class="frame-content-top">
+
+          <h1 class="frame-title">Echoes of the<br>Empty City2</h1>
+
+          <span class="frame-badge">DOCUMENTARY — 2024</span>
+
+          <div class="frame-genres">
+            <span class="genre-word">Urban</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Solitude</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Architecture</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Silence</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Cinematic</span>
+          </div>
+
+          <p class="frame-paragraph">
+            A visual journey through the streets of a city at dawn—before the world wakes up. The film captures the raw, unfiltered beauty of urban spaces when they belong only to the light.
+          </p>
+
+          <p class="frame-subtext">
+            Through wide compositions and deliberate stillness, this piece asks what a city truly looks like without its people. Every empty corridor and sun-drenched wall becomes a character in its own right—breathing, waiting, remembering. The absence here is not loneliness, but possibility.
+          </p>
+
+          <div class="frame-divider"></div>
+
+          <div class="frame-bottom-row">
+            <button class="frame-view-btn">View Full Project</button>
+          </div>
+
+        </div>
+
+        <!-- Navigation buttons inside the card - bottom right -->
+        <div class="frame-nav-buttons">
+          <button class="frame-nav-btn" id="prev-btn2">‹</button>
+          <button class="frame-nav-btn" id="next-btn2">›</button>
+        </div>
+
+      </div>
+    </div><!-- /frame-slide 2 -->
+
+
+    <!-- ── FRAME 3 ── -->
+    <div class="frame-slide" data-frame="3">
+      <div class="frame-left">
+        <div class="frame-image-rect" style="background-image: url('Images/KHome_8.png');"></div>
+      </div>
+
+      <div class="frame-right">
+        <div class="frame-content-top">
+
+          <h1 class="frame-title">Before the<br>Lights Go Out3</h1>
+
+          <span class="frame-badge">BRAND FILM — 2024</span>
+
+          <div class="frame-genres">
+            <span class="genre-word">Drama</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Night</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Neon</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Emotion</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Identity</span>
+          </div>
+
+          <p class="frame-paragraph">
+            A brand story told through the lens of a single evening—where identity, ambition, and vulnerability collide under the glow of city lights. A film about what we project and what we hide.
+          </p>
+
+          <p class="frame-subtext">
+            The use of neon and shadow throughout this piece was intentional—light as performance, darkness as truth. The visual language mirrors the duality at the heart of the brand: confident on the surface, deeply human underneath. Every frame was crafted to feel like a still from a film the audience wishes they'd seen.
+          </p>
+
+          <div class="frame-divider"></div>
+
+          <div class="frame-bottom-row">
+            <button class="frame-view-btn">View Full Project</button>
+          </div>
+
+        </div>
+
+        <!-- Navigation buttons inside the card - bottom right -->
+        <div class="frame-nav-buttons">
+          <button class="frame-nav-btn" id="prev-btn3">‹</button>
+          <button class="frame-nav-btn" id="next-btn3">›</button>
+        </div>
+
+      </div>
+    </div><!-- /frame-slide 3 -->
+
+        <!-- ── FRAME 4 ── -->
+    <div class="frame-slide" data-frame="4">
+      <div class="frame-left">
+        <div class="frame-image-rect" style="background-image: url('Images/KHome_8.png');"></div>
+      </div>
+
+      <div class="frame-right">
+        <div class="frame-content-top">
+
+          <h1 class="frame-title">Before the<br>Lights Go Out4</h1>
+
+          <span class="frame-badge">BRAND FILM — 2024</span>
+
+          <div class="frame-genres">
+            <span class="genre-word">Drama</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Night</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Neon</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Emotion</span>
+            <span class="genre-sep">◦</span>
+            <span class="genre-word">Identity</span>
+          </div>
+
+          <p class="frame-paragraph">
+            A brand story told through the lens of a single evening—where identity, ambition, and vulnerability collide under the glow of city lights. A film about what we project and what we hide.
+          </p>
+
+          <p class="frame-subtext">
+            The use of neon and shadow throughout this piece was intentional—light as performance, darkness as truth. The visual language mirrors the duality at the heart of the brand: confident on the surface, deeply human underneath. Every frame was crafted to feel like a still from a film the audience wishes they'd seen.
+          </p>
+
+          <div class="frame-divider"></div>
+
+          <div class="frame-bottom-row">
+            <button class="frame-view-btn">View Full Project</button>
+          </div>
+
+        </div>
+
+        <!-- Navigation buttons inside the card - bottom right -->
+        <div class="frame-nav-buttons">
+          <button class="frame-nav-btn" id="prev-btn3">‹</button>
+          <button class="frame-nav-btn" id="next-btn3">›</button>
+        </div>
+
+      </div>
+    </div><!-- /frame-slide 3 -->
+
+  </section><!-- /frames-section -->
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+      
+        <!-- Left Section -->
+        <div class="footer-left">
+          <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
+          <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
+        </div>
+      
+        <!-- Right Section -->
+        <div class="footer-right">
+        
+          <!-- Socials -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Socials</h4>
+            <div class="footer-social-icons">
+              <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+                <img src="Images/KInstagram.png" alt="Instagram" class="social-img">
+              </a>
+              <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+                <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
+              </a>
+              <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+                <img src="Images/KYouTube.png" alt="YouTube" class="social-img">
+              </a>
+              <a href="https://discord.com/invite/bQhyr9fcEK" target="_blank" class="social-icon-link">
+                <img src="Images/KDiscord.png" alt="Discord" class="social-img">
+              </a>
+            </div>
+          </div>
+        
+          <!-- Contact -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Contact Us</h4>
+            <div class="footer-contact-item">
+              <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
+              <span class="contact-text">+971 00 000 0000</span>
+            </div>
+            <div class="footer-contact-item">
+              <img src="Images/KEmail.png" alt="Email" class="contact-img">
+              <span class="contact-text">loremipsum@gmail.com</span>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </footer>
+
+
+  <!-- GO TO TOP -->
+  <button id="go-top-btn" aria-label="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+
+<script>
+    /* ── SCROLL PROGRESS BAR ── */
+const progressBar = document.getElementById('k-progress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  if (total > 0) progressBar.style.width = ((scrolled / total) * 100).toFixed(1) + '%';
+}, { passive: true });
+
+/* ── LOGO SWAP ── */
+const framesSection = document.querySelector('.frames-section');
+window.addEventListener('scroll', () => {
+  const h = framesSection ? framesSection.offsetHeight : 0;
+  document.body.classList.toggle('scrolled', window.scrollY > h - 100);
+}, { passive: true });
+
+/* ── GO TO TOP ── */
+const goTopBtn = document.getElementById('go-top-btn');
+window.addEventListener('scroll', () => {
+  goTopBtn.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+goTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ── ACTIVE NAV LINK ── */
+document.addEventListener('DOMContentLoaded', () => {
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    const lp = link.getAttribute('href');
+    if (!lp || lp === '#' || lp.startsWith('#')) return;
+    const cleanLink    = lp.replace(/^\.\//, '').replace(/^\//, '');
+    let cleanCurrent   = currentPath.replace(/^\//, '').split('/').pop();
+    if (cleanCurrent === '') cleanCurrent = 'index.html';
+    if (cleanLink === cleanCurrent) link.classList.add('active');
+  });
+});
+
+/* ── HAMBURGER ── */
+const hamburger = document.getElementById('hamburger');
+const navLinksEl = document.getElementById('nav-links');
+
+if (hamburger && navLinksEl) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinksEl.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  });
+
+  navLinksEl.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinksEl.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    });
+  });
+
+  const wwuBtn = navLinksEl.querySelector('.work-with-us');
+  if (wwuBtn) {
+    wwuBtn.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinksEl.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    });
+  }
+}
+
+document.body.addEventListener('click', (e) => {
+  if (document.body.classList.contains('menu-open') &&
+      !hamburger.contains(e.target) &&
+      !navLinksEl.contains(e.target)) {
+    hamburger.classList.remove('active');
+    navLinksEl.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+});
+
+/* ── FRAME NAVIGATION ── */
+const slides   = Array.from(document.querySelectorAll('.frame-slide'));
+let current    = 0;
+let animating  = false;
+
+function updateButtons() {
+  const prevBtns = document.querySelectorAll('.frame-nav-btn:first-child');
+  const nextBtns = document.querySelectorAll('.frame-nav-btn:last-child');
+  
+  prevBtns.forEach(btn => {
+    btn.disabled = current === 0;
+  });
+  nextBtns.forEach(btn => {
+    btn.disabled = current === slides.length - 1;
+  });
+}
+
+function goTo(index) {
+  if (animating || index === current || index < 0 || index >= slides.length) return;
+  animating = true;
+
+  const leaving  = slides[current];
+  const entering = slides[index];
+
+  leaving.classList.add('exit');
+  leaving.classList.remove('active');
+
+  framesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  setTimeout(() => {
+    leaving.classList.remove('exit');
+    entering.classList.add('active');
+    current = index;
+    updateButtons();
+    animating = false;
+  }, 480);
+}
+
+// Add event listeners to all prev/next buttons
+document.querySelectorAll('.frame-nav-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const isPrev = btn.textContent === '‹';
+    if (isPrev) goTo(current - 1);
+    else goTo(current + 1);
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') goTo(current + 1);
+  if (e.key === 'ArrowLeft')  goTo(current - 1);
+});
+
+updateButtons();
+
+/* ── HANDLE URL PARAMETERS FOR PROJECT NAVIGATION ── */
+function getProjectFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectParam = urlParams.get('project');
+  
+  if (projectParam) {
+    const projectIndex = parseInt(projectParam) - 1; // Convert to 0-based index
+    if (projectIndex >= 0 && projectIndex < slides.length && projectIndex !== current) {
+      // Small delay to ensure slides are loaded
+      setTimeout(() => {
+        goTo(projectIndex);
+      }, 100);
+    }
+  }
+}
+
+// Call this after slides are initialized
+getProjectFromURL();
+</script>
+
+</body>
+</html>

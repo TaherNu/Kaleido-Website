@@ -284,75 +284,57 @@
 
 
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-container">
-
-      <!-- Left Section - 45% -->
-      <div class="footer-left">
-        <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
-        <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
-      </div>
-
-      <!-- Right Section - 55% -->
-      <div class="footer-right">
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
       
-       <!-- Column 1 - Navigation Links (split into 2 columns) -->
-      <div class="footer-col nav-col">
-        <h4 class="footer-col-title">Explore</h4>
-        <div class="footer-nav-grid">
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-          </ul>
-          <ul class="footer-links">
-            <li><a href="creative.html">Creative services</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <!-- Left Section -->
+        <div class="footer-left">
+          <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
+          <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
+        </div>
+      
+        <!-- Right Section -->
+        <div class="footer-right">
+        
+          <!-- Socials -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Socials</h4>
+            <div class="footer-social-icons">
+              <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+                <img src="Images/KInstagram.png" alt="Instagram" class="social-img">
+              </a>
+              <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+                <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
+              </a>
+              <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+                <img src="Images/KYouTube.png" alt="YouTube" class="social-img">
+              </a>
+              <a href="https://discord.com/invite/bQhyr9fcEK" target="_blank" class="social-icon-link">
+                <img src="Images/KDiscord.png" alt="Discord" class="social-img">
+              </a>
+            </div>
+          </div>
+        
+          <!-- Contact -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Contact Us</h4>
+            <div class="footer-contact-item">
+              <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
+              <span class="contact-text">+971 00 000 0000</span>
+            </div>
+            <div class="footer-contact-item">
+              <img src="Images/KEmail.png" alt="Email" class="contact-img">
+              <span class="contact-text">loremipsum@gmail.com</span>
+            </div>
+          </div>
+        
         </div>
       </div>
-
-        <!-- Column 2 - Socials with Icons (no text) -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Socials</h4>
-          <div class="footer-social-icons">
-            <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
-              <img src="Images/KInstagram.png" alt="YouTube" class="social-img">
-            </a>
-            <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
-              <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
-            </a>
-            <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
-              <img src="Images/KYouTube.png" alt="Instagram" class="social-img">
-            </a>
-            <a href="https://discord.com/invite/bQhyr9fcEK" target="_blank" class="social-icon-link">
-              <img src="Images/KDiscord.png" alt="Indeed" class="social-img">
-            </a>
-          </div>
-        </div>
-
-        <!-- Column 3 - Contact -->
-       <!-- Column 3 - Contact -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Contact Us</h4>
-          <div class="footer-contact-item">
-            <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
-            <span class="contact-text">+971 00 000 0000</span>
-          </div>
-          <div class="footer-contact-item">
-            <img src="Images/KEmail.png" alt="Email" class="contact-img">
-            <span class="contact-text">loremipsum@gmail.com</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 
+    
   <!-- Go To Top Button -->
   <button id="go-top-btn" aria-label="Go to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -475,134 +457,58 @@
       });
     });
 
+    
     // Auto-sliding portfolio cards
-    // Auto-sliding portfolio cards - Smooth Infinite Loop
-    const portfolioSlider = document.querySelector('.portfolio-slider');
-    const portfolioTrack = document.querySelector('.portfolio-track');
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
+// Auto-sliding portfolio cards - GPU-accelerated infinite loop
+const portfolioTrack = document.querySelector('.portfolio-track');
+const portfolioCards = document.querySelectorAll('.portfolio-card');
 
-    // Clone cards for infinite effect
-    if (portfolioTrack && portfolioCards.length > 0) {
-      // Clone all cards and append to the end
-      portfolioCards.forEach(card => {
-        const clone = card.cloneNode(true);
-        portfolioTrack.appendChild(clone);
-      });
+if (portfolioTrack && portfolioCards.length > 0) {
+  // Clone cards once for seamless loop
+  portfolioCards.forEach(card => {
+    const clone = card.cloneNode(true);
+    portfolioTrack.appendChild(clone);
+  });
+}
 
-      // Also clone to the beginning for seamless backward scroll
-      const allCards = document.querySelectorAll('.portfolio-card');
-      const firstCards = [];
-      for (let i = 0; i < portfolioCards.length; i++) {
-        const clone = portfolioCards[i].cloneNode(true);
-        firstCards.push(clone);
-      }
-      firstCards.reverse().forEach(card => {
-        portfolioTrack.insertBefore(card, portfolioTrack.firstChild);
-      });
+let translateX = 0;
+let isPaused = false;
+let animFrameId;
+const scrollSpeed = 1.6; // px per frame — smooth at any value, increase freely
+
+// Get single set width after DOM settles
+function getSingleSetWidth() {
+  const card = portfolioTrack?.querySelector('.portfolio-card');
+  if (!card) return 0;
+  const style = getComputedStyle(portfolioTrack);
+  const gap = parseFloat(style.gap) || 24;
+  return (card.offsetWidth + gap) * portfolioCards.length;
+}
+
+function animateSlider() {
+  if (!isPaused) {
+    translateX -= scrollSpeed;
+
+    const setWidth = getSingleSetWidth();
+    // Reset seamlessly when first set has fully scrolled out
+    if (setWidth > 0 && Math.abs(translateX) >= setWidth) {
+      translateX += setWidth;
     }
 
-    let isScrolling = true;
-    let scrollInterval;
-    let scrollSpeed = 1.2;
-    let isTransitioning = false;
+    portfolioTrack.style.transform = `translateX(${translateX}px)`;
+  }
+  animFrameId = requestAnimationFrame(animateSlider);
+}
 
-    // Get updated card width after cloning
-    const updatedCards = document.querySelectorAll('.portfolio-card');
-    const cardWidth = updatedCards[0]?.offsetWidth + 24 || 324; // width + gap
+// Pause on hover
+const portfolioSlider = document.querySelector('.portfolio-slider');
+if (portfolioSlider) {
+  portfolioSlider.addEventListener('mouseenter', () => { isPaused = true; });
+  portfolioSlider.addEventListener('mouseleave', () => { isPaused = false; });
+}
 
-    // Set initial scroll position to the first set of original cards
-    if (portfolioSlider) {
-      portfolioSlider.scrollLeft = portfolioCards.length * cardWidth;
-    }
-
-    function autoScroll() {
-      if (!isScrolling || isTransitioning || !portfolioSlider) return;
-    
-      portfolioSlider.scrollLeft += scrollSpeed;
-    
-      // Check if we've scrolled past the cloned end
-      if (portfolioSlider.scrollLeft >= (updatedCards.length - portfolioCards.length) * cardWidth) {
-        isTransitioning = true;
-        portfolioSlider.scrollLeft = portfolioCards.length * cardWidth;
-        setTimeout(() => {
-          isTransitioning = false;
-        }, 50);
-      }
-
-      // Check if we've scrolled to the beginning
-      if (portfolioSlider.scrollLeft <= (portfolioCards.length * cardWidth) - 100) {
-        // Do nothing, keep going
-      }
-    }
-
-    // Start auto-scrolling
-    function startAutoScroll() {
-      if (scrollInterval) clearInterval(scrollInterval);
-      scrollInterval = setInterval(autoScroll, 16);
-    }
-
-    // Stop auto-scrolling
-    function stopAutoScroll() {
-      if (scrollInterval) clearInterval(scrollInterval);
-    }
-
-    // Pause on hover
-    if (portfolioSlider) {
-      portfolioSlider.addEventListener('mouseenter', () => {
-        stopAutoScroll();
-        isScrolling = false;
-      });
-
-      portfolioSlider.addEventListener('mouseleave', () => {
-        isScrolling = true;
-        startAutoScroll();
-      });
-    }
-
-    // Start auto-scrolling when page loads
-    startAutoScroll();
-
-    // Drag to scroll functionality
-    let isDown = false;
-    let startX;
-    let scrollLeftPosition;
-
-    if (portfolioSlider) {
-      portfolioSlider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        stopAutoScroll();
-        isScrolling = false;
-        portfolioSlider.style.cursor = 'grabbing';
-        startX = e.pageX - portfolioSlider.offsetLeft;
-        scrollLeftPosition = portfolioSlider.scrollLeft;
-      });
-
-      portfolioSlider.addEventListener('mouseleave', () => {
-        isDown = false;
-        portfolioSlider.style.cursor = 'grab';
-        if (!isScrolling) {
-          isScrolling = true;
-          startAutoScroll();
-        }
-      });
-
-      portfolioSlider.addEventListener('mouseup', () => {
-        isDown = false;
-        portfolioSlider.style.cursor = 'grab';
-        if (!isScrolling) {
-          isScrolling = true;
-          startAutoScroll();
-        }
-      });
-
-      portfolioSlider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - portfolioSlider.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        portfolioSlider.scrollLeft = scrollLeftPosition - walk;
-      });
-    }
+// Start
+animFrameId = requestAnimationFrame(animateSlider);
 
       // ===== HAMBURGER MENU FUNCTIONALITY =====
   const hamburger = document.getElementById('hamburger');
