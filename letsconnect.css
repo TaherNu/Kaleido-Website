@@ -311,7 +311,7 @@
     .gs-offer-card:nth-child(3), .gs-offer-card:nth-child(4),
     .gs-offer-card:nth-child(5) { background-image: url('Images/folder.png');
                                   background-position: center;
-                                    background-size: 80%;
+                                    background-size: contain;
                                     background-repeat: no-repeat; }
 
 
@@ -320,6 +320,7 @@
       position: relative;
       z-index: 2;
       text-align: left;
+      padding-left: 1.5rem;
     }
 
     .gs-offer-card-header {
@@ -474,7 +475,7 @@
       width: 100%;
       min-height: 100vh;
       background-image: url('Images/KWWUCSButton_2.png');
-      background-size: contain;
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
@@ -978,7 +979,7 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (min-width: 1025px) and (max-width: 1440px) {
+    @media (min-width: 1025px) and (max-width: 1500px) {
       .gs-hero-title { font-size: 5rem; }
       .gs-offer-heading { font-size: 4rem; }
       .gs-approach-heading { font-size: 4rem; }
@@ -986,6 +987,16 @@
       .gs-cta-heading { font-size: 5rem; }
       .gs-form-heading { font-size: 4rem; }
       .gs-offer-section, .gs-approach-section { padding: 5rem 3rem; }
+
+      
+      .gs-offer-section { padding: 4rem 2rem; min-height: auto; }
+      .gs-offer-container { flex-direction: column; gap: 2rem; }
+      .gs-offer-left { width: 100%; text-align: center; align-items: center; }
+      .gs-offer-right { width: 100%; justify-content: center; }
+      .gs-offer-text { max-width: 100%; text-align: center; }
+      .gs-offer-heading br {
+        display: none;
+      }
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -1027,7 +1038,7 @@
       .gs-offer-section { padding: 4rem 2rem; min-height: auto; }
       .gs-offer-container { flex-direction: column; gap: 2rem; }
       .gs-offer-left { width: 100%; text-align: center; align-items: center; }
-      .gs-offer-right { width: 100%; }
+      .gs-offer-right { width: 100%; justify-content: center; }
       .gs-offer-text { max-width: 100%; text-align: center; }
 
       .gs-approach-section { padding: 4rem 2rem; min-height: auto; }
@@ -1036,7 +1047,7 @@
       .gs-approach-right { width: 100%; }
       .gs-approach-text { max-width: 100%; text-align: center; }
       .gs-approach-heading { text-align: center; }
-      .gs-offer-heading { text-align: center; }
+      .gs-offer-heading { text-align: center; padding-top: 3rem; }
 
       .gs-work-heading { font-size: 4rem; }
       .gs-cta-heading { font-size: 4rem; }
@@ -1089,15 +1100,13 @@
       .gs-hero-title { font-size: 2.2rem; letter-spacing: 2px; }
       .gs-hero-bottom { font-size: 0.78rem; width: 90%; bottom: 1.5rem; }
 
-      .gs-offer-section { padding: 3rem 1.2rem; min-height: auto; }
+
+      .gs-offer-section { padding: 4rem 2rem; min-height: auto; }
       .gs-offer-container { flex-direction: column; gap: 2rem; }
       .gs-offer-left { width: 100%; text-align: center; align-items: center; }
-      .gs-offer-heading { font-size: 3rem; text-align: center; }
+      .gs-offer-right { width: 100%; justify-content: center; }
+      .gs-offer-heading { text-align: center; padding-top: 4rem; }
       .gs-offer-text { max-width: 100%; text-align: center; }
-      .gs-offer-right { width: 100%; grid-template-columns: 1fr; }
-      .gs-offer-card:nth-child(5) { grid-column: 1; }
-      .gs-offer-card { min-height: 200px; }
-      .gs-offer-card-header { font-size: 1.5rem; }
 
       .gs-approach-section { padding: 3rem 1.2rem; min-height: auto; }
       .gs-approach-container { flex-direction: column; gap: 2rem; }
