@@ -47,8 +47,8 @@
         <h1 class="services-hero-heading">CRAFTING STORIES<br>THAT MOVE</h1>
         
         <div class="services-hero-buttons">
-          <button class="services-btn services-btn-solid">EXPLORE OUR WORK</button>
-          <button class="services-btn services-btn-outline">START A PROJECT</button>
+          <button class="services-btn services-btn-solid" onclick="window.location.href='work.html'">EXPLORE OUR WORK</button>
+          <button class="services-btn services-btn-outline" onclick="window.location.href='workwithus.html'">START A PROJECT</button>
         </div>
         
         <p class="services-hero-paragraph">
@@ -74,10 +74,10 @@
         
           <div class="vertical-slider-wrapper">
             <div class="vertical-slider-container">
-              <div class="service-item active" data-service="narrative">STORY DEVELOPMENT</div>
-              <div class="service-item" data-service="commercial">DIRECTION & CINEMATOGRAPHY</div>
-              <div class="service-item" data-service="creative">PRODUCING & FILMING</div>
-              <div class="service-item" data-service="full">POST-PRODUCTION & EDITING</div>
+              <div class="service-item active" data-category="narrative">STORY DEVELOPMENT</div>
+              <div class="service-item" data-category="commercial">DIRECTION & CINEMATOGRAPHY</div>
+              <div class="service-item" data-category="creative">PRODUCING & FILMING</div>
+              <div class="service-item" data-category="full">POST-PRODUCTION & EDITING</div>
             </div>
           </div>
         
@@ -88,7 +88,7 @@
         <div class="services-we-do-cards">
   
           <!-- Card 1 - STORY DEVELOPMENT -->
-          <div class="service-card" data-service="story-development">
+          <div class="service-card" data-service="story-development" data-category="narrative">
             <div class="card-bg" style="background-image: url('Images/KServices_2.png');"></div>
             <div class="card-overlay"></div>
             <div class="card-header">STORY<br>DEVELOPMENT</div>
@@ -97,7 +97,7 @@
           </div>
 
           <!-- Card 2 - DIRECTION & CINEMATOGRAPHY -->
-          <div class="service-card" data-service="direction">
+          <div class="service-card" data-service="direction" data-category="commercial">
             <div class="card-bg" style="background-image: url('Images/KServices_3.png');"></div>
             <div class="card-overlay"></div>
             <div class="card-header">DIRECTION &<br>CINEMATOGRAPHY</div>
@@ -106,7 +106,7 @@
           </div>
 
           <!-- Card 3 - PRODUCING & FILMING -->
-          <div class="service-card" data-service="producing">
+          <div class="service-card" data-service="producing" data-category="creative">
             <div class="card-bg" style="background-image: url('Images/KServices_4.png');"></div>
             <div class="card-overlay"></div>
             <div class="card-header">PRODUCING &<br>FILMING</div>
@@ -115,7 +115,7 @@
           </div>
 
           <!-- Card 4 - POST-PRODUCTION & EDITING -->
-          <div class="service-card" data-service="post-production">
+          <div class="service-card" data-service="post-production" data-category="full">
             <div class="card-bg" style="background-image: url('Images/KServices_5.png');"></div>
             <div class="card-overlay"></div>
             <div class="card-header">POST-PRODUCTION<br>& EDITING</div>
@@ -442,7 +442,7 @@
             <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
               <img src="Images/KYouTube.png" alt="Instagram" class="social-img">
             </a>
-            <a href="https://discord.gg/DtGMmvyp" class="social-icon-link" target="_blank">
+            <a href="https://discord.com/invite/bQhyr9fcEK" target="_blank" class="social-icon-link">
               <img src="Images/KDiscord.png" alt="Indeed" class="social-img">
             </a>
           </div>
@@ -540,6 +540,9 @@
       }
     });
     // Services We/Do - Card expansion on slider selection
+
+
+    
     // Services We/Do - Card expansion on slider selection
     const serviceItemsDo = document.querySelectorAll('.services-we-do .service-item');
     const serviceCards = document.querySelectorAll('.service-card');
