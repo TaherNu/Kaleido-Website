@@ -380,7 +380,7 @@
     .narrative-right {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-end;
       gap: 1rem;
       max-width: 520px;
       padding-top: 0.5rem;
@@ -396,11 +396,12 @@
 
     .narrative-description {
       font-family: 'Archivo Narrow', sans-serif;
-      font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+      font-size: clamp(0.9rem, 1.1vw, 1.4rem);
       line-height: 1.6;
-      color: rgba(253, 253, 246, 0.75);
+      color: rgb(255, 255, 255);
       font-weight: 400;
       letter-spacing: 0.3px;
+      text-align: right;
     }
 
     /* ===== DIVIDER LINE ===== */
@@ -487,7 +488,7 @@
     .film-wide-card {
       flex: 0 0 auto;
       width: 480px;
-      height: 260px;
+      height: 300px;
       border-radius: 16px;
       overflow: hidden;
       position: relative;
