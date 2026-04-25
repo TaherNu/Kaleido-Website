@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kaleido Pictures — Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="narrative.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/KLogo.png" alt="Kaleido Pictures" class="logo-img logo-primary">
+      <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="logo-img logo-secondary">
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="creative.html">Creative Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="work-with-us" onclick="window.location.href='workwithus.html';">Work With Us</button></li>
+    </ul>
+  </nav>
+
+
+  <!-- DYNAMIC CONTENT SECTION -->
+  <section class="narrative-hero">
+
+    <!-- Header Row -->
+    <div class="narrative-header">
+      <h1 class="narrative-title" id="dynamic-title">NARRATIVE<br>FILM</h1>
+
+      <div class="narrative-right">
+        <!-- White star -->
+        <svg class="star-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2 L13.5 9 L20 9 L14.5 13.5 L16.5 20.5 L12 16.5 L7.5 20.5 L9.5 13.5 L4 9 L10.5 9 Z"/>
+        </svg>
+        <p class="narrative-description" id="dynamic-description">
+          Story-driven projects that focus on character, emotion, and atmosphere—crafted through cinematic visuals that bring each narrative to life with depth and intention.
+        </p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="narrative-divider"></div>
+
+    <!-- Sliders -->
+    <div class="narrative-sliders">
+
+      <!-- Slider 1: Left to Right -->
+      <div class="slider-row ltr" id="slider-ltr">
+        <div class="slider-track-wide" id="track-ltr">
+          <!-- Cards will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Slider 2: Right to Left -->
+      <div class="slider-row rtl" id="slider-rtl">
+        <div class="slider-track-wide" id="track-rtl">
+          <!-- Cards will be populated by JavaScript -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-left">
+        <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
+        <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
+      </div>
+
+      <div class="footer-right">
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Socials</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+              <img src="Images/KInstagram.png" alt="Instagram" class="social-img">
+            </a>
+            <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+              <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
+            </a>
+            <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+              <img src="Images/KYouTube.png" alt="YouTube" class="social-img">
+            </a>
+            <a href="https://discord.com/invite/bQhyr9fcEK" target="_blank" class="social-icon-link">
+              <img src="Images/KDiscord.png" alt="Discord" class="social-img">
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
+            <span class="contact-text">+971 00 000 0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <img src="Images/KEmail.png" alt="Email" class="contact-img">
+            <span class="contact-text">loremipsum@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Go To Top Button -->
+  <button id="go-top-btn" aria-label="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+
+  <script>
+    // ===== CONTENT DATA FOR EACH CATEGORY =====
+    // EDIT THIS SECTION TO CHANGE CONTENT FOR EACH CATEGORY
+    const contentData = {
+      narrative: {
+        title: "NARRATIVE<br>FILM",
+        description: "Story-driven projects that focus on character, emotion, and atmosphere—crafted through cinematic visuals that bring each narrative to life with depth and intention.",
+        cards: [
+          {
+            image: "Images/KWork_3.png",
+            badge: "SHORT FILM",
+            title: "THE LAST FRAME",
+            text: "A coming-of-age story about memory, loss, and the spaces we leave behind."
+          },
+          {
+            image: "Images/KWork_4.png",
+            badge: "FEATURE",
+            title: "ECHOES OF HOME",
+            text: "A family torn apart by war finds their way back to each other through unexpected circumstances."
+          },
+          {
+            image: "Images/KWork_5.png",
+            badge: "SHORT FILM",
+            title: "BETWEEN TIDES",
+            text: "Two estranged brothers reunite at their childhood beach house during a storm."
+          },
+          {
+            image: "Images/KWork_6.png",
+            badge: "DOCUMENTARY",
+            title: "UNSEEN VOICES",
+            text: "An intimate portrait of artists navigating identity in a rapidly changing world."
+          },
+          {
+            image: "Images/KWork_3.png",
+            badge: "AWARD WINNING",
+            title: "DAWN PATROL",
+            text: "A surfer's solitary journey through grief and redemption."
+          },
+          {
+            image: "Images/KWork_4.png",
+            badge: "COMING SOON",
+            title: "THE SILENT HOUR",
+            text: "A psychological thriller set in a single room over 60 tense minutes."
+          }
+        ]
+      },
+      commercial: {
+        title: "COMMERCIAL<br>STORYTELLING",
+        description: "Creative work designed to communicate ideas with clarity and impact, blending visual storytelling with brand identity to create engaging and memorable experiences.",
+        cards: [
+          {
+            image: "Images/KWork_4.png",
+            badge: "BRAND FILM",
+            title: "NIKE: UNLIMITED",
+            text: "Celebrating athletes who pushed beyond their limits to achieve the impossible."
+          },
+          {
+            image: "Images/KWork_3.png",
+            badge: "CAMPAIGN",
+            title: "COCA-COLA: TOGETHER",
+            text: "A global campaign celebrating connection, community, and shared moments."
+          },
+          {
+            image: "Images/KWork_5.png",
+            badge: "DIGITAL",
+            title: "APPLE: CREATE",
+            text: "Showcasing creators using technology to bring their wildest ideas to life."
+          },
+          {
+            image: "Images/KWork_6.png",
+            badge: "SOCIAL",
+            title: "ADIDAS: ORIGINALS",
+            text: "Street culture meets high fashion in this bold visual statement."
+          },
+          {
+            image: "Images/KWork_4.png",
+            badge: "TV SPOT",
+            title: "SAMSUNG: INNOVATION",
+            text: "Where technology meets humanity—a story about connection."
+          },
+          {
+            image: "Images/KWork_3.png",
+            badge: "DIGITAL",
+            title: "DISNEY: WONDER",
+            text: "Capturing the magic of childhood imagination through stunning visuals."
+          }
+        ]
+      },
+      experimental: {
+        title: "EXPERIMENTAL<br>VISUALS",
+        description: "A collection of explorative pieces that challenge traditional storytelling, focusing on mood, form, and visual expression to push creative boundaries.",
+        cards: [
+          {
+            image: "Images/KWork_5.png",
+            badge: "ART FILM",
+            title: "CHROMA",
+            text: "An exploration of color as emotion, told entirely without dialogue."
+          },
+          {
+            image: "Images/KWork_6.png",
+            badge: "INSTALLATION",
+            title: "FRAGMENTS",
+            text: "A multi-channel video piece exploring memory fragmentation."
+          },
+          {
+            image: "Images/KWork_3.png",
+            badge: "VFX STUDY",
+            title: "LIMINAL SPACES",
+            text: "Digital environments that exist between reality and imagination."
+          },
+          {
+            image: "Images/KWork_4.png",
+            badge: "MUSIC VIDEO",
+            title: "TRANSMISSION",
+            text: "Audiovisual journey through sound, light, and motion."
+          },
+          {
+            image: "Images/KWork_5.png",
+            badge: "PROJECTION",
+            title: "URBAN RHYTHMS",
+            text: "Cityscapes transformed through abstract projection mapping."
+          },
+          {
+            image: "Images/KWork_6.png",
+            badge: "AI ART",
+            title: "DREAMSYNTH",
+            text: "Collaboration between human creativity and machine perception."
+          }
+        ]
+      },
+      concept: {
+        title: "CONCEPT<br>DEVELOPMENT",
+        description: "Early-stage ideas and visual explorations that shape the foundation of each project, revealing the creative process behind the final outcome.",
+        cards: [
+          {
+            image: "Images/KWork_6.png",
+            badge: "MOOD BOARD",
+            title: "NOIR RENAISSANCE",
+            text: "Reimagining film noir through a contemporary visual lens."
+          },
+          {
+            image: "Images/KWork_5.png",
+            badge: "STORYBOARD",
+            title: "THE EXODUS",
+            text: "Preliminary visualizations for an epic sci-fi narrative."
+          },
+          {
+            image: "Images/KWork_4.png",
+            badge: "LOOK DEV",
+            title: "PASTEL DYSTOPIA",
+            text: "Exploring color palettes that contrast beauty with decay."
+          },
+          {
+            image: "Images/KWork_3.png",
+            badge: "CONCEPT ART",
+            title: "FLOATING WORLDS",
+            text: "Environmental designs for an animated feature in development."
+          },
+          {
+            image: "Images/KWork_6.png",
+            badge: "PITCH DECK",
+            title: "THE COLLECTOR",
+            text: "Visual development for a psychological horror series."
+          },
+          {
+            image: "Images/KWork_5.png",
+            badge: "TEST FOOTAGE",
+            title: "LIQUID LIGHT",
+            text: "Experimental cinematography techniques for a music film."
+          }
+        ]
+      }
+    };
+
+    // Get category from URL parameter
+    function getCategory() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('category') || 'narrative';
+    }
+
+    // Generate card HTML with dynamic content
+    function createCard(cardData) {
+      return `
+        <div class="film-wide-card" style="background-image: url('${cardData.image}'); background-size: cover; background-position: center;">
+          <div class="card-hover-overlay">
+            <span class="overlay-badge">${cardData.badge}</span>
+            <div class="overlay-bottom">
+              <div class="overlay-title">${cardData.title}</div>
+              <p class="overlay-text">${cardData.text}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Populate both sliders with cards
+    function populateSliders(cards) {
+      const trackLTR = document.getElementById('track-ltr');
+      const trackRTL = document.getElementById('track-rtl');
+      
+      if (!trackLTR || !trackRTL) return;
+      
+      // Clear existing content
+      trackLTR.innerHTML = '';
+      trackRTL.innerHTML = '';
+      
+      // Add cards to LTR slider (normal order)
+      cards.forEach(card => {
+        trackLTR.innerHTML += createCard(card);
+      });
+      
+      // Add cards to RTL slider (reverse order for variety)
+      [...cards].reverse().forEach(card => {
+        trackRTL.innerHTML += createCard(card);
+      });
+      
+      // Clone for infinite loop (3 times)
+      const ltrCards = Array.from(trackLTR.querySelectorAll('.film-wide-card'));
+      const rtlCards = Array.from(trackRTL.querySelectorAll('.film-wide-card'));
+      
+      for (let i = 0; i < 3; i++) {
+        ltrCards.forEach(card => {
+          trackLTR.appendChild(card.cloneNode(true));
+        });
+        rtlCards.forEach(card => {
+          trackRTL.appendChild(card.cloneNode(true));
+        });
+      }
+    }
+
+    // Update page content based on category
+    function updateContent() {
+      const category = getCategory();
+      const data = contentData[category] || contentData.narrative;
+      
+      // Update title
+      document.getElementById('dynamic-title').innerHTML = data.title;
+      
+      // Update description
+      document.getElementById('dynamic-description').textContent = data.description;
+      
+      // Update page title
+      let pageTitle = "Kaleido Pictures — ";
+      if (category === 'narrative') pageTitle += "Narrative Film";
+      else if (category === 'commercial') pageTitle += "Commercial Storytelling";
+      else if (category === 'experimental') pageTitle += "Experimental Visuals";
+      else if (category === 'concept') pageTitle += "Concept Development";
+      document.title = pageTitle;
+      
+      // Populate sliders with card data
+      populateSliders(data.cards);
+    }
+
+    // ===== GO TO TOP =====
+    const goTopBtn = document.getElementById('go-top-btn');
+    window.addEventListener('scroll', () => {
+      goTopBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    goTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== LOGO SCROLL CHANGE =====
+    window.addEventListener('scroll', () => {
+      document.body.classList.toggle('scrolled', window.scrollY > window.innerHeight - 100);
+    });
+
+    // ===== HAMBURGER =====
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+          document.body.classList.remove('menu-open');
+        });
+      });
+
+      const workWithUsBtn = navLinks.querySelector('.work-with-us');
+      if (workWithUsBtn) {
+        workWithUsBtn.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+          document.body.classList.remove('menu-open');
+        });
+      }
+    }
+
+    document.body.addEventListener('click', (e) => {
+      if (document.body.classList.contains('menu-open') &&
+          !hamburger.contains(e.target) &&
+          !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    // ===== INFINITE SLIDER ANIMATION SETUP =====
+    function setupInfiniteSlider(trackId) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      track.style.animation = 'none';
+      track.offsetHeight; // Force reflow
+      track.style.animation = null;
+    }
+
+    // Pause animation on individual card hover
+    function attachCardHoverPause(sliderRowId, trackId) {
+      const row = document.getElementById(sliderRowId);
+      const track = document.getElementById(trackId);
+      if (!row || !track) return;
+
+      row.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+      });
+
+      row.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+      });
+    }
+
+    // Initialize everything when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      updateContent();
+      
+      setTimeout(() => {
+        setupInfiniteSlider('track-ltr');
+        setupInfiniteSlider('track-rtl');
+        attachCardHoverPause('slider-ltr', 'track-ltr');
+        attachCardHoverPause('slider-rtl', 'track-rtl');
+      }, 100);
+    });
+  </script>
+
+</body>
+</html>

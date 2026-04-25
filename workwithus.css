@@ -1457,9 +1457,8 @@ body.scrolled .logo-secondary {
     width: 100%;
     flex: none;
   }
-
   .footer-logo-img {
-    width: 440px;
+    width: 300px;
   }
 
   .footer-tagline {
