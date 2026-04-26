@@ -732,7 +732,7 @@
       .lm-who-star { text-align: left; }
       .lm-who-heading { font-size: 3rem; }
       .who-card { min-height: 380px; }
-      .lm-who-cards { gap: 0.8rem; }
+
 
       /* How */
       .lm-how { padding: 4rem 2rem; min-height: auto; }
@@ -823,6 +823,42 @@
       .lm-who-star { text-align: left; }
       .lm-who-cards { flex-direction: column; }
       .who-card { min-height: 280px; }
+      .who-card {
+  min-height: 280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.who-card-inner {
+  width: 100%;
+  height: 280px;
+  position: relative;
+}
+
+.who-card-front,
+.who-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.who-card-number {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.who-card-text {
+  text-align: center;
+  width: 100%;
+}
 
       /* How */
       .lm-how { padding: 3.5rem 1.2rem; min-height: auto; }
@@ -862,4 +898,44 @@
 
       #go-top-btn { width: 45px; height: 45px; bottom: 2rem; right: 2rem; }
       #go-top-btn svg { width: 18px; height: 18px; }
+
+
+      /* How cards — mobile layout */
+.how-card-header {
+  flex-wrap: wrap;
+}
+
+.how-card-right-slot {
+  display: none;
+}
+
+.how-card-body-mobile {
+  display: none;
+  width: 100%;
+  padding-top: 0.8rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #101010;
+  font-weight: 400;
+}
+
+.how-card.open .how-card-body-mobile {
+  display: block;
+}
+
+.how-card-arrow-mobile {
+  width: 36px; height: 36px;
+  border: 2px solid #101010;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #101010; font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.how-card.open .how-card-arrow-mobile {
+  transform: rotate(90deg);
+}
     }

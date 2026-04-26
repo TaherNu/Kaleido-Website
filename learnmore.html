@@ -173,7 +173,9 @@
               <span class="how-card-arrow">›</span>
               <p class="how-card-text">Submit your idea, concept, or story direction.</p>
             </div>
+            <span class="how-card-arrow-mobile">›</span>
           </div>
+            <p class="how-card-body-mobile">Submit your idea, concept, or story direction.</p>
         </div>
 
         <div class="how-card" data-card>
@@ -183,7 +185,9 @@
               <span class="how-card-arrow">›</span>
               <p class="how-card-text">Chosen participants are invited to join the program.</p>
             </div>
+            <span class="how-card-arrow-mobile">›</span>
           </div>
+          <p class="how-card-body-mobile">Chosen participants are invited to join the program.</p>
         </div>
 
         <div class="how-card" data-card>
@@ -193,7 +197,9 @@
               <span class="how-card-arrow">›</span>
               <p class="how-card-text">Refine your idea with mentorship and creative guidance.</p>
             </div>
+            <span class="how-card-arrow-mobile">›</span>
           </div>
+          <p class="how-card-body-mobile">Refine your idea with mentorship and creative guidance.</p>
         </div>
 
         <div class="how-card" data-card>
@@ -203,7 +209,9 @@
               <span class="how-card-arrow">›</span>
               <p class="how-card-text">Produce your project with support from the Kaleido team.</p>
             </div>
+            <span class="how-card-arrow-mobile">›</span>
           </div>
+          <p class="how-card-body-mobile">Produce your project with support from the Kaleido team.</p>
         </div>
 
         <div class="how-card" data-card>
@@ -213,7 +221,9 @@
               <span class="how-card-arrow">›</span>
               <p class="how-card-text">Your film is showcased to the community and beyond.</p>
             </div>
+            <span class="how-card-arrow-mobile">›</span>
           </div>
+          <p class="how-card-body-mobile">Your film is showcased to the community and beyond.</p>
         </div>
     </div>
   </section>
@@ -446,6 +456,16 @@
       });
     }
 
+
+    if (window.innerWidth <= 767) {
+  document.querySelectorAll('.how-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const isOpen = card.classList.contains('open');
+      document.querySelectorAll('.how-card').forEach(c => c.classList.remove('open'));
+      if (!isOpen) card.classList.add('open');
+    });
+  });
+}
   </script>
 
 </body>
