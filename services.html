@@ -798,10 +798,10 @@
     // Determine which card to show
     const itemText = item.textContent.trim();
     let activeServiceType = 'story-development';
-    if (itemText.includes('STORY DEVELOPMENT')) activeServiceType = 'story-development';
-    else if (itemText.includes('DIRECTION & CINEMATOGRAPHY')) activeServiceType = 'direction';
-    else if (itemText.includes('PRODUCING & FILMING')) activeServiceType = 'producing';
-    else if (itemText.includes('POST-PRODUCTION & EDITING')) activeServiceType = 'post-production';
+    if (itemText.includes('NARRATIVE FILM PRODUCTION')) activeServiceType = 'story-development';
+    else if (itemText.includes('COMMERCIAL & BRAND FILMS')) activeServiceType = 'direction';
+    else if (itemText.includes('CREATIVE DIRECTIONS')) activeServiceType = 'producing';
+    else if (itemText.includes('FULL PRODUCTION SERVICES')) activeServiceType = 'post-production';
 
     // Hide all cards
     serviceCards.forEach(card => {
