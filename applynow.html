@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kaleido Pictures — Apply Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="applynow.css">
+</head>
+<body>
+
+  <div id="k-progress"></div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Images/KLogo.png"  alt="Kaleido Pictures" class="logo-img logo-primary">
+      <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="logo-img logo-secondary">
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="creative.html">Creative Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="work-with-us" onclick="window.location.href='workwithus.html';">Work With Us</button></li>
+    </ul>
+  </nav>
+
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+  <section class="an-hero">
+    <div class="an-hero-inner">
+      <h1 class="an-hero-title">START YOUR JOURNEY<br>WITH KALEIDO</h1>
+      <p class="an-hero-bottom">
+        Tell us about your story, your vision, and what you want to create. This is your chance to be seen—not just as a filmmaker, but as a voice.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MULTI-STEP FORM
+  ============================================================ -->
+  <div class="an-form-wrapper">
+
+    <!-- ── STEP 1 — PERSONAL INFORMATION ── -->
+    <section class="form-step active" id="step-1">
+      <div class="step-container">
+
+        <h2 class="step-heading">PERSONAL INFORMATION</h2>
+
+        <!-- Name -->
+        <div class="form-row">
+          <label class="form-label" for="an-name">Name</label>
+          <input class="form-input" type="text" id="an-name" placeholder="Your full name" autocomplete="name">
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+          <label class="form-label" for="an-email">Email</label>
+          <input class="form-input" type="email" id="an-email" placeholder="your@email.com" autocomplete="email">
+        </div>
+
+        <!-- Phone + Location -->
+        <div class="form-row-double">
+          <label class="form-label" for="an-phone">Phone</label>
+          <input class="form-input" type="tel" id="an-phone" placeholder="+971 00 000 0000" autocomplete="tel">
+          <label class="form-label-sm" for="an-location" style="margin-left:1rem;">Location</label>
+          <input class="form-input" type="text" id="an-location" placeholder="City, Country" autocomplete="country">
+        </div>
+
+        <!-- About You -->
+        <h3 class="step-subheading">ABOUT YOU</h3>
+
+        <div class="form-row-col">
+          <label class="form-label-block" for="an-about">Tell us about yourself</label>
+          <textarea class="form-textarea" id="an-about" placeholder="Share your background, interests, and what drives you..."></textarea>
+        </div>
+
+        <div class="form-row-col">
+          <label class="form-label-block" for="an-draws">What draws you to filmmaking?</label>
+          <textarea class="form-textarea" id="an-draws" placeholder="What made you want to tell stories through film?"></textarea>
+        </div>
+
+        <!-- Navigation -->
+        <div class="step-nav">
+          <button class="step-nav-btn hidden" id="prev-1">‹</button>
+          <div class="step-dots">
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+          </div>
+          <button class="step-nav-btn" id="next-1">›</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── STEP 2 — YOUR PROJECT IDEA ── -->
+    <section class="form-step" id="step-2">
+      <div class="step-container">
+
+        <h2 class="step-heading">YOUR PROJECT IDEA</h2>
+
+        <!-- Project Title -->
+        <div class="form-row">
+          <label class="form-label" for="an-title">Project Title</label>
+          <input class="form-input" type="text" id="an-title" placeholder="What's the working title?">
+        </div>
+
+        <!-- Project Type -->
+        <div class="form-row" style="flex-wrap: wrap; gap: 1rem;">
+          <label class="form-label" style="min-width:130px;">Project Type</label>
+          <div class="toggle-group" id="project-type-group">
+            <button type="button" class="toggle-btn" data-group="project-type">Short Film</button>
+            <button type="button" class="toggle-btn" data-group="project-type">Experimental</button>
+            <button type="button" class="toggle-btn" data-group="project-type">Documentary</button>
+            <button type="button" class="toggle-btn" data-group="project-type">Other</button>
+          </div>
+        </div>
+
+        <!-- Describe Idea -->
+        <div class="form-row-col">
+          <label class="form-label-block" for="an-idea">Describe Your Idea</label>
+          <textarea class="form-textarea" id="an-idea" placeholder="Tell us about your project concept, characters, setting, or themes..."></textarea>
+        </div>
+
+        <!-- Message/feeling -->
+        <div class="form-row-col">
+          <label class="form-label-block" for="an-message">What message or feeling do you want your film to convey?</label>
+          <textarea class="form-textarea" id="an-message" placeholder="What do you want audiences to take away?"></textarea>
+        </div>
+
+        <!-- Project stage -->
+        <div class="form-row-col">
+          <label class="form-label-block">What stage is your project currently in?</label>
+          <div class="toggle-group" id="stage-group">
+            <button type="button" class="toggle-btn" data-group="stage">Idea</button>
+            <button type="button" class="toggle-btn" data-group="stage">Script</button>
+            <button type="button" class="toggle-btn" data-group="stage">Pre-production</button>
+            <button type="button" class="toggle-btn" data-group="stage">Filming</button>
+            <button type="button" class="toggle-btn" data-group="stage">Other</button>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="step-nav">
+          <button class="step-nav-btn" id="prev-2">‹</button>
+          <div class="step-dots">
+            <div class="step-dot done"></div>
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+          </div>
+          <button class="step-nav-btn" id="next-2">›</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── STEP 3 — SUPPORT & GOALS ── -->
+    <section class="form-step" id="step-3">
+      <div class="step-container">
+
+        <h2 class="step-heading">SUPPORT &amp; GOALS</h2>
+
+        <!-- Support type -->
+        <div class="form-row-col">
+          <label class="form-label-block">What kind of support are you looking for?</label>
+          <div class="toggle-group" id="support-group">
+            <button type="button" class="toggle-btn" data-group="support">Mentorship</button>
+            <button type="button" class="toggle-btn" data-group="support">Production</button>
+            <button type="button" class="toggle-btn" data-group="support">Creative Direction</button>
+            <button type="button" class="toggle-btn" data-group="support">All of the above</button>
+          </div>
+        </div>
+
+        <!-- Goals -->
+        <div class="form-row-col">
+          <label class="form-label-block" for="an-goals">What do you hope to achieve through this program?</label>
+          <textarea class="form-textarea" id="an-goals" placeholder="Describe what success looks like for you..."></textarea>
+        </div>
+
+        <!-- Portfolio -->
+        <h3 class="step-subheading">PORTFOLIO</h3>
+
+        <div class="form-row-col">
+          <label class="form-label-block" for="an-portfolio-link">Link to previous work (if any)</label>
+          <input class="form-input" type="url" id="an-portfolio-link" placeholder="https://vimeo.com/yourwork or YouTube, Drive, etc.">
+        </div>
+
+        <div class="form-row-col">
+          <label class="form-label-block" style="margin-bottom:0.5rem;">Upload your CV / Portfolio</label>
+          <label class="form-upload" id="upload-label">
+            <input type="file" id="an-portfolio-file" accept=".pdf,.doc,.docx,.zip,.mp4,.mov" onchange="handleFileSelect(this)">
+            <div class="form-upload-label">
+              <span>Click to upload</span> or drag and drop<br>PDF, DOC, ZIP, MP4, MOV
+            </div>
+            <span class="form-upload-filename" id="upload-filename"></span>
+          </label>
+        </div>
+
+        <!-- Navigation -->
+        <div class="step-nav">
+          <button class="step-nav-btn" id="prev-3">‹</button>
+          <div class="step-dots">
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+          </div>
+          <button class="step-nav-btn" id="next-3">›</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── STEP 4 — FINAL STEP ── -->
+    <section class="form-step" id="step-4">
+      <div class="step-container">
+
+        <h2 class="step-heading">FINAL STEP</h2>
+
+        <div class="form-row-col">
+          <label class="form-label-block" for="an-why">Why should you be selected for the Emerging Filmmakers Program?</label>
+          <textarea class="form-textarea" id="an-why" style="min-height: 220px;" placeholder="Tell us what makes you and your story worth investing in..."></textarea>
+        </div>
+
+        <!-- Navigation -->
+        <div class="step-nav">
+          <button class="step-nav-btn" id="prev-4">‹</button>
+          <div class="step-dots">
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot done"></div>
+            <div class="step-dot active"></div>
+          </div>
+          <button class="step-submit-btn" id="submit-btn">SUBMIT</button>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /an-form-wrapper -->
+
+
+  <!-- ============================================================
+       SUCCESS SCREEN
+  ============================================================ -->
+  <section class="an-success" id="success-screen">
+    <img src="Images/done.png" alt="Kaleido Pictures" class="success-logo">
+    <p class="success-text">
+      By applying, you agree to be contacted by the Kaleido team regarding your submission.
+    </p>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-left">
+        <img src="Images/KLogo1.png" alt="Kaleido Pictures" class="footer-logo-img">
+        <p class="footer-tagline">Turning Ideas Into Cinematic Reality</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Socials</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/kaleido.pictures/" target="_blank" class="social-icon-link">
+              <img src="Images/KInstagram.png" alt="Instagram" class="social-img">
+            </a>
+            <a href="https://www.tiktok.com/@dubaifilmer" target="_blank" class="social-icon-link">
+              <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
+            </a>
+            <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
+              <img src="Images/KYouTube.png" alt="YouTube" class="social-img">
+            </a>
+            <a href="https://discord.com/invite/bQhyr9fcEK" target="_blank" class="social-icon-link">
+              <img src="Images/KDiscord.png" alt="Discord" class="social-img">
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
+            <span class="contact-text">+971 00 000 0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <img src="Images/KEmail.png" alt="Email" class="contact-img">
+            <a href="mailto:contact@kaleidopictures.com" class="contact-text"
+               style="text-decoration:none;color:rgba(253,253,246,0.7);transition:color 0.3s ease;">
+              contact@kaleidopictures.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="go-top-btn" aria-label="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+
+    /* ── SCROLL PROGRESS ── */
+    const progressBar = document.getElementById('k-progress');
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (total > 0) progressBar.style.width = ((window.scrollY / total) * 100).toFixed(1) + '%';
+    }, { passive: true });
+
+    /* ── LOGO SWAP ── */
+    const heroEl = document.querySelector('.an-hero');
+    window.addEventListener('scroll', () => {
+      const h = heroEl ? heroEl.offsetHeight : 0;
+      document.body.classList.toggle('scrolled', window.scrollY > h - 100);
+    }, { passive: true });
+
+    /* ── GO TO TOP ── */
+    const goTopBtn = document.getElementById('go-top-btn');
+    window.addEventListener('scroll', () => goTopBtn.classList.toggle('visible', window.scrollY > 400), { passive: true });
+    goTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ── ACTIVE NAV ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname;
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        const lp = link.getAttribute('href');
+        if (!lp || lp.startsWith('#')) return;
+        const cl = lp.replace(/^\.\//, '').replace(/^\//, '');
+        let cc = path.replace(/^\//, '').split('/').pop();
+        if (!cc) cc = 'index.html';
+        if (cl === cc) link.classList.add('active');
+      });
+    });
+
+    /* ── HAMBURGER ── */
+    const hamburger = document.getElementById('hamburger');
+    const navLinksEl = document.getElementById('nav-links');
+
+    if (hamburger && navLinksEl) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinksEl.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+      navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinksEl.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }));
+      const wwu = navLinksEl.querySelector('.work-with-us');
+      if (wwu) wwu.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinksEl.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    }
+    document.body.addEventListener('click', e => {
+      if (document.body.classList.contains('menu-open') &&
+          !hamburger.contains(e.target) && !navLinksEl.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinksEl.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    /* ── TOGGLE BUTTONS (single select per group) ── */
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const group = btn.dataset.group;
+        document.querySelectorAll(`.toggle-btn[data-group="${group}"]`)
+          .forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    /* ── FILE UPLOAD ── */
+    function handleFileSelect(input) {
+      const filename = document.getElementById('upload-filename');
+      filename.textContent = input.files[0] ? input.files[0].name : '';
+    }
+
+    /* Drag-and-drop support */
+    const uploadLabel = document.getElementById('upload-label');
+    if (uploadLabel) {
+      uploadLabel.addEventListener('dragover', e => { e.preventDefault(); uploadLabel.style.borderColor = '#FF8F35'; });
+      uploadLabel.addEventListener('dragleave', () => { uploadLabel.style.borderColor = '#FDFDF6'; });
+      uploadLabel.addEventListener('drop', e => {
+        e.preventDefault();
+        uploadLabel.style.borderColor = '#FDFDF6';
+        const fi = document.getElementById('an-portfolio-file');
+        fi.files = e.dataTransfer.files;
+        handleFileSelect(fi);
+      });
+    }
+
+    /* ── MULTI-STEP NAVIGATION ── */
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    function scrollToForm() {
+      document.querySelector('.an-form-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function showStep(n) {
+      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+      const target = document.getElementById('step-' + n);
+      if (target) target.classList.add('active');
+      currentStep = n;
+      setTimeout(scrollToForm, 50);
+    }
+
+    /* Validation per step */
+    function validateStep(n) {
+      let valid = true;
+
+      /* Clear previous errors */
+      document.querySelectorAll('.form-input.error, .form-textarea.error')
+        .forEach(el => el.classList.remove('error'));
+
+      const require = (id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (!el.value.trim()) { el.classList.add('error'); valid = false; }
+      };
+
+      if (n === 1) {
+        require('an-name');
+        require('an-email');
+        require('an-phone');
+        require('an-location');
+        require('an-about');
+        require('an-draws');
+
+        /* Basic email format */
+        const emailEl = document.getElementById('an-email');
+        if (emailEl && emailEl.value && !emailEl.value.includes('@')) {
+          emailEl.classList.add('error'); valid = false;
+        }
+      }
+
+      if (n === 2) {
+        require('an-title');
+        require('an-idea');
+        require('an-message');
+      }
+
+      if (n === 3) {
+        require('an-goals');
+      }
+
+      if (n === 4) {
+        require('an-why');
+      }
+
+      return valid;
+    }
+
+    /* Next buttons */
+    document.getElementById('next-1').addEventListener('click', () => {
+      if (validateStep(1)) showStep(2);
+    });
+    document.getElementById('next-2').addEventListener('click', () => {
+      if (validateStep(2)) showStep(3);
+    });
+    document.getElementById('next-3').addEventListener('click', () => {
+      if (validateStep(3)) showStep(4);
+    });
+
+    /* Prev buttons */
+    document.getElementById('prev-2').addEventListener('click', () => showStep(1));
+    document.getElementById('prev-3').addEventListener('click', () => showStep(2));
+    document.getElementById('prev-4').addEventListener('click', () => showStep(3));
+
+    /* Submit */
+    document.getElementById('submit-btn').addEventListener('click', async () => {
+      if (!validateStep(4)) return;
+
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = 'Submitting...';
+      btn.disabled = true;
+
+      /* Collect all data */
+      const formData = {
+        name:          document.getElementById('an-name').value.trim(),
+        email:         document.getElementById('an-email').value.trim(),
+        phone:         document.getElementById('an-phone').value.trim(),
+        location:      document.getElementById('an-location').value.trim(),
+        about:         document.getElementById('an-about').value.trim(),
+        draws:         document.getElementById('an-draws').value.trim(),
+        projectTitle:  document.getElementById('an-title').value.trim(),
+        projectType:   document.querySelector('.toggle-btn[data-group="project-type"].active')?.textContent || '',
+        idea:          document.getElementById('an-idea').value.trim(),
+        message:       document.getElementById('an-message').value.trim(),
+        stage:         document.querySelector('.toggle-btn[data-group="stage"].active')?.textContent || '',
+        support:       document.querySelector('.toggle-btn[data-group="support"].active')?.textContent || '',
+        goals:         document.getElementById('an-goals').value.trim(),
+        portfolioLink: document.getElementById('an-portfolio-link').value.trim(),
+        why:           document.getElementById('an-why').value.trim(),
+      };
+
+    try {
+        const res = await fetch('http://localhost:5000/api/submit-application', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
+    
+        const result = await res.json();
+    
+        if (!result.success) {
+            alert('Submission error: ' + result.error);
+            btn.textContent = 'SUBMIT';
+            btn.disabled = false;
+            return;   // ← don't show success screen if it failed
+        }
+    
+    }  catch (e) {
+    alert('Could not reach the server: ' + e.message);  // ← add e.message
+    btn.textContent = 'SUBMIT';
+    btn.disabled = false;
+    return;
+    }
+    
+    // Only reaches here on actual success
+    document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+    const success = document.getElementById('success-screen');
+    success.classList.add('active');
+    success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+  </script>
+
+</body>
+</html>

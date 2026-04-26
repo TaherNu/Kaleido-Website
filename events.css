@@ -1282,6 +1282,7 @@ body.scrolled .logo-secondary {
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
+  text-decoration: none;
 }
 
 .beyond-card.expanded .card-learn-btn {

@@ -74,10 +74,10 @@
         
           <div class="vertical-slider-wrapper">
             <div class="vertical-slider-container">
-              <div class="service-item active" data-category="narrative">STORY DEVELOPMENT</div>
-              <div class="service-item" data-category="commercial">DIRECTION & CINEMATOGRAPHY</div>
-              <div class="service-item" data-category="creative">PRODUCING & FILMING</div>
-              <div class="service-item" data-category="full">POST-PRODUCTION & EDITING</div>
+              <div class="service-item active" data-category="narrative">NARRATIVE FILM PRODUCTION</div>
+              <div class="service-item" data-category="commercial">COMMERCIAL & BRAND FILMS</div>
+              <div class="service-item" data-category="creative">CREATIVE DIRECTIONS</div>
+              <div class="service-item" data-category="full">FULL PRODUCTION SERVICES</div>
             </div>
           </div>
         
@@ -91,36 +91,36 @@
           <div class="service-card" data-service="story-development" data-category="narrative">
             <div class="card-bg" style="background-image: url('Images/KServices_2.png');"></div>
             <div class="card-overlay"></div>
-            <div class="card-header">STORY<br>DEVELOPMENT</div>
-            <div class="card-description">From concept to script, we shape compelling narratives that captivate audiences and bring your vision to life with emotional depth and cinematic structure.</div>
-            <button class="card-explore-btn">Explore</button>
+            <div class="card-header">NARRATIVE FILM <br>PRODUCTION </div>
+            <div class="card-description">We craft cinematic stories driven by emotion, character, and meaning...</div>
+            <button class="card-explore-btn"   onclick="window.location.href='narrative.html?category=storyDevelopment'">Explore Films</button>
           </div>
 
           <!-- Card 2 - DIRECTION & CINEMATOGRAPHY -->
           <div class="service-card" data-service="direction" data-category="commercial">
             <div class="card-bg" style="background-image: url('Images/KServices_3.png');"></div>
             <div class="card-overlay"></div>
-            <div class="card-header">DIRECTION &<br>CINEMATOGRAPHY</div>
-            <div class="card-description">Visual storytelling that moves. Our directors and cinematographers craft every frame with purpose, emotion, and striking composition.</div>
-            <button class="card-explore-btn">Explore</button>
+            <div class="card-header">COMMERCIAL & <br>BRAND FILMS</div>
+            <div class="card-description">Strategic visuals designed to elevate brands and connect with audiences...</div>
+            <button class="card-explore-btn"     onclick="window.location.href='narrative.html?category=direction'">Explore Projects</button>
           </div>
 
           <!-- Card 3 - PRODUCING & FILMING -->
           <div class="service-card" data-service="producing" data-category="creative">
             <div class="card-bg" style="background-image: url('Images/KServices_4.png');"></div>
             <div class="card-overlay"></div>
-            <div class="card-header">PRODUCING &<br>FILMING</div>
-            <div class="card-description">From planning to production, we manage crews, locations, and logistics to bring your story to life efficiently and creatively.</div>
-            <button class="card-explore-btn">Explore</button>
+            <div class="card-header">CREATIVE <br>DIRECTIONS</div>
+            <div class="card-description">Shaping the vision behind every frame...</div>
+            <button class="card-explore-btn"        onclick="window.location.href='narrative.html?category=producing'">Explore Process</button>
           </div>
 
           <!-- Card 4 - POST-PRODUCTION & EDITING -->
           <div class="service-card" data-service="post-production" data-category="full">
             <div class="card-bg" style="background-image: url('Images/KServices_5.png');"></div>
             <div class="card-overlay"></div>
-            <div class="card-header">POST-PRODUCTION<br>& EDITING</div>
-            <div class="card-description">Final touches that elevate your film. Our editors, colorists, and sound designers craft a seamless, polished experience.</div>
-            <button class="card-explore-btn">Explore</button>
+            <div class="card-header">FULL PRODUCTION <br>SERVICES</div>
+            <div class="card-description">End-to-end production handled with precision...</div>
+            <button class="card-explore-btn"       onclick="window.location.href='narrative.html?category=postProduction'">Explore Services</button>
           </div>
 
         </div>
@@ -530,10 +530,10 @@
 
     // Map slider items to card categories
     const categoryMap = {
-      'STORY DEVELOPMENT': 'narrative',
-      'DIRECTION & CINEMATOGRAPHY': 'commercial',
-      'PRODUCING & FILMING': 'creative',
-      'POST-PRODUCTION & EDITING': 'full'
+      'NARRATIVE FILM PRODUCTION': 'narrative',
+      'COMMERCIAL & BRAND FILMS': 'commercial',
+      'CREATIVE DIRECTIONS': 'creative',
+      'FULL PRODUCTION SERVICES': 'full'
     };
 
     function expandCard(selectedCategory) {
@@ -736,10 +736,10 @@
       if (activeServiceItem) {
         const itemText = activeServiceItem.textContent.trim();
         // Map text to card data-service
-        if (itemText.includes('STORY DEVELOPMENT')) activeServiceType = 'story-development';
-        else if (itemText.includes('DIRECTION & CINEMATOGRAPHY')) activeServiceType = 'direction';
-        else if (itemText.includes('PRODUCING & FILMING')) activeServiceType = 'producing';
-        else if (itemText.includes('POST-PRODUCTION & EDITING')) activeServiceType = 'post-production';
+        if (itemText.includes('NARRATIVE FILM PRODUCTION')) activeServiceType = 'story-development';
+        else if (itemText.includes('COMMERCIAL & BRAND FILMS')) activeServiceType = 'direction';
+        else if (itemText.includes('CREATIVE DIRECTIONS')) activeServiceType = 'producing';
+        else if (itemText.includes('FULL PRODUCTION SERVICES')) activeServiceType = 'post-production';
       }
 
       // Show the matching card

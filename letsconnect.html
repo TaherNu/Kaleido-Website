@@ -427,21 +427,21 @@
       });
     });
 
-    /* ── FORM SUBMIT ── */
- /* ── FORM SUBMIT FOR GET STARTED ── */
-async function handleGsFormSubmit(e) {
+
+
+    async function handleGsFormSubmit(e) {
     e.preventDefault();
 
-    const company  = document.getElementById('gs-company').value.trim();
-    const contact  = document.getElementById('gs-contact').value.trim();
-    const email    = document.getElementById('gs-email').value.trim();
-    const budget   = document.getElementById('gs-budget').value.trim();
-    const timeline = document.getElementById('gs-timeline').value.trim();
-    const details  = document.getElementById('gs-details').value.trim();
-    const typeBtn  = document.querySelector('.collab-type-btn.active');
-    const type     = typeBtn ? typeBtn.dataset.type : '';
+    const company     = document.getElementById('gs-company').value.trim();
+    const contactName = document.getElementById('gs-contact').value.trim();  // ← renamed
+    const email       = document.getElementById('gs-email').value.trim();
+    const budget      = document.getElementById('gs-budget').value.trim();
+    const timeline    = document.getElementById('gs-timeline').value.trim();
+    const details     = document.getElementById('gs-details').value.trim();
+    const typeBtn     = document.querySelector('.collab-type-btn.active');
+    const type        = typeBtn ? typeBtn.dataset.type : '';
 
-    if (!company || !contact || !email || !details) {
+    if (!company || !contactName || !email || !details) {  // ← contactName here
         alert('Please fill in all required fields.');
         return;
     }
@@ -451,21 +451,23 @@ async function handleGsFormSubmit(e) {
         return;
     }
 
-    const submitBtn = document.querySelector('.form-submit-btn');
+    const submitBtn   = document.querySelector('.form-submit-btn');
     const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 
     try {
-        const response = await fetch('http://localhost:5000/api/submit-collaboration', {
+        const response = await fetch('http://localhost:5000/api/submit-getstarted', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                name: contact,
-                email: email,
-                type: type,
-                message: `Company: ${company}\n\nBudget: ${budget}\n\nTimeline: ${timeline}\n\nProject Details: ${details}`,
-                formType: "getstarted"
+                name:           contactName,   // ← contactName here
+                email:          email,
+                company:        company,
+                type:           type,
+                budget:         budget,
+                timeline:       timeline,
+                projectDetails: details
             })
         });
 
@@ -474,7 +476,7 @@ async function handleGsFormSubmit(e) {
         if (result.success) {
             alert("Thank you! We've received your project inquiry and will be in touch soon.");
             e.target.reset();
-            typeBtns.forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.collab-type-btn').forEach(b => b.classList.remove('active'));
         } else {
             throw new Error(result.error);
         }

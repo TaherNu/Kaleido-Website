@@ -134,178 +134,348 @@
 
 
   <script>
-    // ===== CONTENT DATA FOR EACH CATEGORY =====
-    // EDIT THIS SECTION TO CHANGE CONTENT FOR EACH CATEGORY
-    const contentData = {
-      narrative: {
-        title: "NARRATIVE<br>FILM",
-        description: "Story-driven projects that focus on character, emotion, and atmosphere—crafted through cinematic visuals that bring each narrative to life with depth and intention.",
-        cards: [
-          {
-            image: "Images/KWork_3.png",
-            badge: "SHORT FILM",
-            title: "THE LAST FRAME",
-            text: "A coming-of-age story about memory, loss, and the spaces we leave behind."
-          },
-          {
-            image: "Images/KWork_4.png",
-            badge: "FEATURE",
-            title: "ECHOES OF HOME",
-            text: "A family torn apart by war finds their way back to each other through unexpected circumstances."
-          },
-          {
-            image: "Images/KWork_5.png",
-            badge: "SHORT FILM",
-            title: "BETWEEN TIDES",
-            text: "Two estranged brothers reunite at their childhood beach house during a storm."
-          },
-          {
-            image: "Images/KWork_6.png",
-            badge: "DOCUMENTARY",
-            title: "UNSEEN VOICES",
-            text: "An intimate portrait of artists navigating identity in a rapidly changing world."
-          },
-          {
-            image: "Images/KWork_3.png",
-            badge: "AWARD WINNING",
-            title: "DAWN PATROL",
-            text: "A surfer's solitary journey through grief and redemption."
-          },
-          {
-            image: "Images/KWork_4.png",
-            badge: "COMING SOON",
-            title: "THE SILENT HOUR",
-            text: "A psychological thriller set in a single room over 60 tense minutes."
-          }
-        ]
+// ===== CONTENT DATA FOR EACH CATEGORY =====
+const contentData = {
+  // EXISTING CATEGORIES (for the work gallery buttons)
+  narrative: {
+    title: "NARRATIVE<br>FILM",
+    description: "Story-driven projects that focus on character, emotion, and atmosphere—crafted through cinematic visuals that bring each narrative to life with depth and intention.",
+    cards: [
+      {
+        image: "Images/KWork_3.png",
+        badge: "SHORT FILM",
+        title: "THE LAST FRAME",
+        text: "A coming-of-age story about memory, loss, and the spaces we leave behind."
       },
-      commercial: {
-        title: "COMMERCIAL<br>STORYTELLING",
-        description: "Creative work designed to communicate ideas with clarity and impact, blending visual storytelling with brand identity to create engaging and memorable experiences.",
-        cards: [
-          {
-            image: "Images/KWork_4.png",
-            badge: "BRAND FILM",
-            title: "NIKE: UNLIMITED",
-            text: "Celebrating athletes who pushed beyond their limits to achieve the impossible."
-          },
-          {
-            image: "Images/KWork_3.png",
-            badge: "CAMPAIGN",
-            title: "COCA-COLA: TOGETHER",
-            text: "A global campaign celebrating connection, community, and shared moments."
-          },
-          {
-            image: "Images/KWork_5.png",
-            badge: "DIGITAL",
-            title: "APPLE: CREATE",
-            text: "Showcasing creators using technology to bring their wildest ideas to life."
-          },
-          {
-            image: "Images/KWork_6.png",
-            badge: "SOCIAL",
-            title: "ADIDAS: ORIGINALS",
-            text: "Street culture meets high fashion in this bold visual statement."
-          },
-          {
-            image: "Images/KWork_4.png",
-            badge: "TV SPOT",
-            title: "SAMSUNG: INNOVATION",
-            text: "Where technology meets humanity—a story about connection."
-          },
-          {
-            image: "Images/KWork_3.png",
-            badge: "DIGITAL",
-            title: "DISNEY: WONDER",
-            text: "Capturing the magic of childhood imagination through stunning visuals."
-          }
-        ]
+      {
+        image: "Images/KWork_4.png",
+        badge: "FEATURE",
+        title: "ECHOES OF HOME",
+        text: "A family torn apart by war finds their way back to each other through unexpected circumstances."
       },
-      experimental: {
-        title: "EXPERIMENTAL<br>VISUALS",
-        description: "A collection of explorative pieces that challenge traditional storytelling, focusing on mood, form, and visual expression to push creative boundaries.",
-        cards: [
-          {
-            image: "Images/KWork_5.png",
-            badge: "ART FILM",
-            title: "CHROMA",
-            text: "An exploration of color as emotion, told entirely without dialogue."
-          },
-          {
-            image: "Images/KWork_6.png",
-            badge: "INSTALLATION",
-            title: "FRAGMENTS",
-            text: "A multi-channel video piece exploring memory fragmentation."
-          },
-          {
-            image: "Images/KWork_3.png",
-            badge: "VFX STUDY",
-            title: "LIMINAL SPACES",
-            text: "Digital environments that exist between reality and imagination."
-          },
-          {
-            image: "Images/KWork_4.png",
-            badge: "MUSIC VIDEO",
-            title: "TRANSMISSION",
-            text: "Audiovisual journey through sound, light, and motion."
-          },
-          {
-            image: "Images/KWork_5.png",
-            badge: "PROJECTION",
-            title: "URBAN RHYTHMS",
-            text: "Cityscapes transformed through abstract projection mapping."
-          },
-          {
-            image: "Images/KWork_6.png",
-            badge: "AI ART",
-            title: "DREAMSYNTH",
-            text: "Collaboration between human creativity and machine perception."
-          }
-        ]
+      {
+        image: "Images/KWork_5.png",
+        badge: "SHORT FILM",
+        title: "BETWEEN TIDES",
+        text: "Two estranged brothers reunite at their childhood beach house during a storm."
       },
-      concept: {
-        title: "CONCEPT<br>DEVELOPMENT",
-        description: "Early-stage ideas and visual explorations that shape the foundation of each project, revealing the creative process behind the final outcome.",
-        cards: [
-          {
-            image: "Images/KWork_6.png",
-            badge: "MOOD BOARD",
-            title: "NOIR RENAISSANCE",
-            text: "Reimagining film noir through a contemporary visual lens."
-          },
-          {
-            image: "Images/KWork_5.png",
-            badge: "STORYBOARD",
-            title: "THE EXODUS",
-            text: "Preliminary visualizations for an epic sci-fi narrative."
-          },
-          {
-            image: "Images/KWork_4.png",
-            badge: "LOOK DEV",
-            title: "PASTEL DYSTOPIA",
-            text: "Exploring color palettes that contrast beauty with decay."
-          },
-          {
-            image: "Images/KWork_3.png",
-            badge: "CONCEPT ART",
-            title: "FLOATING WORLDS",
-            text: "Environmental designs for an animated feature in development."
-          },
-          {
-            image: "Images/KWork_6.png",
-            badge: "PITCH DECK",
-            title: "THE COLLECTOR",
-            text: "Visual development for a psychological horror series."
-          },
-          {
-            image: "Images/KWork_5.png",
-            badge: "TEST FOOTAGE",
-            title: "LIQUID LIGHT",
-            text: "Experimental cinematography techniques for a music film."
-          }
-        ]
+      {
+        image: "Images/KWork_6.png",
+        badge: "DOCUMENTARY",
+        title: "UNSEEN VOICES",
+        text: "An intimate portrait of artists navigating identity in a rapidly changing world."
+      },
+      {
+        image: "Images/KWork_3.png",
+        badge: "AWARD WINNING",
+        title: "DAWN PATROL",
+        text: "A surfer's solitary journey through grief and redemption."
+      },
+      {
+        image: "Images/KWork_4.png",
+        badge: "COMING SOON",
+        title: "THE SILENT HOUR",
+        text: "A psychological thriller set in a single room over 60 tense minutes."
       }
-    };
+    ]
+  },
+  commercial: {
+    title: "COMMERCIAL<br>STORYTELLING",
+    description: "Creative work designed to communicate ideas with clarity and impact, blending visual storytelling with brand identity to create engaging and memorable experiences.",
+    cards: [
+      {
+        image: "Images/KWork_4.png",
+        badge: "BRAND FILM",
+        title: "NIKE: UNLIMITED",
+        text: "Celebrating athletes who pushed beyond their limits to achieve the impossible."
+      },
+      {
+        image: "Images/KWork_3.png",
+        badge: "CAMPAIGN",
+        title: "COCA-COLA: TOGETHER",
+        text: "A global campaign celebrating connection, community, and shared moments."
+      },
+      {
+        image: "Images/KWork_5.png",
+        badge: "DIGITAL",
+        title: "APPLE: CREATE",
+        text: "Showcasing creators using technology to bring their wildest ideas to life."
+      },
+      {
+        image: "Images/KWork_6.png",
+        badge: "SOCIAL",
+        title: "ADIDAS: ORIGINALS",
+        text: "Street culture meets high fashion in this bold visual statement."
+      },
+      {
+        image: "Images/KWork_4.png",
+        badge: "TV SPOT",
+        title: "SAMSUNG: INNOVATION",
+        text: "Where technology meets humanity—a story about connection."
+      },
+      {
+        image: "Images/KWork_3.png",
+        badge: "DIGITAL",
+        title: "DISNEY: WONDER",
+        text: "Capturing the magic of childhood imagination through stunning visuals."
+      }
+    ]
+  },
+  experimental: {
+    title: "EXPERIMENTAL<br>VISUALS",
+    description: "A collection of explorative pieces that challenge traditional storytelling, focusing on mood, form, and visual expression to push creative boundaries.",
+    cards: [
+      {
+        image: "Images/KWork_5.png",
+        badge: "ART FILM",
+        title: "CHROMA",
+        text: "An exploration of color as emotion, told entirely without dialogue."
+      },
+      {
+        image: "Images/KWork_6.png",
+        badge: "INSTALLATION",
+        title: "FRAGMENTS",
+        text: "A multi-channel video piece exploring memory fragmentation."
+      },
+      {
+        image: "Images/KWork_3.png",
+        badge: "VFX STUDY",
+        title: "LIMINAL SPACES",
+        text: "Digital environments that exist between reality and imagination."
+      },
+      {
+        image: "Images/KWork_4.png",
+        badge: "MUSIC VIDEO",
+        title: "TRANSMISSION",
+        text: "Audiovisual journey through sound, light, and motion."
+      },
+      {
+        image: "Images/KWork_5.png",
+        badge: "PROJECTION",
+        title: "URBAN RHYTHMS",
+        text: "Cityscapes transformed through abstract projection mapping."
+      },
+      {
+        image: "Images/KWork_6.png",
+        badge: "AI ART",
+        title: "DREAMSYNTH",
+        text: "Collaboration between human creativity and machine perception."
+      }
+    ]
+  },
+  concept: {
+    title: "CONCEPT<br>DEVELOPMENT",
+    description: "Early-stage ideas and visual explorations that shape the foundation of each project, revealing the creative process behind the final outcome.",
+    cards: [
+      {
+        image: "Images/KWork_6.png",
+        badge: "MOOD BOARD",
+        title: "NOIR RENAISSANCE",
+        text: "Reimagining film noir through a contemporary visual lens."
+      },
+      {
+        image: "Images/KWork_5.png",
+        badge: "STORYBOARD",
+        title: "THE EXODUS",
+        text: "Preliminary visualizations for an epic sci-fi narrative."
+      },
+      {
+        image: "Images/KWork_4.png",
+        badge: "LOOK DEV",
+        title: "PASTEL DYSTOPIA",
+        text: "Exploring color palettes that contrast beauty with decay."
+      },
+      {
+        image: "Images/KWork_3.png",
+        badge: "CONCEPT ART",
+        title: "FLOATING WORLDS",
+        text: "Environmental designs for an animated feature in development."
+      },
+      {
+        image: "Images/KWork_6.png",
+        badge: "PITCH DECK",
+        title: "THE COLLECTOR",
+        text: "Visual development for a psychological horror series."
+      },
+      {
+        image: "Images/KWork_5.png",
+        badge: "TEST FOOTAGE",
+        title: "LIQUID LIGHT",
+        text: "Experimental cinematography techniques for a music film."
+      }
+    ]
+  },
+
+  // ===== NEW CATEGORIES FOR SERVICES BUTTONS =====
+  storyDevelopment: {
+    title: "NARRATIVE FILM<br>PRODUCTION",
+    description: "We craft cinematic stories driven by emotion, character, and meaning—turning ideas into visuals that feel authentic, immersive, and lasting.",
+    cards: [
+      {
+        image: "Images/KServices_2.png",
+        badge: "PROCESS",
+        title: "FROM IDEA TO SCRIPT",
+        text: "We take your raw concepts and develop them into fully structured screenplays with emotional depth."
+      },
+      {
+        image: "Images/KHome_12.png",
+        badge: "TECHNIQUE",
+        title: "CHARACTER ARCHITECTURE",
+        text: "Building multi-dimensional characters that drive your story forward."
+      },
+      {
+        image: "Images/KHome_13.png",
+        badge: "METHOD",
+        title: "NARRATIVE STRUCTURE",
+        text: "Crafting compelling arcs that keep audiences engaged from start to finish."
+      },
+      {
+        image: "Images/KHome_14.png",
+        badge: "SERVICE",
+        title: "SCRIPT DOCTORING",
+        text: "Expert analysis and refinement of existing scripts to enhance their impact."
+      },
+      {
+        image: "Images/KHome_15.png",
+        badge: "WORKSHOP",
+        title: "STORY CONSULTING",
+        text: "One-on-one sessions to brainstorm and develop your narrative ideas."
+      },
+      {
+        image: "Images/KHome_12.png",
+        badge: "OUTPUT",
+        title: "PITCH DECK CREATION",
+        text: "Professional presentation materials to help sell your story to producers."
+      }
+    ]
+  },
+  direction: {
+    title: "COMMERCIAL & <br>BRAND FILMS",
+    description: "Strategic visuals designed to elevate brands and connect with audiences—crafted with purpose, clarity, and a strong sense of identity to leave a lasting impression.",
+    cards: [
+      {
+        image: "Images/KServices_3.png",
+        badge: "SERVICE",
+        title: "DIRECTION",
+        text: "Visionary leadership that brings your story to life with emotional authenticity."
+      },
+      {
+        image: "Images/KHome_13.png",
+        badge: "TECHNIQUE",
+        title: "CINEMATOGRAPHY",
+        text: "Masterful camera work, lighting, and composition that elevates every scene."
+      },
+      {
+        image: "Images/KHome_14.png",
+        badge: "PROCESS",
+        title: "SHOT LISTING",
+        text: "Detailed shot-by-shot planning to ensure efficient and creative production."
+      },
+      {
+        image: "Images/KHome_15.png",
+        badge: "STYLE",
+        title: "VISUAL LANGUAGE",
+        text: "Developing unique visual signatures that define your project's identity."
+      },
+      {
+        image: "Images/KHome_12.png",
+        badge: "COLLAB",
+        title: "DIRECTOR'S LAB",
+        text: "Mentorship and creative collaboration for emerging directing talent."
+      },
+      {
+        image: "Images/KHome_13.png",
+        badge: "OUTPUT",
+        title: "CAMERA & LIGHTING",
+        text: "Industry-standard equipment and expert crews for stunning visuals."
+      }
+    ]
+  },
+  producing: {
+    title: "CREATIVE <br>DIRECTIONS",
+    description: "Strategic visuals designed to elevate brands and connect with audiences—crafted with purpose, clarity, and a strong sense of identity to leave a lasting impression.",
+    cards: [
+      {
+        image: "Images/KServices_4.png",
+        badge: "SERVICE",
+        title: "PRODUCTION MANAGEMENT",
+        text: "Full-service production coordination from pre-production to wrap."
+      },
+      {
+        image: "Images/KHome_14.png",
+        badge: "LOGISTICS",
+        title: "LOCATION SCOUTING",
+        text: "Finding the perfect settings to bring your story's world to life."
+      },
+      {
+        image: "Images/KHome_15.png",
+        badge: "TEAM",
+        title: "CREW ASSEMBLY",
+        text: "Building the right team of professionals for your specific project needs."
+      },
+      {
+        image: "Images/KHome_12.png",
+        badge: "BUDGET",
+        title: "FINANCIAL PLANNING",
+        text: "Transparent budgeting and resource allocation for maximum efficiency."
+      },
+      {
+        image: "Images/KHome_13.png",
+        badge: "SCHEDULE",
+        title: "PRODUCTION TIMELINE",
+        text: "Strategic scheduling that respects creative needs and deadlines."
+      },
+      {
+        image: "Images/KHome_14.png",
+        badge: "ON-SET",
+        title: "FILMING & EXECUTION",
+        text: "Hands-on production support ensuring smooth on-set operations."
+      }
+    ]
+  },
+  postProduction: {
+    title: "FULL PRODUCTION <br>SERVICES",
+    description: "Final touches that elevate your film. Our editors, colorists, and sound designers craft a seamless, polished experience.",
+    cards: [
+      {
+        image: "Images/KServices_5.png",
+        badge: "SERVICE",
+        title: "EDITING",
+        text: "Expert assembly and pacing that brings your story's rhythm to life."
+      },
+      {
+        image: "Images/KHome_15.png",
+        badge: "COLOR",
+        title: "COLOR GRADING",
+        text: "Sophisticated color grading that establishes mood and visual consistency."
+      },
+      {
+        image: "Images/KHome_12.png",
+        badge: "AUDIO",
+        title: "SOUND DESIGN",
+        text: "Immersive soundscapes that deepen emotional impact and realism."
+      },
+      {
+        image: "Images/KHome_13.png",
+        badge: "VFX",
+        title: "VISUAL EFFECTS",
+        text: "Seamless integration of practical and digital effects."
+      },
+      {
+        image: "Images/KHome_14.png",
+        badge: "MUSIC",
+        title: "SCORING",
+        text: "Original compositions and music supervision for emotional resonance."
+      },
+      {
+        image: "Images/KHome_15.png",
+        badge: "DELIVERY",
+        title: "FINAL MASTERING",
+        text: "Polished deliverables ready for festivals, streaming, or broadcast."
+      }
+    ]
+  }
+};
 
     // Get category from URL parameter
     function getCategory() {

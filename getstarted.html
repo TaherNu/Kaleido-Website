@@ -441,56 +441,53 @@
       });
     }
 
-    /* ── FORM SUBMIT FOR PITCH ── */
-/* ── FORM SUBMIT FOR PITCH ── */
-async function handlePitchSubmit(e) {
+
+    async function handlePitchSubmit(e) {
     e.preventDefault();
-    
-    const name = document.getElementById('pitch-name').value.trim();
-    const email = document.getElementById('pitch-email').value.trim();
+
+    const name         = document.getElementById('pitch-name').value.trim();
+    const email        = document.getElementById('pitch-email').value.trim();
     const projectTitle = document.getElementById('pitch-title').value.trim();
-    const typeBtn = document.querySelector('.collab-type-btn.active');
-    const projectType = typeBtn ? typeBtn.dataset.type : '';
-    const logline = document.getElementById('pitch-logline').value.trim();
-    const concept = document.getElementById('pitch-concept').value.trim();
-    
+    const typeBtn      = document.querySelector('.collab-type-btn.active');
+    const projectType  = typeBtn ? typeBtn.dataset.type : '';
+    const logline      = document.getElementById('pitch-logline').value.trim();
+    const concept      = document.getElementById('pitch-concept').value.trim();
+
     if (!name || !email || !projectTitle) {
         alert('Please fill in your name, email, and project title.');
         return;
     }
-    
-    const submitBtn = document.querySelector('.form-submit-btn');
+
+    const submitBtn    = document.querySelector('.form-submit-btn');
     const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting...';
-    
+
     try {
-        const response = await fetch('http://localhost:5000/api/submit-collaboration', {
+        const response = await fetch('http://localhost:5000/api/submit-pitch', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                name: name,
-                email: email,
-                type: projectType,
-                message: `Project Title: ${projectTitle}\n\nLogline: ${logline}\n\nConcept: ${concept}`,
-                formType: "pitch"
+                name:         name,
+                email:        email,
+                projectTitle: projectTitle,
+                projectType:  projectType,
+                logline:      logline,
+                concept:      concept
             })
         });
-        
+
         const result = await response.json();
-        
+
         if (result.success) {
-            alert('Thank you for your pitch! We\'ll review it and be in touch soon.');
+            alert("Thank you for your pitch! We'll review it and be in touch soon.");
             e.target.reset();
-            document.querySelectorAll('.collab-type-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+            document.querySelectorAll('.collab-type-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById('upload-filename').textContent = '';
             switchTab('concept');
         } else {
             throw new Error(result.error);
         }
-        
     } catch (error) {
         console.error('Error:', error);
         alert('Error: ' + error.message);
