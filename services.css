@@ -992,7 +992,7 @@ body.scrolled .logo-secondary {
   }
 
   .service-card.active-card .card-description {
-    width: 50%;
+    width: 40%;
     font-size: 0.9rem;
     opacity: 1;
     visibility: visible;
