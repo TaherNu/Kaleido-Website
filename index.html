@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Images/KLogo.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="animations.css">
 </head>
@@ -228,29 +229,57 @@
 
 
 
+<!-- PAGE 5 - STUDIO REELS -->
+<section class="studio-reel">
+  <div class="reel-container">
 
-    <!-- PAGE 5 - STUDIO REEL -->
-    <section class="studio-reel">
-      <div class="reel-container">
-        <!-- Left side - small transparent rectangle with white border -->
-        <div class="side-rectangle"></div>
+    <!-- LEFT 30% — Title -->
+    <div class="reel-left">
+      <h2 class="reel-main-title">STUDIO<br>REELS</h2>
+    </div>
 
-        <!-- Right side - large rectangle with background image -->
-        <div class="main-reel">
-          <div class="reel-content">
-            <div class="reel-subtitle">* OUR VISUAL SIGNATURE</div>
+    <!-- RIGHT 70% — 3 Video Cards -->
+    <div class="reel-right">
+      <div class="reel-cards-track">
 
-            <div class="reel-heading-wrapper">
-              <div class="reel-line"></div>
-              <h2 class="reel-heading">STUDIO REEL</h2>
-              <div class="reel-line"></div>
-            </div>
-
-            <div class="reel-footer-text">A journey through our cinematic universe.</div>
-          </div>
+        <!-- Card 1 -->
+        <div class="reel-card" data-video="Images/reel1.mp4" style="background-color: #EC4539;">
+          <div class="reel-card-overlay"></div>
+          <button class="reel-play-btn" aria-label="Play reel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,3 19,12 5,21"></polygon>
+            </svg>
+          </button>
+          <video class="reel-video" src="Images/videos/reel1.mp4" loop playsinline></video>
         </div>
+
+        <!-- Card 2 -->
+        <div class="reel-card" data-video="Images/reel2.mp4" style="background-color: #EC4539;">
+          <div class="reel-card-overlay"></div>
+          <button class="reel-play-btn" aria-label="Play reel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,3 19,12 5,21"></polygon>
+            </svg>
+          </button>
+          <video class="reel-video" src="Images/videos/reel2.mov" loop playsinline></video>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="reel-card" data-video="Images/reel3.mp4" style="background-color: #EC4539;">
+          <div class="reel-card-overlay"></div>
+          <button class="reel-play-btn" aria-label="Play reel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,3 19,12 5,21"></polygon>
+            </svg>
+          </button>
+          <video class="reel-video" src="Images/videos/reel3.mov" loop playsinline></video>
+        </div>
+
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
 
 
     <!-- PAGE 6 - STORIES IN EVERY FRAME -->
@@ -767,6 +796,58 @@
 
   // Call on resize
   window.addEventListener('resize', updateMovementBackgrounds);
+
+
+
+
+
+
+
+
+
+  /* ── STUDIO REELS — click to play/pause ── */
+  document.querySelectorAll('.reel-card').forEach(card => {
+    const video  = card.querySelector('.reel-video');
+    const playBtn = card.querySelector('.reel-play-btn');
+  
+    card.addEventListener('click', () => {
+      const isPlaying = card.classList.contains('playing');
+    
+      /* Pause all other cards first */
+      document.querySelectorAll('.reel-card.playing').forEach(c => {
+        c.classList.remove('playing');
+        c.querySelector('.reel-video')?.pause();
+      });
+    
+      if (!isPlaying && video) {
+        card.classList.add('playing');
+        video.play();
+      }
+    });
+  
+    /* Drag-to-scroll on mobile/tablet — prevent click-play during drag */
+  });
+  
+  /* Drag scroll for reel-right on tablet/mobile */
+  const reelRight = document.querySelector('.reel-right');
+  if (reelRight) {
+    let isDown = false, startX, scrollLeft;
+  
+    reelRight.addEventListener('mousedown', e => {
+      isDown = true; reelRight.style.cursor = 'grabbing';
+      startX = e.pageX - reelRight.offsetLeft;
+      scrollLeft = reelRight.scrollLeft;
+    });
+    reelRight.addEventListener('mouseleave', () => { isDown = false; reelRight.style.cursor = 'grab'; });
+    reelRight.addEventListener('mouseup',    () => { isDown = false; reelRight.style.cursor = 'grab'; });
+    reelRight.addEventListener('mousemove',  e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x    = e.pageX - reelRight.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      reelRight.scrollLeft = scrollLeft - walk;
+    });
+  }
 </script>
 
 <script src="animations.js"></script>
