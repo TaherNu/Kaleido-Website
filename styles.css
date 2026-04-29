@@ -686,7 +686,7 @@ body.scrolled .logo-secondary {
 }
 
 .film-card:nth-child(2) {
-  background-image: url('Images/KHome_7.png');
+  background-image: url('Images/KHome_6.png');
 }
 
 .film-card:nth-child(3) {
@@ -697,13 +697,6 @@ body.scrolled .logo-secondary {
   background-image: url('Images/KHome_8.png');
 }
 
-.film-card:nth-child(5) {
-  background-image: url('Images/KHome_6.png');
-}
-
-.film-card:nth-child(6) {
-  background-image: url('Images/KHome_7.png');
-}
 
 
 .featured-card .card-content {

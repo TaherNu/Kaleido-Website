@@ -189,7 +189,7 @@
             <h3 class="card-title">WORKSHOP<br>MASTERCLASSES</h3>
             <div class="card-text-content">
               <p class="card-description-bottom">Hands-on sessions led by industry professionals covering directing, cinematography, editing, and the business of storytelling.</p>
-              <button class="card-learn-btn">View Calendar</button>
+              <button class="card-learn-btn" onclick="scrollToUpNext()">View Calendar</button>
             </div>
           </div>
 
@@ -240,7 +240,6 @@
       </div>
     </section>
 
-
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
@@ -265,7 +264,7 @@
                 <img src="Images/KTikTok.png" alt="TikTok" class="social-img">
               </a>
               <a href="https://www.youtube.com/@adhamgira" target="_blank" class="social-icon-link">
-                <img src="Images/KYouTube.png" alt="YouTube" class="social-img">
+                <img src="Images/KYoutube.png" alt="YouTube" class="social-img">
               </a>
               <a href="https://discord.com/invite/bQhyr9fcEK" target="_blank" class="social-icon-link">
                 <img src="Images/KDiscord.png" alt="Discord" class="social-img">
@@ -274,7 +273,8 @@
           </div>
         
           <!-- Contact -->
-          <div class="footer-col">
+          <!-- Contact -->
+        <div class="footer-col">
           <h4 class="footer-col-title">Contact Us</h4>
           <div class="footer-contact-item">
             <img src="Images/WhatsApp.png" alt="Phone" class="contact-img">
@@ -284,8 +284,6 @@
             <img src="Images/KEmail.png" alt="Email" class="contact-img">
             <a href="mailto:contact@kaleidopictures.com" class="contact-text" style="text-decoration: none; color: rgba(253, 253, 246, 0.7); transition: color 0.3s ease;">contact@kaleidopictures.com</a>
           </div>
-        </div>
-        
         </div>
       </div>
     </footer>
@@ -530,6 +528,19 @@ function initBeyondScreenMobile() {
   // Initialize on load and resize
   initBeyondScreenMobile();
   window.addEventListener('resize', initBeyondScreenMobile);
+
+
+
+  // ===== SCROLL TO UP NEXT SECTION =====
+function scrollToUpNext() {
+  const upnextSection = document.querySelector('.events-upnext');
+  if (upnextSection) {
+    upnextSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
   </script>
   <script src="events-animations.js"></script>
 </body>
