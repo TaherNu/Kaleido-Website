@@ -189,6 +189,8 @@
       <p class="pitch-form-subtext">Ready to share your story? Fill in the details below and we'll be in touch.</p>
 
       <form class="pitch-form" onsubmit="handlePitchSubmit(event)">
+         <!-- HONEYPOT -->
+         <input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="display:none;">
 
         <!-- Name -->
         <div class="form-row">
@@ -444,6 +446,7 @@
     async function handlePitchSubmit(e) {
     e.preventDefault();
 
+    if (document.getElementById('website').value) return;
     const name         = document.getElementById('pitch-name').value.trim();
     const email        = document.getElementById('pitch-email').value.trim();
     const projectTitle = document.getElementById('pitch-title').value.trim();

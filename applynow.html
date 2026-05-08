@@ -55,6 +55,8 @@
        MULTI-STEP FORM
   ============================================================ -->
   <div class="an-form-wrapper">
+     <!-- HONEYPOT -->
+     <input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="display:none;">
 
     <!-- ── STEP 1 — PERSONAL INFORMATION ── -->
     <section class="form-step active" id="step-1">
@@ -506,6 +508,7 @@
     /* Submit */
     document.getElementById('submit-btn').addEventListener('click', async () => {
       if (!validateStep(4)) return;
+      if (document.getElementById('website').value) return;
 
       const btn = document.getElementById('submit-btn');
       btn.textContent = 'Submitting...';

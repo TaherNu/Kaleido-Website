@@ -183,6 +183,8 @@
         <p class="start-collab-subtext">If you're ready to create something with us, we'd love to hear from you.</p>
     
         <form class="collab-form" onsubmit="handleFormSubmit(event)">
+            <!-- HONEYPOT -->
+           <input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="display:none;">
         
           <!-- Name -->
           <div class="form-row">
@@ -265,9 +267,10 @@
       });
     
       // Updated form submit handler to connect to your backend
-async function handleFormSubmit(e) {
+    async function handleFormSubmit(e) {
     e.preventDefault();
     
+    if (document.getElementById('website').value) return;
     const name = document.getElementById('collab-name').value.trim();
     const email = document.getElementById('collab-email').value.trim();
     const message = document.getElementById('collab-message').value.trim();
@@ -293,7 +296,7 @@ async function handleFormSubmit(e) {
     
     try {
         // Send data to your backend
-        const response = await fetch('http://localhost:5000/api/submit-collaboration', {
+        const response = await fetch('/api/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -302,7 +305,8 @@ async function handleFormSubmit(e) {
                 name: name,
                 email: email,
                 type: type,
-                message: message
+                message: message,
+                formType: 'workwithus'
             })
         });
         

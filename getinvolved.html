@@ -180,6 +180,8 @@
       <p class="get-involved-subtext">Ready to be part of something? Tell us about yourself and how you'd like to connect.</p>
 
       <form class="collab-form" onsubmit="handleFormSubmit(event)">
+         <!-- HONEYPOT -->
+          <input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="display:none;">
 
         <!-- Name -->
         <div class="form-row">
@@ -382,6 +384,7 @@
     async function handleFormSubmit(e) {
     e.preventDefault();
     
+    if (document.getElementById('website').value) return;
     const name = document.getElementById('jtm-name').value.trim();
     const email = document.getElementById('jtm-email').value.trim();
     const message = document.getElementById('jtm-message').value.trim();
@@ -399,7 +402,7 @@
     submitBtn.textContent = 'Sending...';
     
     try {
-        const response = await fetch('http://localhost:5000/api/submit-collaboration', {
+        const response = await fetch('/api/submit-form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
