@@ -453,9 +453,9 @@
     ============================================================ */
     @media (max-width: 767px) {
       .navbar { height: 8%; padding: 1rem 2.5rem; padding-bottom: 0; margin: 0; z-index: 150; }
-        .logo-img .logo-secondary{height: 50px;}
+        .logo-img .logo-secondary{height: 45px;}
 
-  .logo-img .logo-primary {height: 30px;}
+        .logo-img .logo-primary {height: 30px;}
       .hamburger { display: flex; }
       .nav-links {
         position: fixed; top: 0; right: -100%;

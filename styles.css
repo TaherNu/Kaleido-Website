@@ -339,7 +339,7 @@ body.scrolled .logo-secondary {
   }
 
   .logo-img .logo-secondary{
-    height: 50px;
+    height: 45px;
   }
 
   .logo-img .logo-primary {
@@ -1390,6 +1390,7 @@ body.scrolled .logo-secondary {
   .reel-card {
     flex: 0 0 72vw;
     width: 72vw;
+    height: 40vh;
   }
 
   .reel-play-btn {
