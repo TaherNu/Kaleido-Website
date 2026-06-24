@@ -342,11 +342,11 @@ body.scrolled .logo-secondary {
     height: 8%;
   }
 
-  .logo-img .logo-secondary{
+  .logo-img.logo-secondary{
     height: 45px;
   }
 
-  .logo-img .logo-primary {
+  .logo-img.logo-primary {
     height: 30px;
   }
 
@@ -934,6 +934,7 @@ body.scrolled .logo-secondary {
   .frame-bg {
     background-size: cover;
     background-position: center;
+
   }
 
   /* For Slide 1 - centered content */

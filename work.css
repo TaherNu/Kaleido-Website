@@ -342,12 +342,12 @@ body.scrolled .logo-secondary {
     height: 8%;
   }
 
-  .logo-img .logo-secondary{
-    height: 35px;
+  .logo-img.logo-secondary{
+    height: 35px; 
   }
 
-  .logo-img .logo-primary {
-    height: 20px;
+  .logo-img.logo-primary {
+    height: 25px;
   }
 
   .hamburger {
