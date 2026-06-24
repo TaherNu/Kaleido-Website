@@ -235,38 +235,53 @@
     <div class="reel-right">
       <div class="reel-cards-track">
 
-        <!-- Card 1 -->
-        <div class="reel-card" data-video="Images/reel1.mp4" style="background-color: #EC4539;">
-          <div class="reel-card-overlay"></div>
-          <button class="reel-play-btn" aria-label="Play reel">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5,3 19,12 5,21"></polygon>
-            </svg>
-          </button>
-          <video class="reel-video" src="Images/videos/reel1.mp4" loop playsinline></video>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="reel-card" data-video="Images/reel2.mp4" style="background-color: #EC4539;">
-          <div class="reel-card-overlay"></div>
-          <button class="reel-play-btn" aria-label="Play reel">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5,3 19,12 5,21"></polygon>
-            </svg>
-          </button>
-          <video class="reel-video" src="Images/videos/reel2.mov" loop playsinline></video>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="reel-card" data-video="Images/reel3.mp4" style="background-color: #EC4539;">
-          <div class="reel-card-overlay"></div>
-          <button class="reel-play-btn" aria-label="Play reel">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5,3 19,12 5,21"></polygon>
-            </svg>
-          </button>
-          <video class="reel-video" src="Images/videos/reel3.mov" loop playsinline></video>
-        </div>
+       <!-- Card 1 -->
+       <div class="reel-card" style="background-color: #EC4539;">
+         <div class="reel-card-overlay"></div>
+         <button class="reel-play-btn" aria-label="Play reel">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+             <polygon points="5,3 19,12 5,21"></polygon>
+           </svg>
+         </button>
+         <iframe class="reel-video"
+           src="https://www.youtube.com/embed/wBfCHSbpEPs?enablejsapi=1&autoplay=0&loop=1&playlist=wBfCHSbpEPs&controls=0&mute=1&rel=0&modestbranding=1"
+           frameborder="0"
+           allow="autoplay; encrypted-media"
+           allowfullscreen>
+         </iframe>
+       </div>
+       
+       <!-- Card 2 -->
+       <div class="reel-card" style="background-color: #EC4539;">
+         <div class="reel-card-overlay"></div>
+         <button class="reel-play-btn" aria-label="Play reel">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+             <polygon points="5,3 19,12 5,21"></polygon>
+           </svg>
+         </button>
+         <iframe class="reel-video"
+           src="https://www.youtube.com/embed/nsq2BW70Vwk?enablejsapi=1&autoplay=0&loop=1&playlist=nsq2BW70Vwk&controls=0&mute=1&rel=0&modestbranding=1"
+           frameborder="0"
+           allow="autoplay; encrypted-media"
+           allowfullscreen>
+         </iframe>
+       </div>
+       
+       <!-- Card 3 -->
+       <div class="reel-card" style="background-color: #EC4539;">
+         <div class="reel-card-overlay"></div>
+         <button class="reel-play-btn" aria-label="Play reel">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+             <polygon points="5,3 19,12 5,21"></polygon>
+           </svg>
+         </button>
+         <iframe class="reel-video"
+           src="https://www.youtube.com/embed/EJ2ALGwTQBU?enablejsapi=1&autoplay=0&loop=1&playlist=EJ2ALGwTQBU&controls=0&mute=1&rel=0&modestbranding=1"
+           frameborder="0"
+           allow="autoplay; encrypted-media"
+           allowfullscreen>
+         </iframe>
+       </div>
 
       </div>
     </div>
@@ -797,29 +812,69 @@
 
 
 
+/* ── STUDIO REELS — YouTube IFrame API play/pause ── */
+  let ytPlayers = [];
+  let ytApiReady = false;
 
-  /* ── STUDIO REELS — click to play/pause ── */
-  document.querySelectorAll('.reel-card').forEach(card => {
-    const video  = card.querySelector('.reel-video');
-    const playBtn = card.querySelector('.reel-play-btn');
-  
-    card.addEventListener('click', () => {
-      const isPlaying = card.classList.contains('playing');
-    
-      /* Pause all other cards first */
-      document.querySelectorAll('.reel-card.playing').forEach(c => {
-        c.classList.remove('playing');
-        c.querySelector('.reel-video')?.pause();
+  function onYouTubeIframeAPIReady() {
+    ytApiReady = true;
+    document.querySelectorAll('.reel-card iframe.reel-video').forEach((iframe, index) => {
+      iframe.id = 'reel-yt-' + index;
+      const card = iframe.closest('.reel-card');
+
+      const player = new YT.Player(iframe.id, {
+        events: {
+          'onReady': (e) => {
+            e.target.mute();
+          },
+          'onStateChange': (e) => {
+            // Keep the visual "playing" state in sync with real player state
+            if (e.data === YT.PlayerState.PLAYING) {
+              card.classList.add('playing');
+            } else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) {
+              card.classList.remove('playing');
+            }
+          }
+        }
       });
-    
-      if (!isPlaying && video) {
+
+      ytPlayers.push({ card, player });
+    });
+  }
+
+  // Load the YouTube IFrame API script
+  const ytScriptTag = document.createElement('script');
+  ytScriptTag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(ytScriptTag);
+
+  document.querySelectorAll('.reel-card').forEach(card => {
+    card.addEventListener('click', () => {
+      if (!ytApiReady) return;
+
+      const entry = ytPlayers.find(p => p.card === card);
+      if (!entry) return;
+
+      const isPlaying = card.classList.contains('playing');
+
+      /* Pause all other reels first */
+      ytPlayers.forEach(p => {
+        if (p.card !== card) {
+          p.player.pauseVideo();
+          p.card.classList.remove('playing');
+        }
+      });
+
+      if (!isPlaying) {
+        entry.player.unMute();
+        entry.player.playVideo();
         card.classList.add('playing');
-        video.play();
+      } else {
+        entry.player.pauseVideo();
+        card.classList.remove('playing');
       }
     });
-  
-    /* Drag-to-scroll on mobile/tablet — prevent click-play during drag */
   });
+
   
   /* Drag scroll for reel-right on tablet/mobile */
   const reelRight = document.querySelector('.reel-right');
