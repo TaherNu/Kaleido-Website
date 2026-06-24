@@ -534,10 +534,17 @@
       };
 
     try {
+        const fd = new FormData();
+        Object.entries(formData).forEach(([key, value]) => fd.append(key, value));
+
+        const fileInput = document.getElementById('an-portfolio-file');
+        if (fileInput.files && fileInput.files[0]) {
+            fd.append('an-portfolio-file', fileInput.files[0]);
+        }
+
         const res = await fetch('http://localhost:5000/api/submit-application', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
+            body: fd
         });
     
         const result = await res.json();

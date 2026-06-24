@@ -247,10 +247,11 @@
                 <polyline points="17 8 12 3 7 8"/>
                 <line x1="12" y1="3" x2="12" y2="15"/>
               </svg>
-              <p class="upload-label">Click to upload your script</p>
-              <p class="upload-hint">PDF, Final Draft, Fountain, Word — max 20MB</p>
-              <p class="upload-filename" id="upload-filename"></p>
-              <input type="file" id="script-file" name="script" accept=".pdf,.fdx,.fountain,.docx,.doc" style="display:none" onchange="handleFileSelect(this)">
+
+          <p class="upload-label">Click to upload your script</p>
+          <p class="upload-hint">PDF, Word, or TXT — max 20MB</p>
+          <p class="upload-filename" id="upload-filename"></p>
+          <input type="file" id="script-file" name="script" accept=".pdf,.docx,.doc,.txt" style="display:none" onchange="handleFileSelect(this)">
             </div>
           </div>
         </div>
@@ -466,17 +467,22 @@
     submitBtn.textContent = 'Submitting...';
 
     try {
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('projectTitle', projectTitle);
+        formData.append('projectType', projectType);
+        formData.append('logline', logline);
+        formData.append('concept', concept);
+
+        const scriptFileInput = document.getElementById('script-file');
+        if (scriptFileInput.files && scriptFileInput.files[0]) {
+            formData.append('script', scriptFileInput.files[0]);
+        }
+
         const response = await fetch('http://localhost:5000/api/submit-pitch', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                name:         name,
-                email:        email,
-                projectTitle: projectTitle,
-                projectType:  projectType,
-                logline:      logline,
-                concept:      concept
-            })
+            body: formData
         });
 
         const result = await response.json();

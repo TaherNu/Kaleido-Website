@@ -677,13 +677,15 @@
           ['Type', s.type],
           ['Message', s.message, true],
         ]);
+
       } else if (s._collection === 'pitch_submissions') {
         fields = buildFields([
           ['Project Title', s.projectTitle],
           ['Project Type', s.projectType],
           ['Logline', s.logline],
           ['Concept', s.concept, true],
-        ]);
+        ]) + buildFileField('Script File', s.scriptUrl);
+
       } else if (s._collection === 'work_with_kaleido') {
         fields = buildFields([
           ['Company', s.company],
@@ -706,7 +708,7 @@
           ['Idea', s.idea, true],
           ['Goals', s.goals, true],
           ['Why Selected', s.why, true],
-        ]);
+        ]) + buildFileField('Portfolio File', s.portfolioFileUrl);
       }
 
       const id = s._id;
@@ -750,6 +752,19 @@
             <div class="field-value">${sanitize(value)}</div>
           </div>`;
       }).join('');
+    }
+
+    // ── BUILD FILE LINK FIELD ──
+    function buildFileField(label, url) {
+      if (!url) return '';
+      // url comes from our own Cloudinary upload, but escape it anyway
+      // since it's being placed inside an href attribute.
+      const safeUrl = String(url).replace(/"/g, '&quot;');
+      return `
+        <div class="field-item full-width">
+          <div class="field-label">${label}</div>
+          <div class="field-value"><a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="color:#FF8F35;text-decoration:underline;">View File ↗</a></div>
+        </div>`;
     }
 
     // ── UPDATE STATUS ──
