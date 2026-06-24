@@ -338,8 +338,12 @@ body.scrolled .logo-secondary {
     height: 8%;
   }
 
-  .logo-img {
-    height: 80px;
+  .logo-img .logo-secondary{
+    height: 50px;
+  }
+
+  .logo-img .logo-primary {
+    height: 30px;
   }
 
   .hamburger {

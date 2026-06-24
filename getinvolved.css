@@ -1597,8 +1597,12 @@ body.scrolled .logo-secondary { opacity: 1; }
     height: 8%;
   }
 
-  .logo-img {
-    height: 40px;
+  .logo-img .logo-secondary{
+    height: 50px;
+  }
+
+  .logo-img .logo-primary {
+    height: 30px;
   }
 
   .hamburger {
