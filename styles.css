@@ -2533,7 +2533,7 @@ body.scrolled .logo-secondary {
 
   /* Studio Reel Section - Mobile layout */
   .studio-reel {
-    min-height: 100vh;
+    min-height: 70vh;
   }
 
   .side-rectangle {
